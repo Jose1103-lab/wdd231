@@ -6,6 +6,13 @@
     --font2-color: #91c2ff;
     --highlight-color: #91c2ff;
     --highlight2-color: #91c2ff;
+    --small: .8rem;
+    --normal: 1.2rem;
+    --large: 2rem;
+}
+
+*{
+    box-sizing: border-box;
 }
 
 .charm-regular {
@@ -35,6 +42,7 @@ body {
 main {
     background-color: var(--alternative-color);
     width: 100%;
+    margin: 0; 
     display: grid;
     grid-template-columns: 1fr;
     justify-self: center;
@@ -42,6 +50,7 @@ main {
 }
 
 section{
+    width: 100%;
     justify-self: center;
     padding: 1rem 1.5rem;
     border: 1px solid red ;
@@ -49,4 +58,9 @@ section{
 
 section img{
     width: 100%;
+    height: auto;
+}
+
+main h2{
+    text-align: center;
 }
