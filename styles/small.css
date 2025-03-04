@@ -1,9 +1,52 @@
-:root{
+:root {
     --main-color: #91c2ff;
-    --secundary-color:#91c2ff;
-    --alternative-color:#91c2ff;
-    --font-color:#91c2ff;
-    --font2-color:#91c2ff;
-    --highlight-color:#91c2ff;
-    --highlight2-color:#91c2ff;
+    --secundary-color: #d1d1d1;
+    --alternative-color: #ffffff;
+    --font-color: #91c2ff;
+    --font2-color: #91c2ff;
+    --highlight-color: #91c2ff;
+    --highlight2-color: #91c2ff;
+}
+
+.charm-regular {
+    font-family: "Charm", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.charm-bold {
+    font-family: "Charm", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.henny-penny-regular {
+    font-family: "Henny Penny", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--secundary-color);
+    display: grid;
+    grid-template-areas: .5fr auto 2rem / 1fr;
+}
+
+main {
+    background-color: var(--alternative-color);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-self: center;
+    gap: 1rem;
+}
+
+section{
+    justify-self: center;
+    padding: 1rem 1.5rem;
+    border: 1px solid red ;
+}
+
+section img{
+    width: 100%;
 }
