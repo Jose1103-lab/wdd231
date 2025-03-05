@@ -17,13 +17,13 @@
 
 p,
 a,
-figcaptionm,
+figcaption,
 li {
     font-size: var(--normal);
 }
 
 body {
-    background-color: var(--secundary-color);
+    background-color: var(--alternative-color);
     display: grid;
     grid-template-areas: .5fr auto 2rem / 1fr;
 }
@@ -54,8 +54,14 @@ header{
     place-content:center;
 }
 
-li{ /* quede aqui*/
-    margin: 5px 0;
+li { 
+    list-style-type: none;
+    margin: 5px 0 5px -30px;
+}
+
+li::before {
+    content: "✯";
+    /* margin-right: 10px; */
 }
 
 header h1 span{
@@ -68,13 +74,41 @@ h1 span img{
 }
 
 .menu {
+    display: none;
+    transition: 1s ease-in-out;
+    transform: translateY(-20px);
+    /* animation: .5s ease-in-out wrapperOut; */
+}
+
+.menu.show{
+    animation: .5s ease-in-out wrapper;
+    background-color: var(--secundary-color);
     padding: 25px 0;
-    display: flex;
+    display: flex; 
     flex-flow: column nowrap;
     gap: 10px;
     text-align: left;
-    padding-left: var(--large);
+    padding-left: var(--large);    
 }
+
+@keyframes wrapper {
+    0%{
+        transform: translateY(-160px);
+        filter: opacity(0);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/* @keyframes wrapperOut {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-160px);
+    }
+} */
 
 .menu a {
     width: 100%;
@@ -133,10 +167,40 @@ section img {
     border-radius: 10px;
 }
 
+.filter{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:space-around ;
+}
+
+.filter div{
+    background-color: var(--highlight2-color);
+    box-shadow: 1px 0 2px var(--highlight-color);
+    width:80px;
+    padding: 5px 0 ;
+    text-align: center;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.filter div:hover{
+    box-shadow: 2px 3px 3px var(--highlight-color);
+}
+
+.class-ct{
+    display: flex;
+    flex-direction: column;
+    
+}
+
 /*  footer stuff -------------- */
+footer{
+    background-color: var(--secundary-color);
+}
+
 footer p{
     font-size: var(--small);
     text-align: center;
     color: var(--font-color);
-    background-color: var(--secundary-color);
 }

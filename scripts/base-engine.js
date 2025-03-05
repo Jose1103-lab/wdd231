@@ -86,7 +86,16 @@ function dateSetter(){
     
     modifier.textContent = lastM;
     yearMod.textContent = year;
-    console.log(lastM, year) // tester
+    console.log(lastM, year); // tester
+}
+dateSetter();
+
+
+function menuToggler(){
+    const menu = document.querySelector("#menu");
+    menu.classList.toggle('show');
 }
 
-dateSetter();
+const firer = document.querySelector('.player');
+firer.addEventListener("click", menuToggler);
+
