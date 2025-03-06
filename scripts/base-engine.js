@@ -9,7 +9,7 @@ const courses = [
         technology: [
             'Python'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -22,7 +22,7 @@ const courses = [
             'HTML',
             'CSS'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'CSE',
@@ -34,7 +34,7 @@ const courses = [
         technology: [
             'Python'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'CSE',
@@ -46,7 +46,7 @@ const courses = [
         technology: [
             'C#'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -60,7 +60,7 @@ const courses = [
             'CSS',
             'JavaScript'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -78,24 +78,71 @@ const courses = [
     }
 ]
 
-function dateSetter(){
-    const modifier = document.querySelector('#lastMod'); 
+// date function------------------------------------------------
+function dateSetter() {
+    const modifier = document.querySelector('#lastMod');
     const lastM = document.lastModified;
     const year = new Date().getFullYear();
     const yearMod = document.querySelector('#year');
-    
+
     modifier.textContent = lastM;
     yearMod.textContent = year;
     console.log(lastM, year); // tester
 }
 dateSetter();
 
-
-function menuToggler(){
+// menu function------------------------------------------------
+function menuToggler() {
     const menu = document.querySelector("#menu");
     menu.classList.toggle('show');
 }
 
 const firer = document.querySelector('.player');
 firer.addEventListener("click", menuToggler);
+
+
+// filter function------------------------------------------------
+function classTagLoader(identifier) {
+    const container = document.querySelector(".class-ct");
+    let newArray;
+    container.innerHTML = "";
+    
+    courses.forEach(item => {
+        if (identifier === item.subject) {
+            newArray = courses.filter(item => item.subject === identifier);
+        } else if (identifier === undefined) {
+            newArray = courses;
+        }
+    });
+
+    newArray.forEach(item => {
+        const newElement = document.createElement("a");
+        newElement.setAttribute("href", "#");
+        newElement.classList.add(`${item.subject.toLowerCase()}`);
+        newElement.textContent = item.subject + item.number;
+        if (item.completed === true) {
+            newElement.classList.add("complete");
+        }else {
+            newElement.classList.add("missing");
+        }
+
+        container.appendChild(newElement);
+    });
+}
+
+classTagLoader();
+
+const filter = document.querySelector("#all").addEventListener("click", () => {
+    classTagLoader();
+});
+
+const filter1 = document.querySelector("#cse").addEventListener("click", () => {
+    classTagLoader("CSE");
+});
+
+const filter2 = document.querySelector("#wdd").addEventListener("click", () => {
+    classTagLoader("WDD");
+});
+
+
 

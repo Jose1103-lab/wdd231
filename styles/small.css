@@ -68,6 +68,7 @@ header h1 span{
     display: block;
 }
 
+
 h1 span img{
     border-radius: 10px;
     box-shadow: -4.5px 4.5px 1px 1px var(--highlight-color);
@@ -78,17 +79,17 @@ h1 span img{
     transition: 1s ease-in-out;
     transform: translateY(-20px);
     /* animation: .5s ease-in-out wrapperOut; */
-}
-
-.menu.show{
     animation: .5s ease-in-out wrapper;
     background-color: var(--secundary-color);
     padding: 25px 0;
-    display: flex; 
-    flex-flow: column nowrap;
     gap: 10px;
     text-align: left;
     padding-left: var(--large);    
+}
+
+.menu.show{
+    display: flex; 
+    flex-flow: column nowrap;
 }
 
 @keyframes wrapper {
@@ -107,9 +108,9 @@ h1 span img{
     }
     100%{
         transform: translateY(-160px);
-    }
-} */
-
+        }
+        } */
+        
 .menu a {
     width: 100%;
     text-decoration: none;
@@ -174,24 +175,59 @@ section img {
 }
 
 .filter div{
-    background-color: var(--highlight2-color);
-    box-shadow: 1px 0 2px var(--highlight-color);
+    box-shadow: 1px 1px 5px var(--highlight-color);
     width:80px;
     padding: 5px 0 ;
     text-align: center;
-    border-radius: 25px;
+    border-radius: 5px;
     cursor: pointer;
     transition: .3s;
 }
 
 .filter div:hover{
+    background-color: var(--highlight-color);
+    color: var(--alternative-color);
     box-shadow: 2px 3px 3px var(--highlight-color);
 }
 
 .class-ct{
+    padding: 20px 0;
     display: flex;
-    flex-direction: column;
-    
+    flex-flow: row wrap;
+    place-content: center;
+    gap: 15px;
+}
+
+.class-ct a {
+    text-align: center;
+    color: var(--alternative-color);
+    width: 250px;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: .5s;
+}
+.class-ct a:hover{
+    box-shadow: 0 0 10px var(--highlight2-color);
+    background-color: var(--alternative-color);
+    color: var(--font-color);
+}
+
+.class-ct .wdd {
+    background-color: var(--main-color);
+    color: var(--font-color);
+}
+.class-ct .cse {
+    background-color: var(--font2-color);
+}
+
+.complete::after{
+    content: " ✓";
+    color: green;
+}
+.missing::after{
+    content: " ❌";
+    font-size: .9rem;
 }
 
 /*  footer stuff -------------- */

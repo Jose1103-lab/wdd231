@@ -1,8 +1,61 @@
-@import url(small.css);
-
-@media screen and (min-width:480px){
+@media screen and (min-width:680px){
     main{
-        max-width:1200px ;
+        max-width:900px ;
+        grid-template-columns: auto 0.5fr;
+        grid-template-rows: auto auto auto;
+    }
+    main h1{
+        grid-area: 1/1/2/3;
+    }
+
+    .main-ct,
+    .aside-ct,
+    .bottom-ct{
+        border: 1px solid var(--font2-color);
+        border-radius: 5px;
+        box-shadow: 0 0 10px var(--main-color);
+    }
+
+    .main-ct{
+        grid-area: 2/1/3/2;
+        min-width: 350px;
+    }
+
+    .aside-ct{
+        grid-area: 2/2/3/3;
+        max-height: fit-content;
+        min-width: 300px;
+    }
+
+    .bottom-ct{
+        grid-area: 3/1/4/3;
+    }
+
+    .filter{
+        max-width: 280px;
+        font-size: var(--small);
+    }
+
+    .player{
+        display: none;
+    }
+    .menu.show, /* in case the user change the orientation*/
+    .menu{
+        padding: 0;
+        max-height: fit-content;
+        display: flex;
+        flex-flow: row nowrap;
+        text-align: center;
+    }
+    .menu a{
+        padding: 10px 0;
+        transition: .5s;
     }
     
+    .menu a:hover::before,
+    .menu a:hover{
+        content: "";
+        background-color: var(--font2-color);
+        color: var(--font-color);
+    }
 }
