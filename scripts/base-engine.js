@@ -105,6 +105,8 @@ firer.addEventListener("click", menuToggler);
 function classTagLoader(identifier) {
     const container = document.querySelector(".class-ct");
     let newArray;
+    let counter = 0;
+    let credits = 0;
     container.innerHTML = "";
     
     courses.forEach(item => {
@@ -116,10 +118,18 @@ function classTagLoader(identifier) {
     });
 
     newArray.forEach(item => {
+        counter++;
+        credits += item.credits;
+        const coursesMod = document.querySelector("#courses");
+        const creditsMod = document.querySelector("#credits");
+        coursesMod.textContent = counter;
+        creditsMod.textContent = credits;
+
         const newElement = document.createElement("a");
         newElement.setAttribute("href", "#");
         newElement.classList.add(`${item.subject.toLowerCase()}`);
         newElement.textContent = item.subject + item.number;
+        
         if (item.completed === true) {
             newElement.classList.add("complete");
         }else {

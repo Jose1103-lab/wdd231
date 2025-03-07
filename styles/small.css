@@ -230,6 +230,21 @@ section img {
     font-size: .9rem;
 }
 
+#stats p {
+    margin-right: 10px;
+    font-size: var(--small);
+    display: inline;
+}
+#stats  {
+    padding: 10px 0 0 8px ; 
+}
+
+#courses,
+#credits {
+    color: var(--font2-color);
+    font-size: var(--normal);
+}
+
 /*  footer stuff -------------- */
 footer{
     background-color: var(--secundary-color);
