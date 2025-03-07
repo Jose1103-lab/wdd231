@@ -189,6 +189,10 @@ section img {
     color: var(--alternative-color);
     box-shadow: 2px 3px 3px var(--highlight-color);
 }
+main .bottom-ct{
+    height: auto;
+    min-height: 400px;
+}
 
 .class-ct{
     padding: 20px 0;
