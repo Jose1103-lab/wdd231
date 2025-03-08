@@ -25,7 +25,7 @@ li {
 body {
     background-color: var(--alternative-color);
     display: grid;
-    /* grid-template-areas: 0.5fr auto 2rem / 1fr; */
+    /* grid-template-areas: 0.5frdivuto 2rem / 1fr; */
 }
 
 .charm-regular {
@@ -174,7 +174,8 @@ section img {
     justify-content:space-around ;
 }
 
-.filter div{
+.filter button{
+    border: none;
     box-shadow: 1px 1px 5px var(--highlight-color);
     width:80px;
     padding: 5px 0 ;
@@ -184,7 +185,7 @@ section img {
     transition: .3s;
 }
 
-.filter div:hover{
+.filter button:hover{
     background-color: var(--highlight-color);
     color: var(--alternative-color);
     box-shadow: 2px 3px 3px var(--highlight-color);
@@ -202,7 +203,7 @@ main .bottom-ct{
     gap: 15px;
 }
 
-.class-ct a {
+.class-ct div {
     text-align: center;
     color: var(--alternative-color);
     width: 250px;
@@ -211,7 +212,7 @@ main .bottom-ct{
     text-decoration: none;
     transition: .5s;
 }
-.class-ct a:hover{
+.class-ct div:hover{
     box-shadow: 0 0 10px var(--highlight2-color);
     background-color: var(--alternative-color);
     color: var(--font-color);

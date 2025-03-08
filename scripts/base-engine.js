@@ -108,7 +108,7 @@ function classTagLoader(identifier) {
     let counter = 0;
     let credits = 0;
     container.innerHTML = "";
-    
+
     courses.forEach(item => {
         if (identifier === item.subject) {
             newArray = courses.filter(item => item.subject === identifier);
@@ -116,8 +116,7 @@ function classTagLoader(identifier) {
             newArray = courses;
         }
     });
-
-    newArray.forEach(item => {
+    newArray.reduce((art, item) => {
         counter++;
         credits += item.credits;
         const coursesMod = document.querySelector("#courses");
@@ -125,19 +124,18 @@ function classTagLoader(identifier) {
         coursesMod.textContent = counter;
         creditsMod.textContent = credits;
 
-        const newElement = document.createElement("a");
-        newElement.setAttribute("href", "#");
+        const newElement = document.createElement("div");
         newElement.classList.add(`${item.subject.toLowerCase()}`);
         newElement.textContent = item.subject + item.number;
-        
+
         if (item.completed === true) {
             newElement.classList.add("complete");
-        }else {
+        } else {
             newElement.classList.add("missing");
         }
 
         container.appendChild(newElement);
-    });
+    }, 0);
 }
 
 classTagLoader();
