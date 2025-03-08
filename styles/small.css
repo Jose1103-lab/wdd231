@@ -3,7 +3,7 @@
     --secundary-color: #d1d1d1;
     --alternative-color: #ffffff;
     --font-color: #000000;
-    --font2-color: #7f0fca;
+    --font2-color: #38005e;
     --highlight-color: #534b4b;
     --highlight2-color: #91c2ff;
     --small: .8rem;
@@ -122,6 +122,7 @@ h1 span img{
 
 .menu a:hover {
     color: var(--font2-color);
+
 }
 
 .menu a:hover::before,

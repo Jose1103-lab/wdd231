@@ -57,6 +57,6 @@
     .menu a:hover{
         content: "";
         background-color: var(--font2-color);
-        color: var(--font-color);
+        color: var(--alternative-color);
     }
 }
