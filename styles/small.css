@@ -3,7 +3,7 @@
     --secundary-color: #d1d1d1;
     --alternative-color: #ffffff;
     --font-color: #000000;
-    --font2-color: #b444ff;
+    --font2-color: #7f0fca;
     --highlight-color: #534b4b;
     --highlight2-color: #91c2ff;
     --small: .8rem;
@@ -14,6 +14,7 @@
 * {
     box-sizing: border-box;
 }
+
 
 p,
 a,
