@@ -4,9 +4,9 @@
         grid-template-columns: auto 0.5fr;
         grid-template-rows: auto auto auto;
     }
-    main h1{
+    /* main h1{
         grid-area: 1/1/2/3;
-    }
+    } */
 
     .main-ct,
     .aside-ct,
