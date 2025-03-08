@@ -65,12 +65,12 @@ li::before {
     /* margin-right: 10px; */
 }
 
-header h1 span{
+header h2 span{
     display: block;
 }
 
 
-h1 span img{
+h2 span img{
     border-radius: 10px;
     box-shadow: -4.5px 4.5px 1px 1px var(--highlight-color);
 }
