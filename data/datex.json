@@ -1,0 +1,43 @@
+{
+	"family_location": "Puerto Plata",
+	"family_members": 6,
+	"family_name": "Brito Santana",
+	"family": [
+		{
+			"name": "Alice",
+			"age": 30,
+			"single": false,
+			"job": true
+		},
+		{
+			"name": "Bob",
+			"age": 22,
+			"single": true,
+			"job": true
+		},
+		{
+			"name": "Charlie",
+			"age": 28,
+			"single": false,
+			"job": false
+		},
+		{
+			"name": "Lola",
+			"age": 18,
+			"single": true,
+			"job": false
+		},
+		{
+			"name": "Diana",
+			"age": 35,
+			"single": true,
+			"job": true
+		},
+		{
+			"name": "Eve",
+			"age": 40,
+			"single": false,
+			"job": true
+		}
+	]
+}

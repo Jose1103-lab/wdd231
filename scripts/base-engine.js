@@ -1,3 +1,7 @@
+// import datex from './data';
+// datex();
+
+
 const courses = [
     {
         subject: 'CSE',
