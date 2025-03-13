@@ -1,7 +1,3 @@
-// import datex from './data';
-// datex();
-
-
 const courses = [
     {
         subject: 'CSE',
@@ -13,7 +9,8 @@ const courses = [
         technology: [
             'Python'
         ],
-        completed: true
+        completed: true,
+        score: 'A',
     },
     {
         subject: 'WDD',
@@ -26,7 +23,8 @@ const courses = [
             'HTML',
             'CSS'
         ],
-        completed: true
+        completed: true,
+        score: 'A',
     },
     {
         subject: 'CSE',
@@ -38,7 +36,8 @@ const courses = [
         technology: [
             'Python'
         ],
-        completed: true
+        completed: true,
+        score: 'A-',
     },
     {
         subject: 'CSE',
@@ -50,7 +49,8 @@ const courses = [
         technology: [
             'C#'
         ],
-        completed: true
+        completed: true,
+        score: 'B',
     },
     {
         subject: 'WDD',
@@ -64,7 +64,8 @@ const courses = [
             'CSS',
             'JavaScript'
         ],
-        completed: true
+        completed: true,
+        score: 'A+',
     },
     {
         subject: 'WDD',
@@ -78,7 +79,8 @@ const courses = [
             'CSS',
             'JavaScript'
         ],
-        completed: false
+        completed: false,
+        score: '',
     }
 ]
 
@@ -106,7 +108,7 @@ firer.addEventListener("click", menuToggler);
 
 
 // filter function------------------------------------------------
-function classTagLoader(identifier) {
+export default function classTagLoader(identifier) {
     const container = document.querySelector(".class-ct");
     let newArray;
     let counter = 0;
@@ -142,19 +144,19 @@ function classTagLoader(identifier) {
     }, 0);
 }
 
-classTagLoader();
+// classTagLoader();
 
-const filter = document.querySelector("#all").addEventListener("click", () => {
-    classTagLoader();
-});
+// const filter = document.querySelector("#all").addEventListener("click", () => {
+//     classTagLoader();
+// });
 
-const filter1 = document.querySelector("#cse").addEventListener("click", () => {
-    classTagLoader("CSE");
-});
+// const filter1 = document.querySelector("#cse").addEventListener("click", () => {
+//     classTagLoader("CSE");
+// });
 
-const filter2 = document.querySelector("#wdd").addEventListener("click", () => {
-    classTagLoader("WDD");
-});
+// const filter2 = document.querySelector("#wdd").addEventListener("click", () => {
+//     classTagLoader("WDD");
+// });
 
-
-
+// classTagLoader();
+// export {classTagLoader, courses};
