@@ -11,63 +11,115 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
-    <script src="scripts/main-all.js"></script>
+    <script src="scripts/main.js" defer></script>
     <title>Directory</title>
 </head>
 
 <body>
     <header>
+        <div class="brand">
+            <img src="images/chamber-logo.webp" alt="Company logo" loading="lazy" width="50" class="logo">
+            <img src="images/font-chamber.webp" alt="Ambar, Chamber Of E-commerce" loading="lazy" width="200">
 
-        <img src="images/chamber-logo.webp" alt="Company logo" loading="lazy" width="50">
-        <img src="images/font-chamber.webp" alt="Ambar, Chamber Of E-commerce" loading="lazy" width="200">
+        </div>
 
         <!-- <h1>Ambar <span>Chamber Of E-commerce</span></h1> -->
 
         <div class="head-ctrl">
-            <div id="menu-toggler" class="toggler"></div>
             <div id="bg-toggler" class="toggler"></div>
+            <div id="menu-toggler" class="toggler"></div>
+        </div>
 
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </nav>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
+
+        <!-- this is comtainer for the switchers -->
         <div class="mn-tl-cont">
             <h1 class="current">Directory</h1>
             <div class="view-toggler">
-                <div id="grid" class=""></div>
-                <div id="list" class=""></div>
+                <div id="grid" class=""><img src="images/icons/grid-view.png" alt="Grid view" title="Grid view" width="14"></div>
+                <div id="list" class=""><img src="images/icons/list-view.png" alt="List view" title="List view" width="15"></div>
             </div>
         </div>
 
+        <!-- this is a template for the tiles -->
         <div id="commerce" class="commerce-cont">
             <div class="tile">
-                <img src="" alt="site">
+                <img src="images/data/ambar-factory.jpg" alt="site">
                 <div>
                     <h2>Business name</h2>
-                    <p><span class="tile-title">Phone: </span>800-060-5496</p>
-                    <p><span class="tile-title">Adrress: </span>14 3rd st, Vietnam, Santiago, DR</p>
-                    <p><span class="tile-title">Site: </span><a href="">Something</a></p>
+                    <ul>
+                        <li><span class="tile-title">Adrress: </span>14 3rd st, Vietnam, Santiago, DR</li>
+                        <li><span class="tile-title">Phone: </span>800-060-5496</li>
+                        <li><span class="tile-title">Email: </span><a href="">info@do.me</a></li>
+                        <li><span class="tile-title">Site: </span><a href="">Something</a></li>
+                    </ul>
 
                 </div>
-
             </div>
+            <div class="tile">
+                <img src="images/data/el-artesano.jpg" alt="site">
+                <div>
+                    <h2>Business name</h2>
+                    <ul>
+                        <li><span class="tile-title">Adrress: </span>14 3rd st, Vietnam, Santiago, DR</li>
+                        <li><span class="tile-title">Phone: </span>800-060-5496</li>
+                        <li><span class="tile-title">Email: </span><a href="">info@do.me</a></li>
+                        <li><span class="tile-title">Site: </span><a href="">Something</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tile">
+                <img src="images/data/ambar-dominicano.jpg" alt="site" loading="lazy">
+                <div>
+                    <h2>Business name</h2>
+                    <ul>
+                        <li><span class="tile-title">Adrress: </span>14 3rd st, Vietnam, Santiago, DR</li>
+                        <li><span class="tile-title">Phone: </span>800-060-5496</li>
+                        <li><span class="tile-title">Email: </span><a href="">info@do.me</a></li>
+                        <li><span class="tile-title">Site: </span><a href="">Something</a></li>
+                    </ul>
 
+                </div>
+            </div>
         </div>
-
     </main>
 
 
     <footer>
-        <p class="copyr charm-regular">&copy;<span id="year"></span> Ambar Chamber Of E-Commerce</p>
-        <p id="lastMod"></p>
+        <div class="s-info">
+            <h4>Ambar Chamber of Commerce</h4>
+            <ul>
+                <li>14 3rd st, Vietnam</li>
+                <li>Santiago, Dominican Republic</li>
+                <li>jservicios625@gmail.com</li>
+                <li>849-584-1957</li>
+            </ul>
+        </div>
+        <div class="n-icons">
+            <h5>Follow us</h5>
+            <a href="" title="LinkedIn"><img src="images/icons/linked-2.png" alt="LinkedIn" loading="lazy" width="40"></a>
+            <a href="" title="Instagram"><img src="images/icons/ig-2.png" alt="Instagram" loading="lazy" width="40"></a>
+            <a href="" title="Youtube"><img src="images/icons/you2b.png" alt="Youtube" loading="lazy" width="40"></a>
+        </div>
+        <div class="p-info">
+            <ul>
+                <li>WDD 231 Class Project</li>
+                <li>Jose Brito</li>
+                <li class="copyr charm-regular">&copy;<span id="year"></span> Ambar Chamber Of E-Commerce</li>
+                <li id="lastMod"></li>
+            </ul>
+        </div>
 
     </footer>
 
