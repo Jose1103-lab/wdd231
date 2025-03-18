@@ -19,9 +19,10 @@ function menuToggler() {
 }
 
 function schemaColorChanger() {
-    const body = [document.querySelector("footer"), document.querySelector("main")]; //experimental feature
+    const body = [document.querySelector("footer"), document.querySelector("main"), document.querySelector(".view-toggler")]; //experimental feature
     body[0].classList.toggle('dark');
     body[1].classList.toggle('dark');
+    body[2].classList.toggle('dark');
 }
 
 const schemaColor = document.querySelector("#bg-toggler").addEventListener("click", schemaColorChanger);

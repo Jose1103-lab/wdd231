@@ -14,17 +14,48 @@
 
 /* general stuff */
 
+.courier-prime-regular {
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+  .courier-prime-bold {
+    font-family: "Courier Prime", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+.radley-regular {
+    font-family: "Radley", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 *{
     box-sizing: border-box;
 }
 
+#current-page #sub{
+    border-color:  var(--highlight-color) ;
+}
+
+a{
+
+    font-family: "courier-prime", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--normal);
+}
+
 p,
 li,
-a,
 label,
 figcaption,
 option,
 input{
+    font-family: "Radley", serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: var(--normal);
 }
 
@@ -64,7 +95,12 @@ header{
 }
 #bg-toggler::before{
     content: "◑";
+    transition: .5s;
 }
+#bg-toggler:hover{
+    text-shadow: var(--highlight2-color) 0 0 13px ;
+}
+
 #menu-toggler::before{
     content: "☰";
     animation: rota .15s ease-in-out ;
@@ -88,7 +124,8 @@ header{
     animation:wrapperb .2s ease-in-out;
     width: 100%;
     display: none;
-    background-color: rebeccapurple;
+    background-color: var(--secundary-color);
+    box-shadow: 0 5px 20px 1px var(--secundary-color);
 }
 
 @media screen and (max-width:760px) {   
@@ -130,17 +167,25 @@ header{
 }
 
 /* commerce card design---------------------- */
-/* main{
-
-} */
+.main-container{
+    justify-self: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 860px;
+}
 
 .mn-tl-cont{
-    padding: 0 10px;
+    border-bottom: 1px solid var(--highlight2-color);
+    padding: 0 10px 5px 10px;
+    margin-bottom: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 }
 
+.view-toggler.dark #aa{
+    filter:invert(100%);
+}
 .view-toggler{
     border-radius: 6px;
     border: 1px solid black;
@@ -151,7 +196,9 @@ header{
     grid-template-columns: 1fr 1fr;
     place-items: center;
 }
-#grid{border-right: 1px solid black;}
+#grid{
+    border-right: 1px solid black;
+}
 
 #list,
 #grid{
@@ -177,10 +224,15 @@ header{
 
 .tile{
     padding: 10px;
-    border-radius: 6px;
-    border: 1px solid var(--secundary-color); 
+    border-radius: 3px;
     display: grid;
     grid-template-columns: 210px 1fr;
+    border: 1px solid transparent; 
+    transition: .3s ease-out;
+}
+
+.tile:hover{
+    border: 1px solid var(--secundary-color); 
 }
 
 .tile h2 {
@@ -205,10 +257,14 @@ header{
 
 /* footer stuff------------------------------------ */
 footer{
+    border-top: 1px solid var(--main-color);
     display: grid;
     grid-template-areas: auto auto / 1fr 1fr  ;
     place-items: center;
+    background-color: var(--secundary-color);
+    color: var(--main-color);
 }
+
 footer li{
     font-size: var(--small);
     list-style: none;
@@ -220,7 +276,10 @@ footer li{
 }
 .n-icons{
     grid-area: 1/2/2/3;
-    align-self: flex-start;
+    align-self:flex-start;
+}
+.n-icons h5{
+    margin-bottom: 5px;
 }
 
 .p-info{

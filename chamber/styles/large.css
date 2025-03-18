@@ -13,6 +13,7 @@
     }
 
     #menu {
+        box-shadow: none;
         width: fit-content;
         grid-area: 1/2/2/3;
         background-color: transparent;
