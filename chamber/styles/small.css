@@ -206,7 +206,7 @@ main h1{
 
 .view-toggler {
     border-radius: 6px;
-    border: 1px solid black;
+    border: 1px solid var(--font1-color);
     justify-self: right;
     align-self: flex-end;
     margin-bottom: 3px;
@@ -256,7 +256,7 @@ main h1{
 .commerce-cont {
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-items: center;
     justify-content: left;
     gap: 20px;
@@ -295,12 +295,15 @@ main h1{
 
 .tile li a {
     /* text-decoration: none; */
-    color: var(--primary-color);
+    color: var(--secundary-color);
 }
 
 .tile-title {
     font-size: var(--normal);
     font-weight: 900;
+}
+#commerce.dark ul a {
+    color: var(--primary-color);
 }
 
 .tile img {

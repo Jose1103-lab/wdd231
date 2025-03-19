@@ -20,10 +20,16 @@ function menuToggler() {
 }
 
 function schemaColorChanger() {
-    const body = [document.querySelector("footer"), document.querySelector("main"), document.querySelector(".view-toggler")]; //experimental feature
+    const body = [
+        document.querySelector("footer"), 
+        document.querySelector("main"), 
+        document.querySelector(".view-toggler"), 
+        document.querySelector("#commerce")
+    ]; //experimental feature
     body[0].classList.toggle('dark');
     body[1].classList.toggle('dark');
     body[2].classList.toggle('dark');
+    body[3].classList.toggle('dark');
 }
 
 async function fetchData() {
@@ -51,7 +57,7 @@ fetchData().then(data => {
                 <li><span class="tile-title">Adrress: </span>${member.address}</li>
                 <li><span class="tile-title">Phone: </span>${member.phone}</li>
                 <li><span class="tile-title">Email: </span>${member.email}</li>
-                <li><span class="tile-title">Site: </span><a href="${member.website}" target="_blank">${member.name}</a></li>
+                <li><span class="tile-title">Site: </span><a href="${member.website}" target="_blank" >${member.name}</a></li>
             </ul>
             </div>
         `;
