@@ -180,6 +180,10 @@ header {
 }
 
 /* commerce card design---------------------- */
+main h1{
+    margin: 20px 0 0 20px;
+}
+
 .main-container {
     justify-self: center;
     padding: 10px;
@@ -189,11 +193,10 @@ header {
 
 .mn-tl-cont {
     border-bottom: 1px solid var(--font-color);
-    padding: 0 10px 5px 10px;
+    padding: 0 10px 3px 10px;
     margin-bottom: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    display: flex;
+    justify-content: right;
 }
 
 .view-toggler.dark #aa,
