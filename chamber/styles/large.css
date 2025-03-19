@@ -1,4 +1,4 @@
-@media screen and (min-width:760px) {
+@media screen and (min-width:830px) {
     header{
         grid-template-columns: auto auto 50px;
         place-items: center;
@@ -10,6 +10,9 @@
 
     .logo{
         display: inline;
+    }
+    .view-toggler{
+        display: grid;
     }
 
     #menu {
@@ -24,6 +27,10 @@
     #menu ul {
         flex-direction: row;
         gap: 20px;
+        font-size: var(--normal);
+    }
+    #menu ul li a{
+        font-size: var(--normal);
     }
     #menu-toggler{
         display: none;

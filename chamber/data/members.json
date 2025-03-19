@@ -1,0 +1,82 @@
+[
+    {
+        "name": "John Doe",
+        "address": "123 Main St, Anytown, USA",
+        "phone": "555-1234",
+        "website": "http://johndoe.com",
+        "image": "johndoe.jpg",
+        "membership_level": "Gold"
+    },
+    {
+        "name": "Jane Smith",
+        "address": "456 Oak St, Anytown, USA",
+        "phone": "555-5678",
+        "website": "http://janesmith.com",
+        "image": "janesmith.jpg",
+        "membership_level": "Silver"
+    },
+    {
+        "name": "Bob Johnson",
+        "address": "789 Pine St, Anytown, USA",
+        "phone": "555-8765",
+        "website": "http://bobjohnson.com",
+        "image": "bobjohnson.jpg",
+        "membership_level": "Bronze"
+    },
+    {
+        "name": "Alice Brown",
+        "address": "101 Maple St, Anytown, USA",
+        "phone": "555-4321",
+        "website": "http://alicebrown.com",
+        "image": "alicebrown.jpg",
+        "membership_level": "Gold"
+    },
+    {
+        "name": "Charlie Davis",
+        "address": "202 Birch St, Anytown, USA",
+        "phone": "555-6789",
+        "website": "http://charliedavis.com",
+        "image": "el-artesano.jpg",
+        "membership_level": "Silver"
+    },
+    {
+        "name": "Emily Evans",
+        "address": "303 Cedar St, Anytown, USA",
+        "phone": "555-9876",
+        "website": "http://emilyevans.com",
+        "image": "emilyevans.jpg",
+        "membership_level": "Bronze"
+    },
+    {
+        "name": "Frank Green",
+        "address": "404 Spruce St, Anytown, USA",
+        "phone": "555-6543",
+        "website": "http://frankgreen.com",
+        "image": "frankgreen.jpg",
+        "membership_level": "Gold"
+    },
+    {
+        "name": "Grace Hall",
+        "address": "505 Elm St, Anytown, USA",
+        "phone": "555-3210",
+        "website": "http://gracehall.com",
+        "image": "gracehall.jpg",
+        "membership_level": "Silver"
+    },
+    {
+        "name": "Henry King",
+        "address": "606 Willow St, Anytown, USA",
+        "phone": "555-2109",
+        "website": "http://henryking.com",
+        "image": "henryking.jpg",
+        "membership_level": "Bronze"
+    },
+    {
+        "name": "Ivy Lee",
+        "address": "707 Aspen St, Anytown, USA",
+        "phone": "555-1098",
+        "website": "http://ivylee.com",
+        "image": "ivylee.jpg",
+        "membership_level": "Gold"
+    }
+]
