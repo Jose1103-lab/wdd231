@@ -1,82 +1,82 @@
 [
     {
-        "name": "John Doe",
-        "address": "123 Main St, Anytown, USA",
-        "phone": "555-1234",
-        "website": "http://johndoe.com",
-        "image": "johndoe.jpg",
+        "name": "El Artesano",
+        "address": "Mercado Modelo 2nd lv, Santiago, Dom. Rep.",
+        "phone": "809-971-5058",
+        "website": "https://www.instagram.com/joyasenambar/?hl=es",
+        "image": "el-artesano.webp",
         "membership_level": "Gold"
     },
     {
-        "name": "Jane Smith",
-        "address": "456 Oak St, Anytown, USA",
-        "phone": "555-5678",
-        "website": "http://janesmith.com",
-        "image": "janesmith.jpg",
+        "name": "Ambar Dominicano",
+        "address": "Ruta Panoramica, Santiago, Dom. Rep.",
+        "phone": "809-972-3050",
+        "website": "https://www.instagram.com/ambardominican2/",
+        "image": "ambar-dominicano.webp",
         "membership_level": "Silver"
     },
     {
-        "name": "Bob Johnson",
-        "address": "789 Pine St, Anytown, USA",
-        "phone": "555-8765",
-        "website": "http://bobjohnson.com",
-        "image": "bobjohnson.jpg",
-        "membership_level": "Bronze"
+        "name": "Blue Ambar House",
+        "address": "#30 Prof. Juan Bosch St, Puerto Plata, Dom. Rep.",
+        "phone": "809-690-2070",
+        "website": "https://www.instagram.com/blueamberhouse.official/",
+        "image": "ambar-house.webp",
+        "membership_level": "Silver"
     },
     {
-        "name": "Alice Brown",
-        "address": "101 Maple St, Anytown, USA",
-        "phone": "555-4321",
-        "website": "http://alicebrown.com",
-        "image": "alicebrown.jpg",
+        "name": "Ambar Factory",
+        "address": "La Cumbre, Santiago, Dom. Rep.",
+        "phone": "809-993-2997",
+        "website": "https://www.instagram.com/ambar_factory/",
+        "image": "ambar-factory.webp",
         "membership_level": "Gold"
     },
     {
-        "name": "Charlie Davis",
-        "address": "202 Birch St, Anytown, USA",
-        "phone": "555-6789",
-        "website": "http://charliedavis.com",
-        "image": "el-artesano.jpg",
+        "name": "Ambar Museum",
+        "address": "#59 Duarte St, Puerto Plata, Dom. Rep.",
+        "phone": "809-734-2599",
+        "website": "https://www.ambermuseum.com",
+        "image": "ambar.webp",
         "membership_level": "Silver"
     },
     {
-        "name": "Emily Evans",
-        "address": "303 Cedar St, Anytown, USA",
-        "phone": "555-9876",
-        "website": "http://emilyevans.com",
-        "image": "emilyevans.jpg",
-        "membership_level": "Bronze"
-    },
-    {
-        "name": "Frank Green",
-        "address": "404 Spruce St, Anytown, USA",
-        "phone": "555-6543",
-        "website": "http://frankgreen.com",
-        "image": "frankgreen.jpg",
+        "name": "La Bodega",
+        "address": "Av José Eugenio Kounhardt, Puerto Plata, Dom. Rep.",
+        "phone": "809-970-7750",
+        "website": "--",
+        "image": "la-bodega.webp",
         "membership_level": "Gold"
     },
     {
-        "name": "Grace Hall",
-        "address": "505 Elm St, Anytown, USA",
-        "phone": "555-3210",
-        "website": "http://gracehall.com",
-        "image": "gracehall.jpg",
+        "name": "Bleu Ambr Jewelry",
+        "address": "Le Parc by Cormont, L-11, Punta Cana, Dom. Rep.",
+        "phone": "829-883-3024",
+        "website": "https://www.bleuambr.com/",
+        "image": "blue-ambr.webp",
+        "membership_level": "Gold"
+    },
+    {
+        "name": "Joyas Criollas",
+        "address": "#24 Dr. César Dargám St, Santo Domingo, Dom. Rep.",
+        "phone": "809-567-8518",
+        "website": "https://www.joyascriollasrd.com/",
+        "image": "joyas-criollas.webp",
         "membership_level": "Silver"
     },
     {
-        "name": "Henry King",
-        "address": "606 Willow St, Anytown, USA",
-        "phone": "555-2109",
-        "website": "http://henryking.com",
-        "image": "henryking.jpg",
-        "membership_level": "Bronze"
+        "name": "Mundo del Ambar",
+        "address": "#452 Arz. Merino St, Santo Domingo, Dom. Rep.",
+        "phone": "829-451-4735",
+        "website": "https://www.instagram.com/thestoreatawm/?hl=en&utm_source=chatgpt.com",
+        "image": "ambar-world.webp",
+        "membership_level": "Silver"
     },
     {
-        "name": "Ivy Lee",
-        "address": "707 Aspen St, Anytown, USA",
-        "phone": "555-1098",
-        "website": "http://ivylee.com",
-        "image": "ivylee.jpg",
+        "name": "Skillus",
+        "address": "#421 Av. 27 de Feb, Plaza Dominica, Local 2B1, Santo Domingo, Dom. Rep.",
+        "phone": "849-258-4562",
+        "website": "https://skillusrd.com/",
+        "image": "skillus.webp",
         "membership_level": "Gold"
     }
 ]

@@ -7,6 +7,10 @@
     <meta name="author" content="Jose Brito">
     <meta name="description"
         content="This is the directory page for the Chamber of Commerce website, listing all the businesses and services available in the community.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jose1103-lab.github.io/wdd231/chamber/directory.html">
+    <meta property="og:title" content="Ambar Chamber Of E-Commerce | Directory">
+    <meta property="og:image" content="https://jbrito06.github.io/wdd231/chamber/images/data/ambar.webp">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
@@ -16,7 +20,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Radley&display=swap"
         rel="stylesheet">
     <script src="scripts/main.js" defer></script>
-    <title>Directory</title>
+    <link rel="icon" href="images/icons/chamber-logo.webp">
+    <title>Ambar Chamber of Commerce | Directory</title>
 </head>
 
 <body>
@@ -24,10 +29,7 @@
         <div class="brand">
             <img src="images/chamber-logo.webp" alt="Company logo" loading="lazy" width="50" class="logo">
             <img src="images/font-chamber.webp" alt="Ambar, Chamber Of E-commerce" loading="lazy" width="200">
-
         </div>
-
-        <!-- <h1>Ambar <span>Chamber Of E-commerce</span></h1> -->
 
         <div class="head-ctrl">
             <div id="bg-toggler" class="toggler"></div>
@@ -46,11 +48,11 @@
     </header>
 
     <main>
+        <h1 class="current">AMBAR | Directory</h1>
         <div class="main-container">
-
             <!-- this is comtainer for the switchers -->
             <div class="mn-tl-cont">
-                <h1 class="current">Directory</h1>
+                <!-- <h1 class="current">Ambar Chamber of Commerce | Directory</h1> -->
                 <div class="view-toggler">
                     <div id="grid" class=""><img src="images/icons/grid-view.png" alt="Grid view" title="Grid view"
                             width="14" id="aa"></div>
@@ -58,47 +60,10 @@
                             width="15" id="ab"></div>
                 </div>
             </div>
-
             <!-- this is a template for the tiles -->
+
             <div id="commerce" class="commerce-cont grid">
-                <!-- <div class="tile">
-                    <img src="images/data/ambar-factory.jpg" alt="site">
-                    <div>
-                        <h2>Business name</h2>
-                        <ul>
-                            <li><span class="tile-title">Adrress: </span>14 3rd st, Vietnam, Santiago, DR</li>
-                            <li><span class="tile-title">Phone: </span>800-060-5496</li>
-                            <li><span class="tile-title">Email: </span><a href="">info@do.me</a></li>
-                            <li><span class="tile-title">Site: </span><a href="">Something</a></li>
-                        </ul>
-
-                    </div>
-                </div> -->
-                <!-- <div class="tile">
-                    <img src="images/data/el-artesano.jpg" alt="site">
-                    <div id="tile-info">
-                        <h2>Business name</h2>
-                        <ul>
-                            <li><span class="tile-title">Adrress: </span>14 3rd st, Vietnam, Santiago, DR</li>
-                            <li><span class="tile-title">Phone: </span>800-060-5496</li>
-                            <li><span class="tile-title">Email: </span><a href="">info@do.me</a></li>
-                            <li><span class="tile-title">Site: </span><a href="">Something</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="tile">
-                    <img src="images/data/ambar-dominicano.jpg" alt="site" loading="lazy">
-                    <div>
-                        <h2>Business name</h2>
-                        <ul>
-                            <li><span class="tile-title">Adrress: </span>14 3rd st, Vietnam, Santiago, DR</li>
-                            <li><span class="tile-title">Phone: </span>800-060-5496</li>
-                            <li><span class="tile-title">Email: </span><a href="">info@do.me</a></li>
-                            <li><span class="tile-title">Site: </span><a href="">Something</a></li>
-                        </ul> -->
-
-                    </div>
-                </div>
+                
             </div>
         </div>
     </main>

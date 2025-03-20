@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
     "liveServer.settings.port": 5501,
     "terminal.integrated.defaultProfile.windows": "bash (MSYS2)"
+=======
+    "liveServer.settings.port": 5502
+>>>>>>> 80c9fd384fcf7db1895aff4903042319fc59c57e
 }
