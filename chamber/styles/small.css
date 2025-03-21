@@ -37,7 +37,7 @@
     box-sizing: border-box;
 }
 
-#current-page #sub {
+.current-page #sub {
     border-color: var(--highlight-color);
 }
 
