@@ -79,13 +79,13 @@ h2 span img{
     display: none;
     transition: 1s ease-in-out;
     transform: translateY(-20px);
-    /* animation: .5s ease-in-out wrapperOut; */
     animation: .5s ease-in-out wrapper;
     background-color: var(--secundary-color);
     padding: 25px 0;
     gap: 10px;
     text-align: left;
     padding-left: var(--large);    
+    /* animation: .5s ease-in-out wrapperOut; */
 }
 
 .menu.show{
@@ -140,6 +140,10 @@ h2 span img{
     position: absolute;
     right: 1rem;
     top: 3rem;
+}
+.player.show::after
+{
+    content: "✖";
 }
 
 /*  Main stuff -------------- */

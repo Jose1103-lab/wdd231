@@ -100,7 +100,9 @@ dateSetter();
 // menu function------------------------------------------------
 function menuToggler() {
     const menu = document.querySelector("#menu");
+    const button = document.querySelector(".player");
     menu.classList.toggle('show');
+    button.classList.toggle('show');
 }
 
 const firer = document.querySelector('.player');
