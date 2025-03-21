@@ -43,11 +43,16 @@ function schemaColorChanger() {
     
 }
 
-async function fetchData() {
-    const response = await fetch("data/members.json");
+async function fetchData(api) {
+    const response = await fetch(api);
     const data = await response.json();
     return data;
 }
+
+
+// fetchData("https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}").then(data => {});
+
+
 
 try {
     const schemaChecker = localStorage.getItem("schema");
@@ -57,7 +62,7 @@ try {
     const listView = document.querySelector("#list").addEventListener("click", () => { viewChanger('l') });
     const schema = document.querySelector("#menu-toggler").addEventListener("click", menuToggler);
 
-    fetchData().then(data => {
+    fetchData("data/members.json").then(data => {
         const container = document.querySelector("#commerce");
         data.forEach(member => {
             const card = document.createElement("div");
