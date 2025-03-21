@@ -19,11 +19,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Radley&display=swap"
         rel="stylesheet">
-    <script src="scripts/main.js" defer></script>
+    <script src="scripts/main.js" type="module"></script>
+
     <link rel="icon" href="images/icons/chamber-logo.webp">
     <title>Ambar Chamber of Commerce</title>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S02MT5L9BG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-S02MT5L9BG');
+</script>
 <body>
     <header>
         <div class="brand">
@@ -48,10 +57,18 @@
     </header>
 
     <main>
-        <h1 class="current">AMBAR | Directory</h1>
-        <div class="main-container">
-
+        <!-- <h1 class="current">AMBAR | Home</h1> -->
+        <div id="hero">
+            <picture>
+                <source srcset="images/data/ambar-world.webp" type="image/webp" media="(max-width: 768px)">
+                <img src="images/data/blue-ambr.webp" alt="ambar picture" loading="lazy">
+            </picture>
         </div>
+
+        <section class="main-container">
+
+
+        </section>
     </main>
 
 
