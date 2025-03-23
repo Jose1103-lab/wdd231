@@ -24,7 +24,7 @@ function menuToggler() {
 function schemaColorChanger() {
     if (localStorage.getItem("schema") === "dark") {
         localStorage.removeItem("schema");
-    }/* else {
+    }/* else { //experimental feature working on it
         const localSchema = localStorage.setItem("schema", "dark");
     }*/
 
