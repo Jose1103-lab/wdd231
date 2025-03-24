@@ -49,6 +49,22 @@ try {
         data.forEach(member => {
             // these tries will be replaced with something more efficient
             try {
+                if (member.event.status) {
+                    const events = document.querySelector(".event-cards-container");  
+                    const card = document.createElement("div");
+                    card.classList.add("event-card");
+                    card.innerHTML = `<img src="images/data/${member.event.cover}" alt="${member.event.name}  picture">
+                    <h3>${member.event.name}</h3>
+                    <p><span class="tile-title">Date: </span>${member.event.date}</p>    
+                    <p><span class="tile-title">Location: </span> ${member.event.location}</p>`;
+                    events.appendChild(card);
+                }   
+
+            } catch (error) {
+                console.log(` event\' data not needed ${error}`)   
+            }
+
+            try {
                 const container2 = document.querySelector(".sec-section");
                 if (member.membership_level === "Gold" && counter < 3) {
                     const card2 = document.createElement("div");
@@ -56,7 +72,6 @@ try {
                     card2.innerHTML = `<h3>${member.name}</h3>
                     <span>~${member.membership_level}~</span>
                     <ul>
-                    <li><span class="tile-title">Email: </span>${member.email}</li>
                     <li><span class="tile-title">Phone: </span>${member.phone}</li>
                     <li><span class="tile-title">Site: </span><a href="${member.website}" target="_blank" >${member.name}</a></li>
                     </ul>
@@ -125,11 +140,11 @@ try {
         // this the the forecast data to be displayed
         forecast.innerHTML = `<h3>Forecast</h3>
         <ul>
-        <img src="http://openweathermap.org/img/w/${weatherDataf.list[0].weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50">
+        <li><img src="http://openweathermap.org/img/w/${weatherDataf.list[0].weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50"></li>
         <li><span class="tile-title">Today: </span>${convertUnit(weatherDataf.list[0].main.feels_like)}°F</li>
-        <img src="http://openweathermap.org/img/w/${weatherDataf.list[1].weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50">
+        <li><img src="http://openweathermap.org/img/w/${weatherDataf.list[1].weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50"></li>
         <li><span class="tile-title">Tomorrow: </span>${convertUnit(weatherDataf.list[1].main.feels_like)}°F</li>
-        <img src="http://openweathermap.org/img/w/${weatherDataf.list[2].weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50">
+        <li><img src="http://openweathermap.org/img/w/${weatherDataf.list[2].weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50"></li>
         <li><span class="tile-title">${days[date[0].getDay()]}: </span>${convertUnit(weatherDataf.list[2].main.feels_like)}°F</li>
         </ul>`;
 

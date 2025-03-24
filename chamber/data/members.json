@@ -7,9 +7,11 @@
         "image": "el-artesano.webp",
         "membership_level": "Gold",
         "event": {
+            "cover": "",
             "name": "",
             "date": "",
-            "location": ""
+            "location": "",
+            "status": ""
         }
     },
     {
@@ -20,9 +22,11 @@
         "image": "ambar-dominicano.webp",
         "membership_level": "Silver",
         "event": {
-            "name": "",
-            "date": "",
-            "location": ""
+            "cover": "amber-event2.webp",
+            "name": "Amber Research",
+            "date": "5/10/2025",
+            "location": "La Puntilla, Puerto Plata",
+            "status": true
         }
     },
     {
@@ -33,9 +37,11 @@
         "image": "ambar-house.webp",
         "membership_level": "Silver",
         "event": {
+            "cover": "",
             "name": "",
             "date": "",
-            "location": ""
+            "location": "",
+            "status": ""
         }
     },
     {
@@ -46,9 +52,11 @@
         "image": "ambar-factory.webp",
         "membership_level": "Gold",
         "event": {
+            "cover": "",
             "name": "",
             "date": "",
-            "location": ""
+            "location": "",
+            "status": ""
         }
     },
     {
@@ -59,9 +67,11 @@
         "image": "ambar.webp",
         "membership_level": "Silver",
         "event": {
-            "name": "",
-            "date": "",
-            "location": ""
+            "cover": "event-ambar.webp",
+            "name": "Northern Exposition",
+            "date": "5/25/2025",
+            "location": "Galerias Torres, Puerto Plata",
+            "status": true
         }
     },
     {
@@ -72,9 +82,11 @@
         "image": "la-bodega.webp",
         "membership_level": "Gold",
         "event": {
+            "cover": "",
             "name": "",
             "date": "",
-            "location": ""
+            "location": "",
+            "status": ""
         }
     },
     {
@@ -85,9 +97,11 @@
         "image": "blue-ambr.webp",
         "membership_level": "Gold",
         "event": {
+            "cover": "",
             "name": "",
             "date": "",
-            "location": ""
+            "location": "",
+            "status": ""
         }
     },
     {
@@ -98,9 +112,11 @@
         "image": "joyas-criollas.webp",
         "membership_level": "Silver",
         "event": {
+            "cover": "",
             "name": "",
             "date": "",
-            "location": ""
+            "location": "",
+            "status": ""
         }
     },
     {
@@ -111,9 +127,11 @@
         "image": "ambar-world.webp",
         "membership_level": "Silver",
         "event": {
+            "cover": "",
             "name": "",
             "date": "",
-            "location": ""
+            "location": "",
+            "status": ""
         }
     },
     {
@@ -124,9 +142,11 @@
         "image": "skillus.webp",
         "membership_level": "Gold",
         "event": {
+            "cover": "",
             "name": "",
             "date": "",
-            "location": ""
+            "location": "",
+            "status": ""
         }
     }
 ]

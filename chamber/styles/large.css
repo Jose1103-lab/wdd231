@@ -20,6 +20,11 @@
 
     .main-tile{
         width: 300px;
+        list-style: none;
+    }
+    .main-tile li{
+        list-style: none;
+        margin-left: -20px;
     }
 
     .main-section {

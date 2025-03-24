@@ -220,10 +220,11 @@ main h1 {
     padding-bottom: 15px;
 }
 
-.weather ul li{
-    border-radius: 0;
+.weather ul li,
+.forecast ul li{
+    list-style: none;
+    margin-left: -20px;
 }
-
 
 .event-cards-container {
     width: 100%;
@@ -241,6 +242,17 @@ main h1 {
     padding: 15px;
     border-radius: 3px;
 }
+
+.event-card img{
+    width: 220px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-card p{
+    margin: 0;
+}
+
 
 .sec-section {
     display: flex;
@@ -314,7 +326,7 @@ main h1 {
 }
 
 .grid .tile img {
-    width: 237px;
+    width: 280px;
     grid-area: 1/1/2/2;
 }
 
@@ -386,9 +398,9 @@ main h1 {
 }
 
 .tile img {
-    border-radius: 5px;
+    border-radius: 3px;
     object-fit: cover;
-    width: 200px;
+    width: 230px;
     height: 200px;
 }
 
