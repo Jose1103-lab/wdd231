@@ -126,7 +126,7 @@ try {
 
         // this the the weather data to be displayed
         weather.innerHTML = `<h3>Current Weather</h3>
-        <img src="http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50">
+        <img src="https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50">
         <ul>
         <li><span class="tile-title">Weather: </span>${weatherData.weather[0].description}</li>
         <li><span class="tile-title">Location: </span>${weatherData.name}</li>
@@ -140,12 +140,12 @@ try {
         // this the the forecast data to be displayed
         forecast.innerHTML = `<h3>Forecast</h3>
         <ul>
-        <li><img src="http://openweathermap.org/img/w/${weatherDataf.list[0].weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50"></li>
+        <li><img src="https://openweathermap.org/img/w/${weatherDataf.list[0].weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50"></li>
         <li><span class="tile-title">Today: </span>${convertUnit(weatherDataf.list[0].main.feels_like)}°F</li>
-        <li><img src="http://openweathermap.org/img/w/${weatherDataf.list[1].weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50"></li>
+        <li><img src="https://openweathermap.org/img/w/${weatherDataf.list[1].weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50"></li>
         <li><span class="tile-title">Tomorrow: </span>${convertUnit(weatherDataf.list[1].main.feels_like)}°F</li>
-        <li><img src="http://openweathermap.org/img/w/${weatherDataf.list[2].weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50"></li>
-        <li><span class="tile-title">${days[date[0].getDay()]}: </span>${convertUnit(weatherDataf.list[2].main.feels_like)}°F</li>
+        <li><img src="https://openweathermap.org/img/w/${weatherDataf.list[2].weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50"></li>
+        <li><span class="tile-title">${days[date[0].getDay()+1]}: </span>${convertUnit(weatherDataf.list[2].main.feels_like)}°F</li>
         </ul>`;
 
 

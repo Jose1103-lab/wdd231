@@ -199,34 +199,39 @@ main h1 {
     -webkit-user-drag: none;
 }
 
-.ladder{
-
-    filter: opacity(90%);
-    height: 80%;
-    background-color: var(--main-color);
-    width: 50%;
-    z-index: 2;
-}
-
 .action {
     display: grid;  
     grid-template-rows: 1fr .5fr;
     position: absolute;
-    top: 0;
+    width: 100%;
+    background-color: #fabf0ebe;
+    border-radius: 5px;
+    padding:20px 30px;
+    top:20%;
     left:0;
-    height: 80%;
-}
-
-.action button{
-    width: 150px;
-    border-radius: 15px;
-    border: 0;
-    background-color: var(--highlight2-color);  
-    font-size: var(--medium);
 }
 
 .action p {
-    font-size: var(--large);
+    font-size: var(--normal);
+    text-align: center;
+}
+
+.action button{
+    padding: 10px 30px;
+    justify-self: center;
+    background-color: transparent;  
+    border: 1px solid var(--secundary-color);
+    border-radius: 8px;
+    color:var(--secundary-color);
+    font-size: var(--medium);
+    font-weight: 700;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.action button:focus,
+.action button:hover{
+    background-color: var(--highlight2-color);
 }
 
 .events>h2,
@@ -260,6 +265,7 @@ main h1 {
 
 .event-cards-container {
 
+    overflow: auto;
     width: 100%;
     padding: 10px;
     display: flex;

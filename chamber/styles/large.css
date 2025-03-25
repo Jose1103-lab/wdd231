@@ -54,6 +54,18 @@
         padding: 5px;
     }
 
+    .action p {
+        font-size: var(--large);
+    }
+    .action {
+        position: absolute;
+        width: 60%;
+        border-radius: 5px;
+        padding:20px 30px;
+        top:20%;
+        left:20%;
+    }
+
     footer {
         grid-template-columns: 1fr 1fr 1fr;
     }
