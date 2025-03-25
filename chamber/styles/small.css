@@ -61,6 +61,7 @@ h4 {
 
 p,
 li,
+button,
 label,
 figcaption,
 option,
@@ -191,12 +192,43 @@ main h1 {
 }
 
 /* ! Home style ---------------------*/
-#hero img {
+#hero picture img {
     width: 100%;
-    height: 400px;
+    height: 500px;
     object-fit: cover;
     -webkit-user-drag: none;
 }
+
+.ladder{
+
+    filter: opacity(90%);
+    height: 80%;
+    background-color: var(--main-color);
+    width: 50%;
+    z-index: 2;
+}
+
+.action {
+    display: grid;  
+    grid-template-rows: 1fr .5fr;
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 80%;
+}
+
+.action button{
+    width: 150px;
+    border-radius: 15px;
+    border: 0;
+    background-color: var(--highlight2-color);  
+    font-size: var(--medium);
+}
+
+.action p {
+    font-size: var(--large);
+}
+
 .events>h2,
 .forecast>h3,
 .weather>h3 {
@@ -227,6 +259,7 @@ main h1 {
 }
 
 .event-cards-container {
+
     width: 100%;
     padding: 10px;
     display: flex;
