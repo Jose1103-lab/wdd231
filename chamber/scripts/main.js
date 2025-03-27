@@ -1,6 +1,9 @@
 import { viewChanger, menuToggler, schemaColorChanger } from "./dom-handler.mjs";
 // import {  } from "./scripts/data.mjs"; // this module imports the data response to be consumed
 
+// const dataw = window.location.search;
+// console.log(dataw);
+// console.log("done");
 
 
 // this module will be migrated to the data.mjs, such file will be handling the fetch request for apis, json, etc
@@ -16,8 +19,8 @@ async function fetchWeatherData() {
     const responsef = await fetch("https://api.openweathermap.org/data/2.5/forecast?lat=20.50&lon=-70.50&unit=imperial&appid=df6e48afc4d27d7b531c008874d59cde");
     const weatherData = await responsew.json();
     const weatherDataf = await responsef.json();
-    console.log(weatherData);
-    console.log(weatherDataf);
+    // console.log(weatherData);
+    // console.log(weatherDataf);
     return [weatherData, weatherDataf];
 }
 
