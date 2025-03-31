@@ -58,27 +58,27 @@
     </header>
 
     <main>
-        <h1 class="current">AMBAR | Join</h1>
+        <h1 class="current">AMBAR | Join form</h1>
         <div class="main-container">
 
             <div class="form-level-cont">
-
                 <section class="form-cont">
                     <form action="thanks.html" method="get">
                         <label>First name<span class="required"> *</span><input type="text" name="firstn"
-                                placeholder="(e.g., John)" required></label>
+                                placeholder="John " required autocapitalize="words"></label>
                         <label>Last name<span class="required"> *</span><input type="text" name="lastn"
-                                placeholder="(e.g., Doe)" required></label>
+                                placeholder="Doe " required autocapitalize="words"></label>
                         <label>Email address<span class="required"> *</span><input type="email" name="email"
-                                placeholder="(e.g., john.doe@example.com)" required></label>
+                                placeholder="john doe@example.com" required></label>
                         <label>Phone<span class="required"> *</span><input type="number" name="phone"
-                                placeholder="(e.g., 1234567890)" required></label>
+                                placeholder="1234567890 " required></label>
                         <label>Organization name<span class="required"> *</span><input type="text" name="orgname"
-                                placeholder="(e.g., Tech Solutions Inc.)" required></label>
+                                placeholder="Tech Solutions Inc." required autocapitalize="words"></label>
                         <label>Organizational title<span class="required"> *</span><input type="text" name="org"
-                                placeholder=" (e.g., CEO)" required></label>
+                                placeholder="CEO" required></label>
                         <label>Organization description<span class="required"> *</span><textarea name="description"
-                                placeholder="(e.g., We specialize in IT solutions for small businesses.)" required></textarea></label>
+                                placeholder="We specialize in handcrafted jewelry for small gift shop stores."
+                                required autocapitalize="sentences"></textarea></label>
                         <label>Membership level<span class="required"> *</span>
                             <select name="membership" id="membership-level" required>
                                 <option value="" disabled selected>Select a membership level</option>
@@ -88,6 +88,7 @@
                                 <option value="np">Non Profit Organization</option>
                             </select>
                         </label>
+                        <input type="datetime-local" name="date" id="submissionDate" hidden>  
 
                         <button type="submit" id="joiner">Join Now!</button>
 
@@ -102,26 +103,33 @@
                     <h2>Membership Levels</h2>
                     <div class="membership">
 
-                        <button class="cat-view">
-                            <img src="images/gold.webp" alt="Gold membership" loading="lazy" width="50">
+                        <div class="cat-view">
                             <h4>Gold </h4>
-                        </button>
-                        <button class="cat-view">
-                            <img src="images/silver.webp" alt="Silver membership" loading="lazy" width="50">
+                            <img src="images/gold.webp" alt="Gold membership" loading="lazy" width="50">
+                            <button id="gold_view">View datails</button>
+                        </div>
+
+                        <div class="cat-view">
                             <h4>Silver </h4>
-                        </button>
-                        <button class="cat-view">
-                            <img src="images/bronze.webp" alt="Bronze membership" loading="lazy" width="50">
+                            <img src="images/silver.webp" alt="Silver membership" loading="lazy" width="50">
+                            <button id="silver_view">View datails</button>
+                        </div>
+
+                        <div class="cat-view">
                             <h4>Bronze </h4>
-                        </button>
-                        <button class="cat-view">
-                            <img src="images/np.webp" alt="Non-Profit membership" loading="lazy" width="35">
+                            <img src="images/bronze.webp" alt="Bronze membership" loading="lazy" width="50">
+                            <button id="bronze_view">View datails</button>
+                        </div>
+
+                        <div class="cat-view">
                             <h4>Non-Profit </h4>
-                        </button>
-                        </bu>
+                            <img src="images/np.webp" alt="Non-Profit membership" loading="lazy" width="35">
+                            <button id="np_view">View datails</button>
+                        </div>
                     </div>
 
                 </section>
+
             </div>
         </div>
     </main>
