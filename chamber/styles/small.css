@@ -443,6 +443,79 @@ main h1 {
     height: 200px;
 }
 
+
+/*! join style---------------------- */
+.form-level-cont{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+.form-cont{
+    width: 90%;
+    /* border :1px solid var(--secundary-color); */
+}
+
+.form-cont form{
+    width: 100%;
+
+}
+
+label{
+    margin: 0 3px ;
+    font-size: var(--normal);
+}
+
+label span {
+    color: red;
+    font-size: var(--small);
+}
+label textarea {
+    height: 200px;
+    resize: none;
+}
+
+label input,
+label select,
+label textarea {
+    display: block;
+    padding: 10px;
+    margin:5px 0 15px 0;
+    width: 100%;
+    font-size: var(--medium);
+    border-radius: 3px;
+    border: 1px solid var(--secundary-color);
+    background-color: var(--under-color);
+}
+
+label input:invalid,
+label select:invalid,
+label textarea:invalid {
+    border: 1px solid red;
+}
+label input:valid,
+label select:valid,
+label textarea:valid {
+    border: 1px solid green;
+}
+
+.membership{
+    display: flex;
+    flex-flow: row wrap;
+    place-content: center;
+    gap: 20px;
+    background-color: var(--highlight2-color);
+    padding-bottom: 10px;
+    border-radius: 3px;
+}
+
+#joiner{
+    width: 80%;
+    margin: 20px 10%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 /*! ---------------------- Footer style-----------------------------*/
 footer {
     border-top: 1px solid var(--main-color);

@@ -27,12 +27,13 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S02MT5L9BG"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-S02MT5L9BG');
+    gtag('config', 'G-S02MT5L9BG');
 </script>
+
 <body>
     <header>
         <div class="brand">
@@ -57,62 +58,71 @@
     </header>
 
     <main>
-        <h1 class="current">AMBAR | Directory</h1>
+        <h1 class="current">AMBAR | Join</h1>
         <div class="main-container">
 
-            <section class="form-cont">
-                <form action="thanks.html" method="get"> 
-                    <label>First name<span class="required"> *</span><input type="text" name="firstn" required></label>     
-                    <label>Last name<span class="required"> *</span><input type="text" name="lastn" required></label>
-                    <label>Email address<span class="required"> *</span><input type="email" name="email" required></label>
-                    <label>Phone<span class="required"> *</span><input type="number" name="phone" required></label>
-                    <label>Organization name<span class="required"> *</span><input type="text" name="orgname" required></label>
-                    <label>Organizational title<span class="required"> *</span><input type="text" name="org" required></label>
-                    <label>Organization description<span class="required"> *</span><textarea name="description" required></textarea></label>
-                    <label>Membership level<span class="required"> *</span>
-                        <select name="membership" id="membership-level" required>
-                            <option value="" disabled selected>Select a membership level</option>
-                            <option value="gold">Gold</option>
-                            <option value="silver">Silver</option>
-                            <option value="bronze">Bronze</option>
-                            <option value="np">Non Profit Organization</option>
-                        </select>
-                    </label>
+            <div class="form-level-cont">
 
-                    <button type="submit">Join Now!</button>
-                
-                </form>
+                <section class="form-cont">
+                    <form action="thanks.html" method="get">
+                        <label>First name<span class="required"> *</span><input type="text" name="firstn"
+                                placeholder="(e.g., John)" required></label>
+                        <label>Last name<span class="required"> *</span><input type="text" name="lastn"
+                                placeholder="(e.g., Doe)" required></label>
+                        <label>Email address<span class="required"> *</span><input type="email" name="email"
+                                placeholder="(e.g., john.doe@example.com)" required></label>
+                        <label>Phone<span class="required"> *</span><input type="number" name="phone"
+                                placeholder="(e.g., 1234567890)" required></label>
+                        <label>Organization name<span class="required"> *</span><input type="text" name="orgname"
+                                placeholder="(e.g., Tech Solutions Inc.)" required></label>
+                        <label>Organizational title<span class="required"> *</span><input type="text" name="org"
+                                placeholder=" (e.g., CEO)" required></label>
+                        <label>Organization description<span class="required"> *</span><textarea name="description"
+                                placeholder="(e.g., We specialize in IT solutions for small businesses.)" required></textarea></label>
+                        <label>Membership level<span class="required"> *</span>
+                            <select name="membership" id="membership-level" required>
+                                <option value="" disabled selected>Select a membership level</option>
+                                <option value="gold">Gold</option>
+                                <option value="silver">Silver</option>
+                                <option value="bronze">Bronze</option>
+                                <option value="np">Non Profit Organization</option>
+                            </select>
+                        </label>
 
-            </section>
+                        <button type="submit" id="joiner">Join Now!</button>
 
-            <section class="levels-cont">
-                
-                <div class="membership">
+                    </form>
+                </section>
+
+                <section class="levels-cont">
                     <dialog class="mb-info">
 
                     </dialog>
-                    
-                    <button>
-                        <img src="images/gold.webp" alt="Gold membership" loading="lazy" width="50">
-                        <h3>Gold Membership</h3>
-                    </button>
-                    <button>
-                        <img src="images/silver.webp" alt="Silver membership" loading="lazy" width="50">
-                        <h3>Silver Membership</h3>
-                    </button>
-                    <button>
-                        <img src="images/bronze.webp" alt="Bronze membership" loading="lazy" width="50">
-                        <h3>Bronze Membership</h3>
-                    </button>
-                    <button>
-                        <img src="images/np.webp" alt="Non-Profit membership" loading="lazy" width="50">
-                        <h3>Non-Profit Membership</h3>
-                    </button>
-                    </bu>
-                </div>
 
-            </section>
+                    <h2>Membership Levels</h2>
+                    <div class="membership">
 
+                        <button class="cat-view">
+                            <img src="images/gold.webp" alt="Gold membership" loading="lazy" width="50">
+                            <h4>Gold </h4>
+                        </button>
+                        <button class="cat-view">
+                            <img src="images/silver.webp" alt="Silver membership" loading="lazy" width="50">
+                            <h4>Silver </h4>
+                        </button>
+                        <button class="cat-view">
+                            <img src="images/bronze.webp" alt="Bronze membership" loading="lazy" width="50">
+                            <h4>Bronze </h4>
+                        </button>
+                        <button class="cat-view">
+                            <img src="images/np.webp" alt="Non-Profit membership" loading="lazy" width="35">
+                            <h4>Non-Profit </h4>
+                        </button>
+                        </bu>
+                    </div>
+
+                </section>
+            </div>
         </div>
     </main>
 
