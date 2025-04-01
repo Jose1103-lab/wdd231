@@ -532,6 +532,31 @@ label select:valid {
     margin: 0;
 }
 
+.price{
+    font-size: var(--normal);
+    grid-area: 2/1/3/3;
+    color: var(--highlight-color);
+}
+.md-cont h2{
+    margin-top:10px ;
+    grid-area: 1/1/2/3 ;
+}
+
+.close{
+    grid-area: 1/2/2/3;
+    justify-self: right;
+    background-color: transparent;
+    border: none;
+    font-size: var(--large);
+    cursor: pointer;
+    height: fit-content;
+    width: fit-content;
+}
+
+.close::after{
+    content: "✖";
+}
+
 #joiner,
 .cat-view button{
     cursor: pointer;  

@@ -71,7 +71,7 @@
                         <label>Email address<span class="required"> *</span><input type="email" name="email"
                                 placeholder="john doe@example.com" required></label>
                         <label>Phone<span class="required"> *</span><input type="number" name="phone"
-                                placeholder="1234567890 " required></label>
+                                placeholder="8097658886" required></label>
                         <label>Organization name<span class="required"> *</span><input type="text" name="orgname"
                                 placeholder="Tech Solutions Inc." required autocapitalize="words"></label>
                         <label>Organizational title<span class="required"> *</span><input type="text" name="org"
@@ -96,36 +96,47 @@
                 </section>
 
                 <section class="levels-cont">
-                    <dialog class="mb-info" id="modal">
-                        <h3>Gold Membership</h3>
-                        <p>Pricing: $450 per year.</p>
-                        <p>Gold members enjoy premium benefits, including exclusive networking events, priority support, and more.</p>
-                        <p>Additional perks include access to VIP-only events and a dedicated account manager.</p>
-                        <button id="close">Close</button>
+                    <dialog class="mb-info" id="gd-modal">
+                        <div class="md-cont">
+                            <h2>Gold Membership</h2>
+                            <p class="price">Pricing: <span>$450 per year</span>.</p>
+                            <p>Gold members enjoy premium benefits, including exclusive networking events, priority
+                                support, and more.</p>
+                            <button class="close"></button>
+                            <img src="images/gold.webp" alt="Gold membership" loading="lazy" width="200">
+                        </div>
                     </dialog>
-
-                    <dialog class="mb-info" id="modal">
-                        <h3>Silver Membership</h3>
-                        <p>Pricing: $275 per year.</p>
-                        <p>Silver members receive access to standard benefits, including community events and support services.</p>
-                        <p>Additional perks include discounted event tickets and promotional opportunities.</p>
-                        <button id="close">Close</button>
+                    
+                    <dialog class="mb-info" id="sl-modal">
+                        <div class="md-cont">
+                            <h2>Silver Membership</h2>
+                            <p class="price">Pricing: $275 per year.</p>
+                            <p>Silver members receive access to standard benefits, including community events and
+                                support services.</p>
+                            <button class="close"></button>
+                            <img src="images/silver.webp" alt="Silver membership" loading="lazy" width="200">
+                        </div>
                     </dialog>
-
-                    <dialog class="mb-info" id="modal">
-                        <h3>Bronze Membership</h3>
-                        <p>Pricing: $150 per year.</p>
-                        <p>Bronze members gain access to basic benefits, perfect for small businesses and startups.</p>
-                        <p>Additional perks include access to online resources and a quarterly newsletter.</p>
-                        <button id="close">Close</button>
+                    
+                    <dialog class="mb-info" id="bz-modal">
+                        <div class="md-cont">
+                            <h2>Bronze Membership</h2>
+                            <p class="price">Pricing: $150 per year.</p>
+                            <p>Bronze members gain access to basic benefits, perfect for small businesses and startups.</p>
+                            <button class="close"></button>
+                            <img src="images/bronze.webp" alt="Bronze membership" loading="lazy" width="200">
+                        </div>
                     </dialog>
-
-                    <dialog class="mb-info" id="modal">
-                        <h3>Non-Profit Membership</h3>
-                        <p>Pricing: Free.</p>
-                        <p>Non-Profit members receive tailored benefits to support their organizational goals and community impact.</p>
-                        <p>Additional perks include grant-writing assistance and community outreach support.</p>
-                        <button id="close">Close</button>
+                    
+                    <dialog class="mb-info" id="np-modal">
+                        <div class="md-cont">
+                            <h2>Non-Profit Membership</h2>
+                            <p>Free</p>
+                            <p>Non-Profit members receive tailored benefits to support their organizational goals and
+                                community impact.</p>
+                            <button class="close"></button>
+                            <img src="images/np.webp" alt="Non-Profit membership" loading="lazy" width="200">
+                        </div>
                     </dialog>
 
                     <h2>Membership Levels</h2>
@@ -134,25 +145,25 @@
                         <div class="cat-view">
                             <h4>Gold </h4>
                             <img src="images/gold.webp" alt="Gold membership" loading="lazy" width="50">
-                            <button id="gold_view">View datails</button>
+                            <button class="open">View datails</button>
                         </div>
 
                         <div class="cat-view">
                             <h4>Silver </h4>
                             <img src="images/silver.webp" alt="Silver membership" loading="lazy" width="50">
-                            <button id="gold_view">View datails</button>
+                            <button class="open">View datails</button>
                         </div>
 
                         <div class="cat-view">
                             <h4>Bronze </h4>
                             <img src="images/bronze.webp" alt="Bronze membership" loading="lazy" width="50">
-                            <button id="bronze_view">View datails</button>
+                            <button class="open">View datails</button>
                         </div>
 
                         <div class="cat-view">
                             <h4>Non-Profit </h4>
                             <img src="images/np.webp" alt="Non-Profit membership" loading="lazy" width="35">
-                            <button id="np_view">View datails</button>
+                            <button class="open">View datails</button>
                         </div>
                     </div>
 

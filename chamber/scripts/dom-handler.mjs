@@ -1,3 +1,5 @@
+import { fetchWeatherData } from "./data.mjs";
+
 //this function changer the view to grid or list
 function viewChanger(identifier) {
     const container = document.querySelector("#commerce");
@@ -44,5 +46,69 @@ function schemaColorChanger() {
     }
 }
 
+// this function opens and closes modals
+function modalHandler(elementId, noModal){
+    const elmodal = document.querySelector(`${elementId}`);
+    const elmodalClose = document.querySelectorAll(".close");
+    const elmodalOpen = document.querySelectorAll(".open");    
 
-export { viewChanger, menuToggler, schemaColorChanger };
+    elmodalClose[`${noModal}`].addEventListener("click", () => {
+        elmodal.close();
+    });
+    elmodalOpen[`${noModal}`].addEventListener("click", () => {
+        elmodal.showModal();
+    })
+}
+
+// this function handles the elements construction for the weather section 
+function weatherBuilder(){
+    fetchWeatherData().then(([weatherData, weatherDataf]) => {
+        console.log(`Weather api status: ${weatherData.cod}`);
+        const weather = document.querySelector(".weather");
+        const date = [new Date(weatherData.sys.sunrise * 1000), new Date(weatherData.sys.sunset * 1000)];
+        const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+        const forecast = document.querySelector(".forecast");
+    
+        try {
+            weather.innerHTML = "";
+            forecast.innerHTML = "";
+            // this function converts the temperature from kelvin to fahrenheit
+            function convertUnit(temp) { return ((temp - 273.15) * 9 / 5 + 32).toFixed(2); }
+            // this the the weather data to be displayed
+            weather.innerHTML = `<h3>Current Weather</h3>
+            <img src="https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50">
+            <ul>
+            <li><span class="tile-title">Weather: </span>${weatherData.weather[0].description}</li>
+            <li><span class="tile-title">Location: </span>${weatherData.name}</li>
+            <li><span class="tile-title">Temperature: </span>${convertUnit(weatherData.main.temp)}°F</li>
+            <li><span class="tile-title">Humidity: </span>${weatherData.main.humidity}%</li>
+            <li><span class="tile-title">Wind: </span>${weatherData.wind.speed}m/s</li>
+            <li><span class="tile-title">Sunrise: </span>${date[0].toLocaleTimeString()}</li>
+            <li><span class="tile-title">Sunset: </span>${date[1].toLocaleTimeString()}</li>
+            </ul>`; 
+            // this the the forecast data to be displayed
+            forecast.innerHTML = `<h3>Forecast</h3>
+            <ul>
+            <li><img src="https://openweathermap.org/img/w/${weatherDataf.list[0].weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50"></li>
+            <li><span class="tile-title">Today: </span>${convertUnit(weatherDataf.list[0].main.feels_like)}°F</li>
+            <li><img src="https://openweathermap.org/img/w/${weatherDataf.list[1].weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50"></li>
+            <li><span class="tile-title">Tomorrow: </span>${convertUnit(weatherDataf.list[1].main.feels_like)}°F</li>
+            <li><img src="https://openweathermap.org/img/w/${weatherDataf.list[2].weather[0].icon}.png" alt="${weatherData.weather[0].description} icon" loading="lazy" width="50"></li>
+            <li><span class="tile-title">${days[date[0].getDay() + 1]}: </span>${convertUnit(weatherDataf.list[2].main.feels_like)}°F</li>
+            </ul>`;
+
+       } catch (error) {
+            console.info(`CHECK THIS: ${error}`);
+       }
+    })
+}
+
+// this function loads the year in the footer
+function yearLoader(){
+    const date = new Date();
+    const year = date.getFullYear();
+    document.querySelector("#year").textContent = year;
+}
+
+
+export { weatherBuilder, viewChanger, modalHandler, menuToggler, schemaColorChanger, yearLoader};

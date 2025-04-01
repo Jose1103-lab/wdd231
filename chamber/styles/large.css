@@ -12,20 +12,29 @@
         background-color: transparent;
     }
 
+    .md-cont{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: var(--normal) auto;
+        place-items: center;
+        gap: 5px;
+    }
+
     .mb-info{
-        background-color: red;
-        box-shadow: 5px 8px 15px 3px var(--under3-color);
+        background-color: var(--main-color);
+        box-shadow: 0 0 105px var(--under3-color);
         border-radius: 5px;
-        padding: 20px 30px;
+        padding: 25px 30px;
+        border: none;
+    }
+
+    .mb-info::backdrop {
+        background-color: rgba(133, 133, 133, 0.389);
     }
     
     :modal{
         width: 50%;
         height: 50%;
-    }
-
-    .modal::backdrop {
-        background-color: rgba(0, 0, 0, 0.678);
     }
     
     #hero img {
@@ -151,6 +160,7 @@
     }
 
     .cat-view:hover {
+        transform: scale(1.02);
         box-shadow: 5px 8px 15px 3px var(--under3-color);
     }
     
