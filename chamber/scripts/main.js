@@ -1,6 +1,17 @@
 import { viewChanger, menuToggler, schemaColorChanger } from "./dom-handler.mjs";
 // import {  } from "./scripts/data.mjs"; // this module imports the data response to be consumed
 
+const elmodal = document.querySelector("#modal");
+const elmodalClose = document.querySelector("#close");
+const elmodalOpen = document.querySelector("#gold_view");
+
+elmodalClose.addEventListener("click", () => {
+    elmodal.close();
+});
+elmodalOpen.addEventListener("click", () => {
+    elmodal.showModal();
+})
+
 // this module will be migrated to the data.mjs, such file will be handling the fetch request for apis, json, etc
 async function fetchData() {
     const response = await fetch("data/members.json");

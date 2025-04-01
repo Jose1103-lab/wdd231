@@ -205,7 +205,7 @@ main h1 {
     position: absolute;
     width: 100%;
     background-color: #fabf0ebe;
-    border-radius: 5px;
+    border-radius: 6px;
     padding:20px 30px;
     top:20%;
     left:0;
@@ -221,12 +221,12 @@ main h1 {
     justify-self: center;
     background-color: transparent;  
     border: 1px solid var(--secundary-color);
-    border-radius: 8px;
+    border-radius: 3px;
     color:var(--secundary-color);
     font-size: var(--medium);
     font-weight: 700;
     cursor: pointer;
-    transition: .5s;
+    transition: .3s ease-out;
 }
 
 .action button:focus,
@@ -396,18 +396,19 @@ main h1 {
 
 .tile {
     display: grid;
-    grid-template-columns: 210px 1fr;
+    grid-template-columns: 250px 1fr;
     width: 100%;
     padding: 10px;
-    border-radius: 6px;
-    border: 1px solid var(--highlight2-color);
+    border-radius: 3px;
+    /* border: 1px solid var(--highlight2-color); */
     transition: .3s ease-out;
 }
 
 .tile:hover {
     background-color: var(--main-color);
-    box-shadow: 1px 2px 3px var(--highlight2-color);
+    box-shadow: 6px 6px 15px 1px var(--under3-color);
     color: var(--font1-color);
+    transform: scale(1.01);
 }
 
 .tile h2 {
@@ -480,17 +481,15 @@ label textarea {
     font-size: var(--normal);
     border-radius: 3px;
     border: 1px solid var(--secundary-color);
-    background-color: var(--under-color);
+    background-color: var(--main-color);
 }
 
 label input:invalid,
-label select:invalid,
-label textarea:invalid {
+label select:invalid {
     border-left: 3px solid red;
 }
 label input:valid,
-label select:valid,
-label textarea:valid {
+label select:valid {
     border: 1px solid green;
 }
 
