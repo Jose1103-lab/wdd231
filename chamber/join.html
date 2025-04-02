@@ -25,20 +25,20 @@
     <title>Ambar Chamber of Commerce | Join</title>
 </head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S02MT5L9BG"></script>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-S02MT5L9BG"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-S02MT5L9BG');
-</script>
+</script> -->
 
 <body>
     <header>
         <div class="brand">
             <img src="images/chamber-logo.webp" alt="Company logo" loading="lazy" width="50" class="logo">
-            <img src="images/font-chamber-dark.webp" alt="Ambar, Chamber Of E-commerce" loading="lazy" width="200">
+            <img src="images/font-chamber.webp" alt="Ambar, Chamber Of E-commerce" loading="lazy" width="200">
         </div>
 
         <div class="head-ctrl">
@@ -60,22 +60,20 @@
     <main>
         <h1 class="current">AMBAR | Join form</h1>
         <div class="main-container">
-
             <div class="form-level-cont">
                 <section class="form-cont">
                     <form action="thanks.html" method="get">
                         <label>First name<span class="required"> *</span><input type="text" name="firstn"
-                                required autocapitalize="words" autocomplete="given-name"></label>
+                                required autocomplete="given-name"></label>
                         <label>Last name<span class="required"> *</span><input type="text" name="lastn"
-                                required autocapitalize="words" autocomplete="family-name"></label>
+                                required autocomplete="family-name"></label>
                         <label>Email address<span class="required"> *</span><input type="email" name="email"
                                 placeholder="john_doe@example.com" required autocomplete="email"></label>
-                        <label>Phone<span class="required"> *</span><input type="number" name="phone"
-                                placeholder="8097658886" required autocomplete="tel"></label>
+                        <label>Phone<span class="required"> *</span><input type="number" name="phone" placeholder="8097658886" required autocomplete="mobile" min="1000000000"></label>
                         <label>Organization name<span class="required"> *</span><input type="text" name="orgname"
                                 placeholder="Tech Solutions Inc." required autocapitalize="words" autocomplete="organization"></label>
                         <label>Organizational title<span class="required"> *</span><input type="text" name="org"
-                            pattern="[A-Za-z\s\-]{7,}" placeholder="CEO, Senior dev, etc." required autocomplete="organization-title"/></label>
+                            pattern="[A-Za-z\s\-]{7,}" placeholder="CEO, Senior dev, etc." required autocomplete="organization-title"></label>
                         <label>Organization description<textarea name="description"
                                  autocapitalize="sentences"></textarea></label>
                         <label>Membership level<span class="required"> *</span>
@@ -87,7 +85,7 @@
                                 <option value="np">Non Profit Organization</option>
                             </select>
                         </label>
-                        <input type="datetime-local" name="date" id="submissionDate" hidden>  
+                        <input type="date" name="date" id="submissionDate" hidden>  
 
                         <button type="submit" id="joiner">Join Now!</button>
 
@@ -141,25 +139,25 @@
                     <h2>Membership Levels</h2>
                     <div class="membership">
 
-                        <div class="cat-view">
+                        <div class="cat-view gcat">
                             <h4>Gold </h4>
-                            <img src="images/gold.webp" alt="Gold membership" loading="lazy" width="50">
+                            <img src="images/gold.webp" alt="Gold membership" class="cooleffect" loading="lazy" width="50">
                             <button class="open">View datails</button>
                         </div>
 
-                        <div class="cat-view">
+                        <div class="cat-view scat">
                             <h4>Silver </h4>
-                            <img src="images/silver.webp" alt="Silver membership" loading="lazy" width="50">
+                            <img src="images/silver.webp" alt="Silver membership" class="cooleffect" loading="lazy" width="50">
                             <button class="open">View datails</button>
                         </div>
 
-                        <div class="cat-view">
+                        <div class="cat-view bcat">
                             <h4>Bronze </h4>
-                            <img src="images/bronze.webp" alt="Bronze membership" loading="lazy" width="50">
+                            <img src="images/bronze.webp" alt="Bronze membership" class="cooleffect" loading="lazy" width="50">
                             <button class="open">View datails</button>
                         </div>
 
-                        <div class="cat-view">
+                        <div class="cat-view npcat">
                             <h4>Non-Profit </h4>
                             <img src="images/np.webp" alt="Non-Profit membership" loading="lazy" width="35">
                             <button class="open">View datails</button>

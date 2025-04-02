@@ -1,15 +1,23 @@
-import {formData, weatherBuilder, modalHandler, viewChanger, menuToggler, yearLoader,schemaColorChanger } from "./dom-handler.mjs";
-
+import { formData, weatherBuilder, modalHandler, viewChanger, menuToggler, yearLoader, schemaColorChanger } from "./dom-handler.mjs";
 // import {  } from "./scripts/data.mjs"; // this module imports the data response to be consumed
 
-formData(); 
+formData();
 weatherBuilder();
 yearLoader();
 
+const schema = document.querySelector("#menu-toggler").addEventListener("click", menuToggler);
+const schemaColor = document.querySelector("#bg-toggler").addEventListener("click", schemaColorChanger);
 
-const submissiondata = document.querySelector("#submissionDate")
-submissiondata.textContent = yearLoader(); // this will be used to get the current year for the footer
+// this module will be migrated to the dom-handler.mjs, such file will be handling the dom manipulation for all pages 
+const schemaChecker = localStorage.getItem("schema"); // with the feature i will look for the preferred schema color saved in the local storage 
+if (schemaChecker === "dark") { schemaColorChanger(); }
 
+// this module will be migrated to the data.mjs, such file will be handling the fetch request for apis, json, etc
+async function fetchData() {
+    const response = await fetch("data/members.json");
+    const data = await response.json();
+    return data;
+}
 
 try {
     modalHandler("#gd-modal", 0);
@@ -19,21 +27,6 @@ try {
 } catch (error) {
     console.log('Some modals were not loaded')
 }
-
-// this module will be migrated to the data.mjs, such file will be handling the fetch request for apis, json, etc
-async function fetchData() {
-    const response = await fetch("data/members.json");
-    const data = await response.json();
-    return data;
-}
-
-const schema = document.querySelector("#menu-toggler").addEventListener("click", menuToggler);
-const schemaColor = document.querySelector("#bg-toggler").addEventListener("click", schemaColorChanger);
-
-// this module will be migrated to the dom-handler.mjs, such file will be handling the dom manipulation for all pages 
-const schemaChecker = localStorage.getItem("schema"); // with the feature i will look for the preferred schema color saved in the local storage 
-if (schemaChecker === "dark") { schemaColorChanger(); }
-
 
 try {
     const gridView = document.querySelector("#grid").addEventListener("click", () => { viewChanger("g") });

@@ -1,27 +1,29 @@
 import { fetchWeatherData, urlGetter } from "./data.mjs";
 
+// this function will be used to fetch the data from form url
 function formData() {
-    const data = urlGetter();
-    const commerce = document.querySelector("#thanks");
-    const container = document.createElement("div");
-    // container.classList.add("");
-    container.innerHTML = `<div class="form-data">
-    <img src="images/check.png" alt="check image" loading="lazy" width="150">
-    <h2>Process Completed</h2>
-        <ul>
-            <li>${data.get("lastn")}, ${data.get("firstn")}</li>
-            <li>${data.get("email")}</li>
-            <li>${data.get("phone")}</li>
-            <li>${data.get("orgname")}</li>
-            <li><span class="tile-title">Submitted:</span> ${data.get("date")}</li>
-        </ul>
-
-        <p>Thank you for your submission, we will get back to you as soon as possible.</p>
-    </div>`
-    commerce.appendChild(container);
-    // return;
+    try {
+        const data = urlGetter();
+        const commerce = document.querySelector("#thanks");
+        const container = document.createElement("div");
+        // container.classList.add("");
+        container.innerHTML = `<div class="form-data">
+        <img src="images/check.png" alt="check image" loading="lazy" class="done" width="150">
+        <h2>Process Completed</h2>
+            <ul>
+                <li>${data.get("lastn")}, ${data.get("firstn")}</li>
+                <li>${data.get("email")}</li>
+                <li>${data.get("phone")}</li>
+                <li>${data.get("orgname")}</li>
+                <li><span class="tile-title">Submitted:</span> ${data.get("date")}</li>
+            </ul>
+    
+            <p>Thank you for your submission, we will get back to you as soon as possible.</p>
+        </div>`
+        commerce.appendChild(container);
+        // return;
+    } catch (error) { }
 }
-; // this function will be used to fetch the data from form url
 
 //this function changer the view to grid or list
 function viewChanger(identifier) {
@@ -121,7 +123,7 @@ function weatherBuilder() {
             </ul>`;
 
         } catch (error) {
-            console.info(`CHECK THIS: ${error}`);
+            console.info(`Warning! ${error}`);
         }
     })
 }
@@ -131,9 +133,12 @@ function yearLoader() {
     const date = new Date();
     const year = date.getFullYear();
     document.querySelector("#year").textContent = year;
-    
-    console.log(date);
-    return date
+
+    try {
+        const submissiondata = document.querySelector("#submissionDate")
+        submissiondata.value = date.toLocaleDateString();
+    } catch (error) {
+    }
 }
 
 

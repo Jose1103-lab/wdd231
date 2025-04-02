@@ -145,28 +145,17 @@
         gap: 20px;
     }
 
-    .md-cont {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: var(--normal) auto;
-        place-items: center;
-        gap: 5px;
-    }
-
-    .mb-info {
-        background-color: var(--main-color);
-        box-shadow: 0 0 105px var(--under3-color);
-        border-radius: 5px;
-        padding: 25px 30px;
-        border: none;
-    }
-
     .mb-info::backdrop {
         background-color: rgba(133, 133, 133, 0.389);
     }
 
-    :modal {
+    .mb-info{
         width: 50%;
         height: 400px;
     }
+
+    /* :modal {
+        width: 50%;
+        height: 400px;
+    } */
 }
