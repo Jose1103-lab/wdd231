@@ -1,4 +1,27 @@
-import { fetchWeatherData } from "./data.mjs";
+import { fetchWeatherData, urlGetter } from "./data.mjs";
+
+function formData() {
+    const data = urlGetter();
+    const commerce = document.querySelector("#thanks");
+    const container = document.createElement("div");
+    // container.classList.add("");
+    container.innerHTML = `<div class="form-data">
+    <img src="images/check.png" alt="check image" loading="lazy" width="150">
+    <h2>Process Completed</h2>
+        <ul>
+            <li>${data.get("lastn")}, ${data.get("firstn")}</li>
+            <li>${data.get("email")}</li>
+            <li>${data.get("phone")}</li>
+            <li>${data.get("orgname")}</li>
+            <li><span class="tile-title">Submitted:</span> ${data.get("date")}</li>
+        </ul>
+
+        <p>Thank you for your submission, we will get back to you as soon as possible.</p>
+    </div>`
+    commerce.appendChild(container);
+    // return;
+}
+; // this function will be used to fetch the data from form url
 
 //this function changer the view to grid or list
 function viewChanger(identifier) {
@@ -47,10 +70,10 @@ function schemaColorChanger() {
 }
 
 // this function opens and closes modals
-function modalHandler(elementId, noModal){
+function modalHandler(elementId, noModal) {
     const elmodal = document.querySelector(`${elementId}`);
     const elmodalClose = document.querySelectorAll(".close");
-    const elmodalOpen = document.querySelectorAll(".open");    
+    const elmodalOpen = document.querySelectorAll(".open");
 
     elmodalClose[`${noModal}`].addEventListener("click", () => {
         elmodal.close();
@@ -61,14 +84,14 @@ function modalHandler(elementId, noModal){
 }
 
 // this function handles the elements construction for the weather section 
-function weatherBuilder(){
+function weatherBuilder() {
     fetchWeatherData().then(([weatherData, weatherDataf]) => {
         console.log(`Weather api status: ${weatherData.cod}`);
         const weather = document.querySelector(".weather");
         const date = [new Date(weatherData.sys.sunrise * 1000), new Date(weatherData.sys.sunset * 1000)];
         const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
         const forecast = document.querySelector(".forecast");
-    
+
         try {
             weather.innerHTML = "";
             forecast.innerHTML = "";
@@ -85,7 +108,7 @@ function weatherBuilder(){
             <li><span class="tile-title">Wind: </span>${weatherData.wind.speed}m/s</li>
             <li><span class="tile-title">Sunrise: </span>${date[0].toLocaleTimeString()}</li>
             <li><span class="tile-title">Sunset: </span>${date[1].toLocaleTimeString()}</li>
-            </ul>`; 
+            </ul>`;
             // this the the forecast data to be displayed
             forecast.innerHTML = `<h3>Forecast</h3>
             <ul>
@@ -97,18 +120,21 @@ function weatherBuilder(){
             <li><span class="tile-title">${days[date[0].getDay() + 1]}: </span>${convertUnit(weatherDataf.list[2].main.feels_like)}°F</li>
             </ul>`;
 
-       } catch (error) {
+        } catch (error) {
             console.info(`CHECK THIS: ${error}`);
-       }
+        }
     })
 }
 
 // this function loads the year in the footer
-function yearLoader(){
+function yearLoader() {
     const date = new Date();
     const year = date.getFullYear();
     document.querySelector("#year").textContent = year;
+    
+    console.log(date);
+    return date
 }
 
 
-export { weatherBuilder, viewChanger, modalHandler, menuToggler, schemaColorChanger, yearLoader};
+export { formData, weatherBuilder, viewChanger, modalHandler, menuToggler, schemaColorChanger, yearLoader };

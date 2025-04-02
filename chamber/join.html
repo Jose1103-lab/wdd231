@@ -65,19 +65,18 @@
                 <section class="form-cont">
                     <form action="thanks.html" method="get">
                         <label>First name<span class="required"> *</span><input type="text" name="firstn"
-                                placeholder="John " required autocapitalize="words"></label>
+                                required autocapitalize="words" autocomplete="given-name"></label>
                         <label>Last name<span class="required"> *</span><input type="text" name="lastn"
-                                placeholder="Doe " required autocapitalize="words"></label>
+                                required autocapitalize="words" autocomplete="family-name"></label>
                         <label>Email address<span class="required"> *</span><input type="email" name="email"
-                                placeholder="john doe@example.com" required></label>
+                                placeholder="john_doe@example.com" required autocomplete="email"></label>
                         <label>Phone<span class="required"> *</span><input type="number" name="phone"
-                                placeholder="8097658886" required></label>
+                                placeholder="8097658886" required autocomplete="tel"></label>
                         <label>Organization name<span class="required"> *</span><input type="text" name="orgname"
-                                placeholder="Tech Solutions Inc." required autocapitalize="words"></label>
+                                placeholder="Tech Solutions Inc." required autocapitalize="words" autocomplete="organization"></label>
                         <label>Organizational title<span class="required"> *</span><input type="text" name="org"
-                                placeholder="CEO" required></label>
+                            pattern="[A-Za-z\s\-]{7,}" placeholder="CEO, Senior dev, etc." required autocomplete="organization-title"/></label>
                         <label>Organization description<textarea name="description"
-                                placeholder="We specialize in handcrafted jewelry for small gift shop stores."
                                  autocapitalize="sentences"></textarea></label>
                         <label>Membership level<span class="required"> *</span>
                             <select name="membership" id="membership-level" required>
@@ -131,11 +130,11 @@
                     <dialog class="mb-info" id="np-modal">
                         <div class="md-cont">
                             <h2>Non-Profit Membership</h2>
-                            <p>Free</p>
+                            <p class="price">Free</p>
                             <p>Non-Profit members receive tailored benefits to support their organizational goals and
                                 community impact.</p>
                             <button class="close"></button>
-                            <img src="images/np.webp" alt="Non-Profit membership" loading="lazy" width="200">
+                            <img src="images/np.webp" alt="Non-Profit membership" loading="lazy" width="150">
                         </div>
                     </dialog>
 

@@ -10,5 +10,11 @@ async function fetchWeatherData() {
     return [weatherData, weatherDataf];
 }
 
+// this function will be used to fetch the data from form url
+function urlGetter() {
+    const data = new URLSearchParams(window.location.search);
+    
+    return data;
+}
 
-export { fetchWeatherData };
+export { fetchWeatherData , urlGetter };

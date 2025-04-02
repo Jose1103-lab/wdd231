@@ -1,9 +1,15 @@
-import { weatherBuilder, modalHandler, viewChanger, menuToggler, yearLoader,schemaColorChanger } from "./dom-handler.mjs";
+import {formData, weatherBuilder, modalHandler, viewChanger, menuToggler, yearLoader,schemaColorChanger } from "./dom-handler.mjs";
 
 // import {  } from "./scripts/data.mjs"; // this module imports the data response to be consumed
 
+formData(); 
 weatherBuilder();
-yearLoader()
+yearLoader();
+
+
+const submissiondata = document.querySelector("#submissionDate")
+submissiondata.textContent = yearLoader(); // this will be used to get the current year for the footer
+
 
 try {
     modalHandler("#gd-modal", 0);
