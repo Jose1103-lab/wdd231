@@ -1,0 +1,221 @@
+/*
+* CSS HEX /
+--night: #0b090aff;
+--eerie-black: #161a1dff;
+--blood-red: #660708ff;
+--cornell-red: #a4161aff;
+--cornell-red-2: #ba181bff;
+--imperial-red: #e5383bff;
+--silver: #b1a7a6ff;
+--timberwolf: #d3d3d3ff;
+--white-smoke: #f5f3f4ff;
+--white: #ffffffff;
+
+/* SCSS Gradient *
+$gradient-top: linear-gradient(0deg, #0b090aff, #161a1dff, #660708ff, #a4161aff, #ba181bff, #e5383bff, #b1a7a6ff, #d3d3d3ff, #f5f3f4ff, #ffffffff);
+$gradient-right: linear-gradient(90deg, #0b090aff, #161a1dff, #660708ff, #a4161aff, #ba181bff, #e5383bff, #b1a7a6ff, #d3d3d3ff, #f5f3f4ff, #ffffffff);
+$gradient-bottom: linear-gradient(180deg, #0b090aff, #161a1dff, #660708ff, #a4161aff, #ba181bff, #e5383bff, #b1a7a6ff, #d3d3d3ff, #f5f3f4ff, #ffffffff);
+$gradient-left: linear-gradient(270deg, #0b090aff, #161a1dff, #660708ff, #a4161aff, #ba181bff, #e5383bff, #b1a7a6ff, #d3d3d3ff, #f5f3f4ff, #ffffffff);
+$gradient-top-right: linear-gradient(45deg, #0b090aff, #161a1dff, #660708ff, #a4161aff, #ba181bff, #e5383bff, #b1a7a6ff, #d3d3d3ff, #f5f3f4ff, #ffffffff);
+$gradient-bottom-right: linear-gradient(135deg, #0b090aff, #161a1dff, #660708ff, #a4161aff, #ba181bff, #e5383bff, #b1a7a6ff, #d3d3d3ff, #f5f3f4ff, #ffffffff);
+$gradient-top-left: linear-gradient(225deg, #0b090aff, #161a1dff, #660708ff, #a4161aff, #ba181bff, #e5383bff, #b1a7a6ff, #d3d3d3ff, #f5f3f4ff, #ffffffff);
+$gradient-bottom-left: linear-gradient(315deg, #0b090aff, #161a1dff, #660708ff, #a4161aff, #ba181bff, #e5383bff, #b1a7a6ff, #d3d3d3ff, #f5f3f4ff, #ffffffff);
+$gradient-radial: radial-gradient(#0b090aff, #161a1dff, #660708ff, #a4161aff, #ba181bff, #e5383bff, #b1a7a6ff, #d3d3d3ff, #f5f3f4ff, #ffffffff);
+*/
+:root {
+    --gold: #dfbe00ff;
+    --eerie-black: #161a1dff;
+    --blood-red: #660708ff;
+    --cornell-red: #a4161aff;
+    --cornell-red-2: #ba181bff;
+    --timberwolf: #d3d3d3ff;
+    --white-smoke: #f5f3f4ff;
+    --white: #ffffffff;
+}
+
+
+.quicksand {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.tinos-regular {
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    color: var(--timberwolf);
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: var(--eerie-black);
+    font-family: "Quicksand", sans-serif;
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    place-items: center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Tinos", serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    color: var(--gold);
+    background-color: var(--blood-red);
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    padding: 20px 15px;
+    max-width: 800px;
+}
+
+main div {
+    margin-bottom: 20px;
+}
+
+div h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.logo-imag {
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    max-width: 400px;
+}
+
+.serv-list {
+    margin-left: 40px;
+}
+
+.sm-text {
+    font-size: 1rem;
+    max-width: 700px;
+}
+
+.bolder {
+    font-weight: 600;
+}
+
+.bolder::after {
+    content: " ";
+}
+
+.scenarios .sm-text {
+    border-left: 5px solid var(--gold);
+    padding-left: 5px;
+    margin: 0 0 25px 10px;
+}
+
+.palette {
+    padding: 50px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pal-item {
+    transform: rotate(35deg);
+    text-align: center;
+    width: fit-content;
+    padding-top: 100px;
+}
+
+.color1 {
+    background-color: var(--gold);
+}
+
+.color2 {
+    background-color: var(--eerie-black);
+}
+
+.color3 {
+    background-color: var(--blood-red);
+}
+
+.color4 {
+    background-color: var(--cornell-red);
+}
+
+.color5 {
+    background-color: var(--cornell-red-2);
+}
+.color8 {
+    color: var(--eerie-black);
+    background-color: var(--timberwolf);
+}
+.color9 {
+    color: var(--eerie-black);
+    background-color: var(--white-smoke);
+}
+.color1a {
+    color: var(--eerie-black);
+    background-color: var(--white);
+}
+
+.wireframe {
+    display: flex;
+    gap: 20px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+figcaption a{
+    color: var(--gold);
+}
+.wireframe figure {
+    cursor: pointer;
+    background-color: var(--blood-red);
+    padding-bottom: 20px;
+    border-radius: 6px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.wireframe figure:hover {
+    box-shadow: 5px 5px 3px 1px var(--gold);
+    transform:translateY(-10px);
+}
+
+.wireframe figure img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+    margin-bottom: 20px;
+}
+
+footer {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--blood-red);
+    color: var(--timberwolf-);
+    font-size: 0.8rem;
+}
