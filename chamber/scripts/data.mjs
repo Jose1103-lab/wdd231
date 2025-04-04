@@ -1,4 +1,3 @@
-
 // this fetch the weather information from the APi
 async function fetchWeatherData() {
     // I fetched the current weather and the forecast data from the openweathermap api
@@ -17,4 +16,10 @@ function urlGetter() {
     return data;
 }
 
-export { fetchWeatherData , urlGetter };
+async function fetchData() {
+    const response = await fetch("data/members.json");
+    const data = await response.json();
+    return data;
+}
+
+export { fetchWeatherData, urlGetter, fetchData };
