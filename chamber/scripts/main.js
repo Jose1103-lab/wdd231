@@ -5,11 +5,35 @@ const getTitle = document.title; // this is experimental (ft-1001)
 yearLoader();
 memberInformation();
 weatherBuilder();
-
-// (ft-1001) experimental feature applied to the join page 
-if(getTitle.includes("Join")){ 
+//FIXME: (ft-1001) experimental feature applied to the join page 
+if (getTitle.includes("Join")) {
     formData();
 }
+
+//FIXME: (ft-1002) experimental feature applied to the dicover page
+// CORS proxy is used to bypass CORS restrictions when fetching the RSS feed
+// this module will be migrated to the data.mjs, such file will be handling the fetch request for local news.
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // CORS proxy URL
+const rssUrl = 'https://www.diariolibre.com/rss/economia.xml';
+
+fetch(proxyUrl + rssUrl)
+    .then(response => response.text())
+    .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+    .then(data => {
+        const items = data.querySelectorAll("item");
+        const itemsLength = items.length;
+        const itemsLimit = itemsLength > 3 ? 3 : itemsLength; // Limit to 5 items   
+        let counter = 0; 
+        items.forEach(item => {
+            if (counter >= itemsLimit) return; // Stop processing if limit is reached
+            const title = item.querySelector("title").textContent;
+            const link = item.querySelector("link").textContent;
+            console.log(`Title: ${title}\nLink: ${link}\n`);
+            counter++; // Increment the counter for each item processed
+            // console.log("RSS Feed Data: ", data);
+        });
+    })
+    .catch(err => console.error(`Error fetching RSS (check the "Cors parse" because it needs authorization): ${err}`));
 
 const schema = document.querySelector("#menu-toggler").addEventListener("click", menuToggler);
 const schemaColor = document.querySelector("#bg-toggler").addEventListener("click", schemaColorChanger);
@@ -19,7 +43,6 @@ const schemaChecker = localStorage.getItem("schema"); // with the feature i will
 if (schemaChecker === "dark") { schemaColorChanger(); }
 
 // this module will be migrated to the data.mjs, such file will be handling the fetch request for apis, json, etc
-
 
 try {
     modalHandler("#gd-modal", 0);

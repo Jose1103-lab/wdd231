@@ -36,7 +36,6 @@ $gradient-radial: radial-gradient(#0b090aff, #161a1dff, #660708ff, #a4161aff, #b
 
 .quicksand {
     font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
   }
