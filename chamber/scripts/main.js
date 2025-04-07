@@ -16,6 +16,32 @@ if (getTitle.includes("Join")) {
 const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // CORS proxy URL
 const rssUrl = 'https://www.diariolibre.com/rss/economia.xml';
 
+
+fetch("data/fact.json")
+    .then(response => response.json())
+    .then(data => {
+        const factsContainer = document.querySelector(".curiosity"); 
+        const factsLength = data.length;
+        const factsLimit = factsLength > 1 ? 1 : factsLength; // Limit to 5 items   
+        console.log(data)
+        let counter = 0; 
+        // data.forEach(item => {
+        //     if (counter >= factsLimit) return;
+        //     const title = item.title;
+        //     const link = item.link;
+        //     const newsItem = document.createElement("div");
+        //     newsItem.classList.add("curiority-card"); 
+        //     newsItem.innerHTML = `
+        //         <img src="${item.image}" alt="News Image" loading="lazy" width="200" height="100">
+        //           <a href="${link}" target="_blank">
+        //         <h4>${title}</h4>Read more</a>
+        //         `;
+        //     factsContainer.appendChild(newsItem);
+        //     // console.log(`Title: ${title}\nLink: ${link}\n`);
+        //     counter++; 
+        // });
+    })
+
 fetch(proxyUrl + rssUrl)
     .then(response => response.text())
     .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
@@ -25,12 +51,24 @@ fetch(proxyUrl + rssUrl)
         const itemsLimit = itemsLength > 3 ? 3 : itemsLength; // Limit to 5 items   
         let counter = 0; 
         items.forEach(item => {
-            if (counter >= itemsLimit) return; // Stop processing if limit is reached
+            if (counter >= itemsLimit) return;
             const title = item.querySelector("title").textContent;
             const link = item.querySelector("link").textContent;
-            console.log(`Title: ${title}\nLink: ${link}\n`);
-            counter++; // Increment the counter for each item processed
-            // console.log("RSS Feed Data: ", data);
+            const newsContainer = document.querySelector(".news");
+            const newsItem = document.createElement("div");
+            newsItem.classList.add("news-card"); 
+            const mediaContent = item.getElementsByTagName("media:content")[0];
+            const imageUrl = mediaContent ? mediaContent.getAttribute("url") : "default-image.jpg"; 
+            newsItem.innerHTML = `
+            <a href="${link}" target="_blank">
+                <div class="news-card-title">
+                <img src="${imageUrl}" alt="News Image" loading="lazy" width="200" height="100">
+                <h4>${title}</h4>Read more</a>
+                </div>
+                `;
+            newsContainer.appendChild(newsItem);
+            // console.log(`Title: ${title}\nLink: ${link}\n`);
+            counter++; 
         });
     })
     .catch(err => console.error(`Error fetching RSS (check the "Cors parse" because it needs authorization): ${err}`));
