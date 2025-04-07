@@ -6,27 +6,12 @@
 				{
 					"fact": "Two Countries in One Island",
 					"description": "The Dominican Republic shares the island of Hispaniola with Haiti.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Hispaniola.png/640px-Hispaniola.png"
+					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Map_of_Hispaniola_with_country_labels.svg/1280px-Map_of_Hispaniola_with_country_labels.svg.png"
 				},
 				{
 					"fact": "Highest Peak in the Caribbean",
 					"description": "Pico Duarte (3,098 m) is the tallest mountain in the Caribbean.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Pico_Duarte.jpg/640px-Pico_Duarte.jpg"
-				},
-				{
-					"fact": "Unique Biodiversity",
-					"description": "Lake Enriquillo is home to wild American crocodiles.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Lago_Enriquillo.jpg/640px-Lago_Enriquillo.jpg"
-				},
-				{
-					"fact": "Desert in the Caribbean",
-					"description": "The Bani Dunes are a rare desert-like area.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Dunas_de_Ban%C3%AD.jpg/640px-Dunas_de_Ban%C3%AD.jpg"
-				},
-				{
-					"fact": "Humpback Whale Sanctuary",
-					"description": "Samaná Bay hosts thousands of whales (Jan–Mar).",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Humpback_whale.jpg/640px-Humpback_whale.jpg"
+					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Pico_Duarte_Dominican_Republic.jpg/1280px-Pico_Duarte_Dominican_Republic.jpg"
 				}
 			]
 		},
@@ -36,27 +21,17 @@
 				{
 					"fact": "First European Settlement",
 					"description": "Santo Domingo (1496) is the oldest city in the Americas.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Colonial_Zone_Santo_Domingo.jpg/640px-Colonial_Zone_Santo_Domingo.jpg"
-				},
-				{
-					"fact": "First Cathedral",
-					"description": "Basilica Cathedral of Santa María la Menor (1540).",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Catedral_de_Santo_Domingo.jpg/640px-Catedral_de_Santo_Domingo.jpg"
-				},
-				{
-					"fact": "First University",
-					"description": "Universidad Autónoma de Santo Domingo (1538).",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/UASD_Main_Entrance.jpg/640px-UASD_Main_Entrance.jpg"
+					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Alcazar_de_Colon%2C_Santo_Domingo.jpg/1280px-Alcazar_de_Colon%2C_Santo_Domingo.jpg"
 				},
 				{
 					"fact": "Taíno Heritage",
 					"description": "The island was called 'Quisqueya' by the Taíno people.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Taíno_carvings.jpg/640px-Taíno_carvings.jpg"
+					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Taino_stone_carvings_at_Cueva_de_las_Maravillas.jpg/1280px-Taino_stone_carvings_at_Cueva_de_las_Maravillas.jpg"
 				},
 				{
 					"fact": "Merengue & Bachata",
 					"description": "Birthplace of these iconic music genres.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Merengue_dance.jpg/640px-Merengue_dance.jpg"
+					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Merengue_Dominicano_en_Barrio_Chino_de_Santo_Domingo.jpg/1280px-Merengue_Dominicano_en_Barrio_Chino_de_Santo_Domingo.jpg"
 				}
 			]
 		},
@@ -66,47 +41,17 @@
 				{
 					"fact": "Mangú",
 					"description": "National breakfast of mashed plantains.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Mangú.jpg/640px-Mangú.jpg"
-				},
-				{
-					"fact": "Majarete",
-					"description": "Sweet corn pudding dessert.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Majarete.jpg/640px-Majarete.jpg"
-				},
-				{
-					"fact": "World’s Best Cocoa",
-					"description": "Top producer of organic cocoa.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Cacao_dominicano.jpg/640px-Cacao_dominicano.jpg"
+					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Mangu_with_salami.jpg/1280px-Mangu_with_salami.jpg"
 				},
 				{
 					"fact": "Coffee Culture",
 					"description": "Famous for strong 'cafecito'.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Coffee_beans_DR.jpg/640px-Coffee_beans_DR.jpg"
+					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Coffee_plants_in_Dominican_Republic.jpg/1280px-Coffee_plants_in_Dominican_Republic.jpg"
 				},
 				{
 					"fact": "Mamajuana",
 					"description": "Traditional spiced alcoholic drink.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Mamajuana_bottle.jpg/640px-Mamajuana_bottle.jpg"
-				}
-			]
-		},
-		{
-			"category": "Sports & Entertainment",
-			"items": [
-				{
-					"fact": "Baseball Obsession",
-					"description": "Produces the most MLB players per capita.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Dominican_Baseball_Game.jpg/640px-Dominican_Baseball_Game.jpg"
-				},
-				{
-					"fact": "Olympic Gold in Boxing",
-					"description": "Pedro Nolasco won gold (1984).",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Olympic_boxing.jpg/640px-Olympic_boxing.jpg"
-				},
-				{
-					"fact": "Miss Universe Titles",
-					"description": "Won 3 crowns (1990, 2003, 2023).",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Miss_Universe_2023.jpg/640px-Miss_Universe_2023.jpg"
+					"image": "https://assets.bonappetit.com/photos/602c0b4985b476c61adea9ac/16:9/w_1600,c_limit/Mamajuana-Cocktail-Lede.jpg"
 				}
 			]
 		},
@@ -116,37 +61,22 @@
 				{
 					"fact": "Amber with Prehistoric Secrets",
 					"description": "Famous for blue amber with trapped insects.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Dominican_Amber.jpg/640px-Dominican_Amber.jpg"
-				},
-				{
-					"fact": "No Daylight Saving Time",
-					"description": "Does not observe DST.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/DR_timezone_map.png/640px-DR_timezone_map.png"
+					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Dominican_blue_amber.jpg/1280px-Dominican_blue_amber.jpg"
 				},
 				{
 					"fact": "'Dominican Time'",
 					"description": "Cultural acceptance of lateness ('la hora dominicana').",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Dominican_Street_Scene.jpg/640px-Dominican_Street_Scene.jpg"
+					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Street_scene_in_Santo_Domingo.jpg/1280px-Street_scene_in_Santo_Domingo.jpg"
 				},
 				{
 					"fact": "Carnaval Dominicano",
 					"description": "Colorful carnival with 'diablos cojuelos' (limping devils).",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Carnaval_Dominicano.jpg/640px-Carnaval_Dominicano.jpg"
-				},
-				{
-					"fact": "The 'Dominican Yola'",
-					"description": "Risky boat migration to Puerto Rico.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Yola_boat.jpg/640px-Yola_boat.jpg"
+					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Carnival_diablos_cojuelos_Dominican_Republic.jpg/1280px-Carnival_diablos_cojuelos_Dominican_Republic.jpg"
 				},
 				{
 					"fact": "World’s Only Larimar Mine",
 					"description": "Source of rare blue larimar gemstone.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Larimar.jpg/640px-Larimar.jpg"
-				},
-				{
-					"fact": "El Morro – Pirates of the Caribbean Fort",
-					"description": "San Felipe Fortress defended against pirates.",
-					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Fortaleza_San_Felipe.jpg/640px-Fortaleza_San_Felipe.jpg"
+					"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Larimar_close_up_gemstone.jpg/1280px-Larimar_close_up_gemstone.jpg"
 				}
 			]
 		}

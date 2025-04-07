@@ -1,0 +1,58 @@
+[  
+    {  
+        "id": 1,
+        "category": "Entertainment",  
+        "description": "Discover local entertainment options, from theaters to live music.",  
+        "city": "Santiago",  
+        "image": "images/data/entertainment.webp"  
+    },  
+    {  
+        "id": 2,
+        "category": "Food",  
+        "description": "Discover the best local cuisines, restaurants, and food spots in your area.",  
+        "city": "Santiago",  
+        "image": "images/data/food.webp"  
+    },  
+    {  
+        "id": 3,
+        "category": "Drink",  
+        "description": "Discover the best local cafes, and bars in your area.",  
+        "city": "Santiago",  
+        "image": "images/data/food.webp"
+    },  
+    {  
+        "id": 4,
+        "category": "Shopping",  
+        "description": "Find unique shops and boutiques that offer a variety of products.",  
+        "city": "Santiago",  
+        "image": "images/data/shopping.webp"
+    },  
+    {  
+        "id": 5,
+        "category": "Museums",  
+        "description": "Discover local museums showcasing art, history, and culture.",  
+        "city": "Santiago",  
+        "image": "images/data/services.webp"
+    },  
+    {  
+        "id": 6,
+        "category": "Health",  
+        "description": "Find local health and wellness services to keep you fit and healthy.",  
+        "city": "Santiago",  
+        "image": "images/data/health.webp"
+    },  
+    {  
+        "id": 7,
+        "category": "Medical",  
+        "description": "Access medical facilities and professionals for your healthcare needs.",  
+        "city": "Santiago",  
+        "image": "images/data/medical.webp"
+    },  
+    {  
+        "id": 8,
+        "category": "Education",  
+        "description": "Explore local schools, colleges, and educational resources in your area.",  
+        "city": "Santiago",
+        "image": "images/data/education.webp"  
+    }  
+]  
