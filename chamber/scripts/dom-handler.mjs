@@ -1,4 +1,4 @@
-import { fetchWeatherData, urlGetter, fetchData } from "./data.mjs";
+import { fetchWeatherData, urlGetter, fetchData, loadLastSeen, fetchDiscover } from "./data.mjs";
 
 // this function will be used to fetch the data from form url
 function formData() {
@@ -210,8 +210,43 @@ function memberInformation() {
     } catch (error) {
         console.error('Businesses\' data was not loaded')
     }
-
 }
 
+function loadDiscover() {
+    loadLastSeen();
 
-export { formData, weatherBuilder, viewChanger, memberInformation, modalHandler, menuToggler, schemaColorChanger, yearLoader };
+    try {
+        fetchDiscover().then(data => {
+            const container = document.querySelector(".dc-menu");
+            const recentContainer = document.querySelector(".recent-vw");
+
+            data.forEach(market => {
+                const card = document.createElement("div");
+                if (market.id === loadLastSeen()) {
+                    card.classList.add("dc-card-recent");
+                    card.innerHTML = `<img src="images/data/${market.image}" alt="${market.name}">
+                    <h3>${market.category}</h3>
+                    <p>${market.description}</p>
+                    <p><span class="tile-title">City: </span>${market.city}</p>
+                    `;
+                    recentContainer.appendChild(card);
+
+                }
+                card.innerHTML = '';
+                card.classList.add("dc-card");
+                card.innerHTML = `<img src="images/data/${market.image}" alt="${market.name}">
+                <h3>${market.category}</h3>
+                <p>${market.description}</p>
+                <p><span class="tile-title">City: </span>${market.city}</p>
+                <button onclick="location.href=${market.link}">Explore</button>
+                `;
+
+                container.appendChild(card);
+            })
+        });
+    } catch (error) {
+        console.log("something happened!")
+    }
+}
+
+export { formData, weatherBuilder, viewChanger, memberInformation, modalHandler, menuToggler, schemaColorChanger, yearLoader, loadDiscover };

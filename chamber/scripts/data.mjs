@@ -84,4 +84,23 @@ function newsGetter() {
         .catch(err => console.error(`Error fetching RSS (check the "Cors parse" because it needs authorization): ${err}`));
 }
 
-export { fetchWeatherData, urlGetter, fetchData, newsGetter, factGetter };
+//FIXME: (ft-1004) experimental feature applied to the dicover page
+async function fetchDiscover() {
+    const response = await fetch("data/discover.json");
+    const data = await response.json();
+    return data;
+}
+
+function loadLastSeen() {
+    const lastSeen = localStorage.getItem("last-seen");
+    console.log(lastSeen);
+    return lastSeen;
+}
+
+function saveLastSeen(id) {
+    const lastSeen = localStorage.setItem("last-seen", id);
+
+    return 'success';
+}
+
+export { fetchWeatherData, urlGetter, fetchData, newsGetter, factGetter, saveLastSeen, loadLastSeen, fetchDiscover};

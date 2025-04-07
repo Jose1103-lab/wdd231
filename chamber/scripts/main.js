@@ -1,7 +1,8 @@
-import { formData, weatherBuilder, modalHandler, viewChanger, menuToggler, yearLoader, memberInformation, schemaColorChanger } from "./dom-handler.mjs";
-import { newsGetter, factGetter } from "./data.mjs";
+import { formData, weatherBuilder, modalHandler, viewChanger, menuToggler, yearLoader, memberInformation, schemaColorChanger, loadDiscover } from "./dom-handler.mjs";
+import { newsGetter, factGetter, saveLastSeen } from "./data.mjs";
 
-
+loadDiscover();
+saveLastSeen();
 newsGetter();
 factGetter();
 yearLoader();

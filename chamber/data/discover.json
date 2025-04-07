@@ -4,49 +4,56 @@
         "category": "Entertainment",  
         "description": "Discover local entertainment options, from theaters to live music.",  
         "city": "Santiago",  
-        "image": "images/data/entertainment.webp"  
+        "image": "images/data/entertainment.webp",
+        "link": "'https://www.google.com/search?sca_esv=5ed5af9e9dc2590a&tbm=lcl&sxsrf=AHTn8zoseUgwfkMuM52LP4oK8K7KHGhTLQ:1743896069763&q=fun+zone+santiago+de+los+caballeros&rflfq=1&num=10&sa=X&ved=2ahUKEwjyxI2Oh8KMAxWnMdAFHagiFeYQjGp6BAgjEAE&biw=1358&bih=626&dpr=1#rlfi=hd:;si:;mv:[[19.8210151,-69.8898854],[18.4026718,-70.77191619999999]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:2'"
     },  
     {  
         "id": 2,
         "category": "Food",  
         "description": "Discover the best local cuisines, restaurants, and food spots in your area.",  
         "city": "Santiago",  
-        "image": "images/data/food.webp"  
+        "image": "images/data/food.webp",
+        "link": "'https://www.google.com/search?q=Food+santiago+de+los+caballeros&sca_esv=5ed5af9e9dc2590a&biw=1516&bih=918&tbm=lcl&sxsrf=AHTn8zrgXg2aTSJb93SuElS0squz5ovgtw%3A1744059861691&ei=1T30Z8j5KdCW5OMP0ZOiyQE&ved=0ahUKEwiIuJek6caMAxVQC3kGHdGJKBkQ4dUDCAo&uact=5&oq=Food+santiago+de+los+caballeros&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIh9Gb29kIHNhbnRpYWdvIGRlIGxvcyBjYWJhbGxlcm9zSLh-UJ13WJ13cAB4AJABAJgBAKABAKoBALgBA8gBAPgBAvgBAZgCAKACAJgDAIgGAZIHAKAHALIHALgHAA&sclient=gws-wiz-local#rlfi=hd:;si:;mv:[[19.4655216,-70.663545],[19.4410567,-70.6982572]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u1!2m2!1m1!1e1!1m4!1u1!2m2!1m1!1e2!2m1!1e2!2m1!1e1!2m1!1e3!3sIAE,lf:1,lf_ui:9'"  
     },  
     {  
         "id": 3,
         "category": "Drink",  
         "description": "Discover the best local cafes, and bars in your area.",  
         "city": "Santiago",  
-        "image": "images/data/food.webp"
+        "image": "images/data/food.webp",
+        "link": "'https://www.google.com/search?q=Drink%20santiago%20de%20los%20caballeros&sca_esv=5ed5af9e9dc2590a&biw=1516&bih=918&tbm=lcl&sxsrf=AHTn8zp30JChMvda-Jgvk7X1Je-47ZbMRg%3A1744060346988&ei=uj_0Z_qHPJjbptQP6bbNiAI&ved=2ahUKEwjF1qqm68aMAxUXAHkGHVjEAyEQwywoAXoECAYQCQ&uact=5&oq=Drink+santiago+de+los+caballeros&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIiBEcmluayBzYW50aWFnbyBkZSBsb3MgY2FiYWxsZXJvc0i8F1CHDFj1FHAAeACQAQCYAQCgAQCqAQC4AQPIAQD4AQL4AQGYAgCgAgCYAwCIBgGSBwCgBwCyBwC4BwA&sclient=gws-wiz-local&rlfi=hd:;si:&tbs=lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u1!2m2!1m1!1e1!1m4!1u1!2m2!1m1!1e2!2m1!1e1!2m1!1e3!2m4!1e2!5m2!2m1!2e9!3sIAE,lf:1,lf_ui:9&rlst=f'"
     },  
     {  
         "id": 4,
         "category": "Shopping",  
         "description": "Find unique shops and boutiques that offer a variety of products.",  
         "city": "Santiago",  
-        "image": "images/data/shopping.webp"
+        "image": "images/data/shopping.webp",
+        "link": "'https://www.google.com/search?q=Shopping+santiago+de+los+caballeros&sca_esv=5ed5af9e9dc2590a&biw=1516&bih=918&tbm=lcl&sxsrf=AHTn8zrOhve-gsK3NWoN_fokyYEitYMSYg%3A1744060418979&ei=AkD0Z7rEO_HNptQP1IKM2QQ&ved=0ahUKEwi6zfWt68aMAxXxpokEHVQBI0sQ4dUDCAo&uact=5&oq=Shopping+santiago+de+los+caballeros&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIiNTaG9wcGluZyBzYW50aWFnbyBkZSBsb3MgY2FiYWxsZXJvc0jgxgFQ7MABWOzAAXAAeACQAQCYAQCgAQCqAQC4AQPIAQD4AQL4AQGYAgCgAgCYAwCIBgGSBwCgBwCyBwC4BwA&sclient=gws-wiz-local#rlfi=hd:;si:;mv:[[19.500367699999998,-70.66633960000001],[19.4338496,-70.7169782]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:10'"
     },  
     {  
         "id": 5,
         "category": "Museums",  
         "description": "Discover local museums showcasing art, history, and culture.",  
         "city": "Santiago",  
-        "image": "images/data/services.webp"
+        "image": "images/data/services.webp",
+        "link": "'https://www.google.com/search?q=historic+placessantiago+de+los+caballeros&sca_esv=5ed5af9e9dc2590a&biw=1516&bih=918&tbm=lcl&sxsrf=AHTn8zpH-thpGUQAOtLSKctoOnvcy4nraQ%3A1744060504017&ei=WED0Z6Fqya2m1A-z0sXoDw&ved=0ahUKEwih9rvW68aMAxXJlokEHTNpEf0Q4dUDCAo&uact=5&oq=historic+placessantiago+de+los+caballeros&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIiloaXN0b3JpYyBwbGFjZXNzYW50aWFnbyBkZSBsb3MgY2FiYWxsZXJvc0jNZ1CjDVi-ZHAAeACQAQKYAQCgAQCqAQC4AQPIAQD4AQGYAgCgAgCYAwCIBgGSBwCgBwCyBwC4BwA&sclient=gws-wiz-local#rlfi=hd:;si:;mv:[[19.5364516,-70.61234879999999],[19.425904,-70.7196506]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:1'"
     },  
     {  
         "id": 6,
         "category": "Health",  
         "description": "Find local health and wellness services to keep you fit and healthy.",  
         "city": "Santiago",  
-        "image": "images/data/health.webp"
+        "image": "images/data/health.webp",
+        "link": "'https://www.google.com/search?q=Health+santiago+de+los+caballeros&sca_esv=5ed5af9e9dc2590a&biw=1516&bih=918&tbm=lcl&sxsrf=AHTn8zpSnLw6Hd1O6fPitQnGKBcDfyK7zw%3A1744060528759&ei=cED0Z-2RLqSzptQPsYC5sAE&ved=0ahUKEwjtiaLi68aMAxWkmYkEHTFADhYQ4dUDCAo&uact=5&oq=Health+santiago+de+los+caballeros&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIiFIZWFsdGggc2FudGlhZ28gZGUgbG9zIGNhYmFsbGVyb3NIwgJQAFgAcAB4AJABAJgBAKABAKoBALgBA8gBAPgBAvgBAZgCAKACAJgDAJIHAKAHALIHALgHAA&sclient=gws-wiz-local#rlfi=hd:;si:;mv:[[19.4883859,-70.65579],[19.431851800000004,-70.7343325]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:2'"
     },  
     {  
         "id": 7,
         "category": "Medical",  
         "description": "Access medical facilities and professionals for your healthcare needs.",  
         "city": "Santiago",  
-        "image": "images/data/medical.webp"
+        "image": "images/data/medical.webp",
+        "link": "'https://www.google.com/search?q=Health+santiago+de+los+caballeros&sca_esv=5ed5af9e9dc2590a&biw=1516&bih=918&tbm=lcl&sxsrf=AHTn8zpSnLw6Hd1O6fPitQnGKBcDfyK7zw%3A1744060528759&ei=cED0Z-2RLqSzptQPsYC5sAE&ved=0ahUKEwjtiaLi68aMAxWkmYkEHTFADhYQ4dUDCAo&uact=5&oq=Health+santiago+de+los+caballeros&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIiFIZWFsdGggc2FudGlhZ28gZGUgbG9zIGNhYmFsbGVyb3NIwgJQAFgAcAB4AJABAJgBAKABAKoBALgBA8gBAPgBAvgBAZgCAKACAJgDAJIHAKAHALIHALgHAA&sclient=gws-wiz-local#rlfi=hd:;si:;mv:[[19.4883859,-70.65579],[19.431851800000004,-70.7343325]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:2'"
     },  
     {  
         "id": 8,
@@ -54,5 +61,6 @@
         "description": "Explore local schools, colleges, and educational resources in your area.",  
         "city": "Santiago",
         "image": "images/data/education.webp"  
+        , "link": "'https://www.google.com/search?q=learning+centers+AND+college+santiago+de+los+caballeros&sca_esv=5ed5af9e9dc2590a&biw=1516&bih=918&tbm=lcl&sxsrf=AHTn8zr4l5TDGbQH8_3daj5kUFAnp5S-tg%3A1744060762967&ei=WkH0Z6jmOuKGptQPheDu8AQ&ved=0ahUKEwio-_jR7MaMAxVig4kEHQWwG04Q4dUDCAo&uact=5&oq=learning+centers+AND+college+santiago+de+los+caballeros&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIjdsZWFybmluZyBjZW50ZXJzIEFORCBjb2xsZWdlIHNhbnRpYWdvIGRlIGxvcyBjYWJhbGxlcm9zSMG_AVCOMViWvgFwAHgAkAEBmAEAoAEAqgEAuAEDyAEA-AEBmAIAoAIAmAMAiAYBkgcAoAcAsgcAuAcA&sclient=gws-wiz-local#rlfi=hd:;si:;mv:[[19.484512,-70.64893459999999],[19.417341399999998,-70.75128029999999]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:2'"
     }  
 ]  
