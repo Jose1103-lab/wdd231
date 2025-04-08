@@ -93,12 +93,11 @@ async function fetchDiscover() {
 
 function loadLastSeen() {
     const lastSeen = localStorage.getItem("last-seen");
-    console.log(lastSeen);
     return lastSeen;
 }
 
 function saveLastSeen(id) {
-    const lastSeen = localStorage.setItem("last-seen", id);
+    const lastSeen = localStorage.setItem("last-seen", 1);
 
     return 'success';
 }

@@ -1,4 +1,4 @@
-import { fetchWeatherData, urlGetter, fetchData, loadLastSeen, fetchDiscover } from "./data.mjs";
+import { fetchWeatherData, urlGetter, fetchData, loadLastSeen, fetchDiscover, saveLastSeen } from "./data.mjs";
 
 // this function will be used to fetch the data from form url
 function formData() {
@@ -213,42 +213,51 @@ function memberInformation() {
 }
 
 function loadDiscover() {
-    loadLastSeen();
-
+    const lastId = parseInt(loadLastSeen());   //* working on that ---------------
     try {
         fetchDiscover().then(data => {
             const container = document.querySelector(".dc-menu");
             const recentContainer = document.querySelector(".recent-vw");
-
+            
             data.forEach(market => {
                 const card = document.createElement("div");
-                if (market.id === loadLastSeen()) {
-                    card.classList.add("dc-card-recent");
-                    card.innerHTML = `<img src="images/data/${market.image}" alt="${market.name}">
+                if (market.id === lastId) {
+                    const cardR = document.createElement("div");
+                    cardR.classList.add("dc-card-recent");
+                    cardR.innerHTML = `
                     <h3>${market.category}</h3>
                     <p>${market.description}</p>
-                    <p><span class="tile-title">Location: </span>${market.city}</p>
+                    <a href="${market.link}" target="_blanck">View again</a>
                     `;
-                    recentContainer.appendChild(card);
-
+                    recentContainer.appendChild(cardR);
                 }
 
                 card.innerHTML = '';
+                card.id = `${market.id}`; //! ----------KIP-------------
                 card.classList.add("dc-card");
                 card.innerHTML = `
                 <img src="images/data/${market.image}" alt="${market.name}" loading="lazy" width="200" height="100">
                 <h3>${market.category}</h3>
                 <p id="st">${market.description}</p>
                 <p id="nd"><span class="tile-title">Location: </span>${market.city}</p>
-                <button onclick="location.href=${market.link}">Explore</button>
+                <button onclick="location.href=${market.link}" class="explore">Explore</button>
+                //! ----------KIP-------------
                 `;
-
+                
+                
                 container.appendChild(card);
             })
+            const lastSeenTaker = document.querySelectorAll(".explore");
+            console.log(lastSeenTaker); //! ----------KIP-------------
+            // lastSeenTaker.addEventListener("click", () => {
+            //     saveLastSeen(market.id ) //! ----------KIP-------------
+            // });
         });
     } catch (error) {
         console.log("something happened!")
     }
+
+
 }
 
 export { formData, weatherBuilder, viewChanger, memberInformation, modalHandler, menuToggler, schemaColorChanger, yearLoader, loadDiscover };

@@ -1,18 +1,45 @@
 import { formData, weatherBuilder, modalHandler, viewChanger, menuToggler, yearLoader, memberInformation, schemaColorChanger, loadDiscover } from "./dom-handler.mjs";
 import { newsGetter, factGetter, saveLastSeen } from "./data.mjs";
-
-loadDiscover();
-saveLastSeen();
-newsGetter();
-factGetter();
-yearLoader();
-memberInformation();
-weatherBuilder();
-
-//FIXME: (ft-1001) experimental feature applied to the join page 
 const getTitle = document.title; // this is experimental (ft-1001)
+
+yearLoader();
+
+if (getTitle.includes("Home")) {
+    weatherBuilder();
+    memberInformation();
+}
+
+if (getTitle.includes("Directory")) {
+    memberInformation();
+    
+    try {
+        const gridView = document.querySelector("#grid").addEventListener("click", () => { viewChanger("g") });
+        const listView = document.querySelector("#list").addEventListener("click", () => { viewChanger('l') });
+    }
+    catch (error) {
+        console.log('List or Grid buttons were not loaded')
+    }
+}
+
+if (getTitle.includes("Discover")) {
+    saveLastSeen();
+    loadDiscover();
+    //FIXME: (ft-1001) experimental feature applied to the join page 
+    newsGetter();
+    factGetter();
+}
+
 if (getTitle.includes("Join")) {
     formData();
+    
+    try {
+        modalHandler("#gd-modal", 0);
+        modalHandler("#sl-modal", 1);
+        modalHandler("#bz-modal", 2);
+        modalHandler("#np-modal", 3);
+    } catch (error) {
+        console.log('Some modals were not loaded')
+    }
 }
 
 const schema = document.querySelector("#menu-toggler").addEventListener("click", menuToggler);
@@ -23,20 +50,4 @@ const schemaChecker = localStorage.getItem("schema"); // with the feature i will
 if (schemaChecker === "dark") { schemaColorChanger(); }
 
 
-try {
-    modalHandler("#gd-modal", 0);
-    modalHandler("#sl-modal", 1);
-    modalHandler("#bz-modal", 2);
-    modalHandler("#np-modal", 3);
-} catch (error) {
-    console.log('Some modals were not loaded')
-}
-
-try {
-    const gridView = document.querySelector("#grid").addEventListener("click", () => { viewChanger("g") });
-    const listView = document.querySelector("#list").addEventListener("click", () => { viewChanger('l') });
-}
-catch (error) {
-    console.log('List or Grid buttons were not loaded')
-}
 
