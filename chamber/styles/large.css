@@ -1,4 +1,4 @@
-@media screen and (min-width:876px) {
+@media screen and (min-width:641px) {
     header {
         grid-template-columns: auto auto 50px;
         place-items: center;
@@ -249,8 +249,8 @@
         grid-area: e;
         justify-self: center;
         background-color: transparent;
-        color: var(--highlight2-color);
-        border: 1px solid var(--highlight2-color);
+        color: var(--secundary-color);
+        border: 1px solid var(--secundary-color);
         padding: 5px 25px;
         border-radius: 3px;
         cursor: pointer;
@@ -258,9 +258,37 @@
     }
 
     .dc-card button:hover {
-        background-color: var(--highlight2-color);
-        color: var(--font1-color);
+        background-color: var(--secundary-color);
+        color: var(--main-color);
     }
 
+}
+
+@media screen and (min-width: 1024px) {
+    .dc-card {
+        width: 550px;
+        justify-self: center;
+        padding-bottom: 20px;
+        grid-template-areas:
+            "a a a"
+            "a a a"
+            "b e e"
+            "c c c"
+            "d d d"
+            /* "e e e" */
+            ;
+    }
+
+    .dc-card img {
+        width: 530px;
+        height: 450px;
+    }
+
+    .dc-card button {
+        justify-self: center;
+        width: 80%;
+        margin: 10px 0;
+        padding: 10px 0;
+    }
 
 }
