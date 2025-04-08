@@ -148,7 +148,7 @@
         background-color: rgba(133, 133, 133, 0.389);
     }
 
-    .mb-info{
+    .mb-info {
         width: 50%;
         height: 400px;
     }
@@ -157,4 +157,110 @@
         width: 50%;
         height: 400px;
     } */
+
+    .main-d-section {
+        padding: 0;
+        display: grid;
+        grid-template-areas:
+            "z z z z z z"
+            "a a a a a b"
+            "a a a a a c"
+            "a a a a a d"
+            "a a a a a ."
+        ;
+        gap: 10px;
+    }
+
+    .recent-vw,
+    .curiosity,
+    .nuews {
+        max-width: 265px;
+        background-color: var(--highlight2-color);
+        padding: 20px;
+        border-radius: 3px;
+        box-shadow: 5px 8px 15px 3px var(--under3-color);
+    }
+
+    .d-header {
+        grid-area: z;
+    }
+
+    .main-dc-menu {
+        grid-area: a;
+    }
+
+    .recent-vw {
+        grid-area: b;
+    }
+
+    .news {
+        grid-area: c;
+    }
+
+    .cueriosity {
+        grid-area: d;
+    }
+
+    .dc-card {
+        margin: 0 0 20px 0;
+        padding: 5px 10px;
+        color: var(--font1-color);
+        display: grid;
+        grid-template-areas:
+            "a a b b"
+            "a a c c"
+            "a a d d"
+            "a a e .";
+        justify-content: left;
+        filter: saturate(0.3);
+        transition: all .5s ease-out;
+    }
+
+    .dc-card h3 {
+        grid-area: b;
+    }
+
+    .dc-card img {
+        width: 200px;
+        height: 180px;
+        object-fit: cover;
+        object-position: 0 75%;
+        border-radius: 3Px;
+        margin-right: 10px;
+        grid-area: a;
+    }
+
+    .dc-card:hover {
+        filter: none;
+        scale: 1.02;
+    }
+
+    .dc-card #st {
+        margin: 0;
+        grid-area: c;
+    }
+
+    .dc-card #nd {
+        margin: 0;
+        grid-area: d;
+    }
+
+    .dc-card button {
+        grid-area: e;
+        justify-self: center;
+        background-color: transparent;
+        color: var(--highlight2-color);
+        border: 1px solid var(--highlight2-color);
+        padding: 5px 25px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all .5s ease-out;
+    }
+
+    .dc-card button:hover {
+        background-color: var(--highlight2-color);
+        color: var(--font1-color);
+    }
+
+
 }

@@ -227,17 +227,19 @@ function loadDiscover() {
                     card.innerHTML = `<img src="images/data/${market.image}" alt="${market.name}">
                     <h3>${market.category}</h3>
                     <p>${market.description}</p>
-                    <p><span class="tile-title">City: </span>${market.city}</p>
+                    <p><span class="tile-title">Location: </span>${market.city}</p>
                     `;
                     recentContainer.appendChild(card);
 
                 }
+
                 card.innerHTML = '';
                 card.classList.add("dc-card");
-                card.innerHTML = `<img src="images/data/${market.image}" alt="${market.name}">
+                card.innerHTML = `
+                <img src="images/data/${market.image}" alt="${market.name}" loading="lazy" width="200" height="100">
                 <h3>${market.category}</h3>
-                <p>${market.description}</p>
-                <p><span class="tile-title">City: </span>${market.city}</p>
+                <p id="st">${market.description}</p>
+                <p id="nd"><span class="tile-title">Location: </span>${market.city}</p>
                 <button onclick="location.href=${market.link}">Explore</button>
                 `;
 

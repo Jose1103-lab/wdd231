@@ -38,7 +38,6 @@ function factGetter() {
                 newsItem.classList.add("curiority-card");
                 newsItem.innerHTML = `
                     <h4 class="card-curiosity">${fact.fact}</h4>
-                    <img src="${fact.image}" alt="${fact.fact}" loading="lazy">
                     <p class="card-curiosity">${fact.description}</p>
                 `;
                 factsContainer.appendChild(newsItem);
@@ -70,11 +69,12 @@ function newsGetter() {
                 const mediaContent = item.getElementsByTagName("media:content")[0];
                 const imageUrl = mediaContent ? mediaContent.getAttribute("url") : "default-image.jpg";
                 newsItem.innerHTML = `
-            <a href="${link}" target="_blank">
+                <a href="${link}" target="_blank">
                 <div class="news-card-title">
                 <img src="${imageUrl}" alt="News Image" loading="lazy" width="200" height="100">
-                <h4>${title}</h4>Read more</a>
+                <h4>${title}</h4>
                 </div>
+                </a>
                 `;
                 newsContainer.appendChild(newsItem);
                 // console.log(`Title: ${title}\nLink: ${link}\n`);
