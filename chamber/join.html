@@ -69,7 +69,7 @@
                                 required autocomplete="family-name"></label>
                         <label>Email address<span class="required"> *</span><input type="email" name="email"
                                 placeholder="john_doe@example.com" required autocomplete="email"></label>
-                        <label>Phone<span class="required"> *</span><input type="number" name="phone" placeholder="8097658886" required autocomplete="mobile" min="1000000000"></label>
+                        <label>Phone<span class="required"> *</span><input type="tel" name="phone" placeholder="8097658886" required autocomplete="mobile" min="1000000000"></label>
                         <label>Organization name<span class="required"> *</span><input type="text" name="orgname"
                                 placeholder="Tech Solutions Inc." required autocapitalize="words" autocomplete="organization"></label>
                         <label>Organizational title<span class="required"> *</span><input type="text" name="org"
@@ -85,7 +85,7 @@
                                 <option value="np">Non Profit Organization</option>
                             </select>
                         </label>
-                        <input type="text" name="date" id="submissionDate" hidden>  
+                        <input type="hidden" name="date" id="submissionDate">  
 
                         <button type="submit" id="joiner">Join Now!</button>
 
