@@ -218,7 +218,7 @@ function loadDiscover() {
         fetchDiscover().then(data => {
             const container = document.querySelector(".dc-menu");
             const recentContainer = document.querySelector(".recent-vw");
-            
+
             data.forEach(market => {
                 const card = document.createElement("div");
                 if (market.id === lastId) {
@@ -227,7 +227,7 @@ function loadDiscover() {
                     cardR.innerHTML = `
                     <h3>${market.category}</h3>
                     <p>${market.description}</p>
-                    <a href="${market.link}" target="_blanck">View again</a>
+                    <a href="${market.link}" target="_blanck">Search again</a>
                     `;
                     recentContainer.appendChild(cardR);
                 }
@@ -240,18 +240,19 @@ function loadDiscover() {
                 <h3>${market.category}</h3>
                 <p id="st">${market.description}</p>
                 <p id="nd"><span class="tile-title">Location: </span>${market.city}</p>
-                <button onclick="location.href=${market.link}" class="explore">Explore</button>
-                //! ----------KIP-------------
+                <button onclick="location.href=#${market.link}" class="explore">Explore</button>
                 `;
-                
-                
+
                 container.appendChild(card);
             })
             const lastSeenTaker = document.querySelectorAll(".explore");
-            console.log(lastSeenTaker); //! ----------KIP-------------
-            // lastSeenTaker.addEventListener("click", () => {
-            //     saveLastSeen(market.id ) //! ----------KIP-------------
-            // });
+
+            lastSeenTaker.forEach((button, index) => {
+                button.addEventListener("click", () => {
+                    const lastSeen = button.parentElement.id;
+                    saveLastSeen(lastSeen); //! working on that ---------------
+                });
+            });
         });
     } catch (error) {
         console.log("something happened!")

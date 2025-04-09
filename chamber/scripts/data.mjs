@@ -97,9 +97,7 @@ function loadLastSeen() {
 }
 
 function saveLastSeen(id) {
-    const lastSeen = localStorage.setItem("last-seen", 1);
-
-    return 'success';
+    localStorage.setItem("lastSeen", id);
 }
 
 export { fetchWeatherData, urlGetter, fetchData, newsGetter, factGetter, saveLastSeen, loadLastSeen, fetchDiscover};
