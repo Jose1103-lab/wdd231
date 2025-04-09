@@ -92,12 +92,12 @@ async function fetchDiscover() {
 }
 
 function loadLastSeen() {
-    const lastSeen = localStorage.getItem("last-seen");
+    const lastSeen = localStorage.getItem("lastSeen");
     return lastSeen;
 }
 
 function saveLastSeen(id) {
-    localStorage.setItem("lastSeen", id);
+    localStorage.setItem("lastSeen", [id, Date.now()]);
 }
 
 export { fetchWeatherData, urlGetter, fetchData, newsGetter, factGetter, saveLastSeen, loadLastSeen, fetchDiscover};

@@ -213,7 +213,16 @@ function memberInformation() {
 }
 
 function loadDiscover() {
-    const lastId = parseInt(loadLastSeen());   //* working on that ---------------
+    //* working on that ---------------
+    let index, lastDate;
+    try {
+        const lastId = loadLastSeen().split(","); //TODO --- make it more abstract and readable
+        index = parseInt(lastId[0]) 
+        lastDate = new Date(parseInt(lastId[1])).toLocaleDateString();
+    }catch (error) {
+        console.log('No data saved')
+    }
+    
     try {
         fetchDiscover().then(data => {
             const container = document.querySelector(".dc-menu");
@@ -221,13 +230,14 @@ function loadDiscover() {
 
             data.forEach(market => {
                 const card = document.createElement("div");
-                if (market.id === lastId) {
+                if (market.id === index) {
                     const cardR = document.createElement("div");
                     cardR.classList.add("dc-card-recent");
                     cardR.innerHTML = `
                     <h3>${market.category}</h3>
+                    <p class="lastV">Last visit on ${lastDate}</p>
                     <p>${market.description}</p>
-                    <a href="${market.link}" target="_blanck">Search again</a>
+                    <a class="lastV" href="${market.link}" target="_blanck">Search again</a>
                     `;
                     recentContainer.appendChild(cardR);
                 }
@@ -240,20 +250,21 @@ function loadDiscover() {
                 <h3>${market.category}</h3>
                 <p id="st">${market.description}</p>
                 <p id="nd"><span class="tile-title">Location: </span>${market.city}</p>
-                <button onclick="location.href=#${market.link}" class="explore">Explore</button>
+                <button onclick="location.href=${market.link}" class="explore">Explore</button>
                 `;
 
                 container.appendChild(card);
             })
-            const lastSeenTaker = document.querySelectorAll(".explore");
 
-            lastSeenTaker.forEach((button, index) => {
+            const lastSeenTaker = document.querySelectorAll(".explore");
+            lastSeenTaker.forEach((button) => {
                 button.addEventListener("click", () => {
                     const lastSeen = button.parentElement.id;
                     saveLastSeen(lastSeen); //! working on that ---------------
                 });
             });
         });
+
     } catch (error) {
         console.log("something happened!")
     }

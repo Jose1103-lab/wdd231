@@ -725,6 +725,15 @@ label select:valid {
     ;
     gap: 10px;
 }
+.d-header p {
+    margin: 20px 0;
+    padding: 30px 20px;
+    border-radius: 2px;
+    background-color:  var(--secundary-color);
+    color: var(--font-color);
+    font-size: var(--medium);
+    text-align: center;
+}
 
 .d-header {
     grid-area: z;
@@ -847,6 +856,22 @@ label select:valid {
 .dc-card button:hover {
     background-color: var(--secundary-color);
     color: var(--main-color);
+}
+
+.recent-vw h2,
+.recent-vw h3 {
+    margin: 0;
+    padding: 0;
+}
+.recent-vw hr {
+    width: 80%;
+    border: 1px solid var(--secundary-color);
+}
+
+.lastV{
+    margin: 0;
+    text-align: center;
+    font-size: var(--small);
 }
 
 /*! ---------------------- Footer style-----------------------------*/

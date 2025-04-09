@@ -22,9 +22,7 @@ if (getTitle.includes("Directory")) {
 }
 
 if (getTitle.includes("Discover")) {
-    saveLastSeen();
     loadDiscover();
-    //FIXME: (ft-1001) experimental feature applied to the join page 
     newsGetter();
     factGetter();
 }

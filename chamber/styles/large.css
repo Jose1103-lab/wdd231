@@ -176,7 +176,10 @@
         padding: 20px;
         box-shadow: 3px 3px 15px 3px var(--under3-color);
     }
-
+    .news {
+        box-shadow: none;
+    }
+    
     .dc-card {
         margin: 0 0 20px 0;
         grid-template-areas:
