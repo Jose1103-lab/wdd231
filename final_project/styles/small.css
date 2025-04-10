@@ -1,0 +1,123 @@
+:root{
+    --main-color:#001322ff;
+    --secundary-color: #ba181bff;
+    --alt-color:#660708ff ;
+    --font-color:#f5f3f4ff;
+    --font2-color:#ffdb0eff;
+    --highlight-color:#d3d3d3ff;
+    --small:.7rem;
+    --normal:1rem;
+    --medium:1.5rem;
+    --large:2rem;
+    --xxl:3rem;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--main-color);
+    color: var(--font2-color);
+}
+
+p,
+a,
+li,
+span,
+label,
+textarea,
+input,
+option{
+    text-decoration: none;
+    color: var(--font-color);
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--normal);
+}
+
+h1,
+h2,
+h4,
+h4,
+h5,
+h6{
+    font-family: 'Tinos', sans-serif;
+    font-size: var(--large);
+}
+
+/*! header style-------------------------- */
+
+header{
+    /* background-color: var(--alt-color); */
+    display: grid;
+    place-items: center;
+    grid-template-areas: "a b b b c";
+    border-bottom:1px solid var(--alt-color);
+}
+
+.logo{
+    padding: 5px 0;
+    grid-area: a;
+}
+
+#tg-mn::after{
+    content: "〣";
+    transform: rotate(-90deg);
+    display: inline-block;
+    margin-left: 3px;
+    font-size: var(--xxl);
+    cursor: pointer;
+}
+
+#usr-status,
+.menu-container{
+    display: none;
+    justify-self: right;
+    grid-area: b;
+}
+.user-ctrl {
+    justify-self: right;
+    margin-right: 20px;
+    grid-area: c;
+    display: flex;
+    place-items: center;
+}
+.user-ctrl img{
+    filter: invert(100%);
+    width: 30px;
+    margin-right: 5px;
+}
+
+.menu-list{
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+}
+.mn-it{
+    padding: 5px 30px;    
+}
+.mn-it a{
+    width: fit-content;    
+}
+.mn-it a::after{
+    display: inline-block;
+    content: " ▾";
+    color: var(--font2-color);
+    transition: all .5s ease-in-out;
+}
+.mn-it a:hover::after{
+    transform: rotate(-180deg);
+    color: var(--secundary-color);
+}
+
+/*! main style-------------------------- */
+/** ------------- home style ------------------ */
+/** ------------- catalog style ------------------ */
+/** ------------- showtime style ------------------ */
+
+
+/*! footer style-------------------------- */
+
+
