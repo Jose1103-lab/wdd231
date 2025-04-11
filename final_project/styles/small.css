@@ -119,5 +119,23 @@ header{
 
 
 /*! footer style-------------------------- */
+footer{
+    display: grid;
+    place-items: center;
+    background-color: var(--alt-color);
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.soc-m-sect img{
+    width: 30px;
+    margin: 0 10px;
+    filter: grayscale(100%);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.soc-m-sect img:hover{
+    filter: grayscale(0);
+}
 
 
