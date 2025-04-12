@@ -1,4 +1,8 @@
  @media screen and (min-width: 768px) {
+    .logo-pic img{
+        width: 300px;
+    }
+
     #usr-status,
     .menu-container{
         display: inline-block;
@@ -8,7 +12,52 @@
         display: none;
     }
 
+    main{
+        grid-template-areas: 
+        "a a a a a" 
+        "a a a a a" 
+        "a a a a a" 
+        "b b b b b" 
+        "c c c c c";
+    }
+
+    .hero{
+        width: 100%;
+        /* border: 1px solid var(--alt-color); */
+    }
+    .hero img{
+        /* width: 100%;
+        height: 500px;         */
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        /* object-fit: cover; */
+    }
+
+    .billboard-list {
+        flex-flow: row wrap;
+    }
+
+    .prem-list {
+        flex-flow: row wrap;
+        max-width: 100%;
+    }
 
 
+
+
+    footer{
+        grid-template-areas: 
+        "a b c c ." 
+        "d d d d d";
+    }
+    .soc-m-list img{
+        filter: grayscale(100%);
+        transition: all .3s ease-in-out;
+    }
+
+    .soc-m-list img:hover{
+        filter: grayscale(0);
+    }
     
  }

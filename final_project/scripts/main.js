@@ -6,19 +6,16 @@ async function movieFectch() {
 }
 
 movieFectch().then((data) => {
-    const movie = document.querySelector("#fetch");
+    const movie = document.querySelector("#billboard-list");
     console.log(data); //! for testing
 
     data.forEach(element => {
         const movieContainer = document.createElement("div");
+        movieContainer.classList.add("bill-item");
         movieContainer.innerHTML = `
-        <img src="${element.poster}" alt="movie image" width="200">
+        <img src="${element.poster}" alt="${element.title}" loading="lazy" la width="200">
         <h3>${element.title}</h3>
-        <p>${element.duration} min</p>
-        <p>${element.rate}</p>
         <p>${element.genre[0]}</p>
-        <p>${element.year}</p>
-        <p>${element.director}</p>
         `
         movie.appendChild(movieContainer);
     });

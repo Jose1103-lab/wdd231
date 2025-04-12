@@ -60,79 +60,32 @@
     </header>
 
     <main>
-        <section class="billboard">
-            <h2>Featured</h2>
-            <div class="billboard-list">
-                <div class="bill-item i-featured">
-                    <img src="images/catalog/3.webp" alt="Movie 3" loading="lazy" width="200">
-                    <h3>Movie Title 3</h3>
-                    <p>Movie description goes here.</p>
-                </div>
-                <div class="bill-item i-featured">
-                    <img src="images/catalog/4.webp" alt="Movie 4" loading="lazy" width="200">
-                    <h3>Movie Title 4</h3>
-                    <p>Movie description goes here.</p>
-                </div>
-            </div>
+        <section class="booking-sect">
+            <p>Fill out the form below to secure your spot for an unforgettable cinematic experience.</p>
 
+            <h2>Book a Ticket</h2>
+            <form action="complete.html" method="get" id="booking-form">
+                <label>First Name <span class="required">*</span> <input type="text" name="first" autocomplete="name" required ></label>
+                <label>Last Name <span class="required">*</span> <input type="text" name="last" autocomplete="family-name" required ></label>
+                <label>Personal ID/Passport <span class="required">*</span><input type="number" name="pid" required></label>
+                <label>Phone Number <span class="required">*</span> <input type="number" name="phone" autocomplete="tel" placeholder="8001234567" required ></label>
+                <label>Email <input type="email" name="email" autocomplete="email" placeholder="joedoe@example.com"></label>
+                <label>Select Movie <span class="required">*</span> <select name="movie" id="movie-bk" required>
+                    <option value="" disabled selected>--Select movie--</option>
+                    
+                </select></label>
+                <label>Select Time <span class="required">*</span> <select name="movie_time" id="movie-bk" required>
+                    <option value="" disabled selected>--Select showtime--</option>
+                    
+                </select></label>
 
-            
+                <input type="hidden" name="date_booked" id="date_booked">
+                <button type="submit" id="booker">Book ticket</button>
+
+            </form>
         </section>
-        
-        <hr>
-        <section class="discuss-sect">
-            <h2>Featured Forum</h2>
-            <div class="discuss-sub">
-                <div class="discuss-list">
-                    <div class="discuss-item">
-                        <h4>fulano de tal • <span>magic mike</span></h4>
-                        <p>Discussisxvgf content goes here.</p>
-                        <p id="date">11/3/54045</p>
-                    </div>
-                    <div class="discuss-item">
-                        <h4>fulano de tal • <span>magic mike</span></h4>
-                        <p>Discussisent goes here.</p>
-                        <p id="date">11/3/54045</p>
-                    </div>
-                    <div class="discuss-item">
-                        <h4>fulano de tal • <span>magic mike</span></h4>
-                        <p>Discussisxvgf content goes here.</p>
-                        <p id="date">11/3/54045</p>
-                    </div>
-                    <div class="discuss-item">
-                        <h4>fulano de tal • <span>magic mike</span></h4>
-                        <p>Discussisxvgf content goes here.</p>
-                        <p id="date">11/3/54045</p>
-                    </div>
-                    <div class="discuss-item">
-                        <h4>fulano de tal • <span>magic mike</span></h4>
-                        <p>Discussisxvgf content goes here.</p>
-                        <p id="date">11/3/54045</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="feat-forum">
-                <form action="gender.html" method="get" id="feat-form">
-                    <label>Name
-                        <input type="text" name="feat_name" id="ft-name" placeholder="Name">
-                    </label>
-                    <label>Movie
-                        <select name="movie" id="movie">
-                            <option disabled selected>--Select--</option>
-                        </select>
-                    </label>
-                    <label>Comment
-                        <textarea name="feat_comment" id="ft-comment" required></textarea>
-                    </label>
-                    <input type="hidden" name="comment_date" id="date-fm">
-    
-                    <button type="submit">Add comment</button>
-                </form>
-            </div>
-        </section>
     </main>
-
 
     <footer>
 

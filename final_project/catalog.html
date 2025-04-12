@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore Le Coin's movie catalog - from classics to latest releases. Find your next favorite film in our extensive collection.">
+    <meta name="author" content="Jose Brito">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jose1103-lab.github.io/wdd231/final_project/index.html">
+    <meta property="og:title" content="Le Coin Cinema Home Page">
+    <meta property="og:image" content="https://jose1103-lab.github.io/wdd231/final_project/images/theathe.webp">
+    <meta property="og:description"
+        content="Explore Le Coin's movie catalog - from classics to latest releases. Find your next favorite film in our extensive collection.">
+    <meta name="twitter:title" content="Le Coin Cinema Home Page">
+    <meta name="twitter:url" content="https://jose1103-lab.github.io/wdd231/final_project/index.html">
+    <meta name="twitter:image" content="https://jose1103-lab.github.io/wdd231/final_project/images/theathe.webp">
+    <meta name="twitter:description"
+        content="Explore Le Coin's movie catalog - from classics to latest releases. Find your next favorite film in our extensive collection.">
+    <link rel="icon" href="images/icons/cinema.webp" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Tinos&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/main.js" type="module"></script>
+    <title>Le Coin</title>
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <picture class="logo-pic">
+                <source srcset="images/theather-pj.webp" media="(min-width: 800px)">
+                <source srcset="images/theather-pj-simple.webp" media="(max-width: 799px)">
+                <img src="images/theather-pj.webp" alt="Le coin logo" loading="lazy" width="150">
+            </picture>
+        </a>
+
+        <nav class="menu-container">
+            <ul class="menu-list">
+                <li class="mn-it"><a title="Showtimes" href="showtime.html">Showtimes</a></li>
+                <li class="mn-it"><a title="Catalog" href="catalog.html">Catalog</a></li>
+                <li class="mn-it"><a title="Genders" href="gender.html">Genders</a></li>
+                <li hidden><a href="siteplan.html" target="_blank">plan</a></li>
+            </ul>
+        </nav>
+
+
+        <div class="user-ctrl">
+            <img src="images/profile.webp" alt="user-icon" width="50">
+            <p id="usr-status">Log in</p>
+            <div id="tg-mn"></div>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="catalog-sect">
+            <p>Explore our extensive collection of movies, from classics to the latest releases. Find your next favorite
+                film!</p>
+            <h2>Billboard</h2>
+            <div class="billboard-list">
+                <div class="bill-item">
+                    <img src="images/catalog/1.webp" alt="Movie 1" loading="lazy" width="200">
+                    <h3>Movie Title 1</h3>
+                    <p>Movie description goes here.</p>
+                    </article>
+                    <article class="bill-item">
+                        <img src="images/catalog/2.webp" alt="Movie 2" loading="lazy" width="200">
+                        <h3>Movie Title 2</h3>
+                        <p>Movie description goes here.</p>
+                    </article>
+                </div>
+
+                <a href="booking.html" class="hook-btn">Book ticket</a>
+        </section>
+
+        <section class="billboard featured">
+            <h2>Featured Movies</h2>
+            <div class="billboard-list">
+                <div class="bill-item i-featured">
+                    <img src="images/catalog/3.webp" alt="Movie 3" loading="lazy" width="200">
+                    <h3>Movie Title 3</h3>
+                    <p>Movie description goes here.</p>
+                </div>
+                <div class="bill-item i-featured">
+                    <img src="images/catalog/4.webp" alt="Movie 4" loading="lazy" width="200">
+                    <h3>Movie Title 4</h3>
+                    <p>Movie description goes here.</p>
+                </div>
+            </div>
+
+            <a href="gender.html" class="hook-btn">Weekly discussion</a>
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <section class="information-sect">
+            <h4>Quick links</h4>
+            <ul>
+                <li><a class="footer-links" href="index.html">Home</a></li>
+                <li><a class="footer-links" href="catalog.html">Billboard</a></li>
+                <li><a class="footer-links" href="showtime.html">Showtimes</a></li>
+                <li><a class="footer-links" href="gender.html">Trending</a></li>
+                <li><a class="footer-links" href="profile.html">Account</a></li>
+            </ul>
+
+        </section>
+
+        <section class="links-sect">
+            <h4>Support</h4>
+            <ul>
+                <li><a class="footer-links" href="contact.html">Contact us</a></li>
+                <li><a class="footer-links" href="showtime.html">Account settings</a></li>
+                <li><a class="footer-links" href="profile.html">Privacy policy</a></li>
+                <li><a class="footer-links" href="siteplan.html" target="_blank">Siteplan Plan<span class="grading">
+                            (for GRADER)</span></a></li>
+                <li><a class="footer-links" href="#" target="_blank">Video<span class="grading"> (for GRADER)</span></a>
+                </li>
+                </a></li>
+            </ul>
+
+        </section>
+
+        <section class="soc-m-sect">
+            <img src="images/theather-pj-simple.webp" alt="le coin logo" loading="lazy" width="150">
+            <div class="soc-m-list">
+                <a href="https://www.instagram.com/lecoin"><img src="images/icons/cl-ig.webp" alt="Instagram"
+                        loading="lazy" width="40"></a>
+                <a href="https://www.facebook.com/lecoin"><img src="images/icons/cl-facebook.webp" alt="Facebook"
+                        loading="lazy" width="40"></a>
+                <a href="https://www.youtube.com/lecoin"><img src="images/icons/cl-yt.webp" alt="YouTube" loading="lazy"
+                        width="40"></a>
+                <a href="https://twitter.com/lecoin"><img src="images/icons/cl-x.webp" alt="X (Twitter)" loading="lazy"
+                        width="40"></a>
+            </div>
+
+        </section>
+
+        <p class="copy">&copy;<span id="yearC"></span> Copyright • Le Coin Cinema</p>
+
+    </footer>
+
+</body>
+
+</html>
