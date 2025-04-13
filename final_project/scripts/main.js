@@ -12,6 +12,7 @@ movieFectch().then((data) => {
     data.forEach(element => {
         const movieContainer = document.createElement("div");
         movieContainer.classList.add("bill-item");
+        movieContainer.setAttribute("id", element.id);
         movieContainer.innerHTML = `
         <img src="${element.poster}" alt="${element.title}" loading="lazy" la width="200">
         <h3>${element.title}</h3>

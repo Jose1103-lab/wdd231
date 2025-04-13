@@ -139,7 +139,7 @@ main {
     place-items: center;
     place-content: center;
 }
-main>*:not(.hero) {
+main>* {
     max-width: 960px;
 }
 
@@ -178,7 +178,7 @@ main section{
     position: absolute;
     height: fit-content;
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 0 20px 0;
     top: 30%;
     text-align: center;
     color: var(--font2-color);
@@ -189,7 +189,18 @@ main section{
     background-color: var(--font2-color);
     padding: 5px 10px;
     border-radius: 5px;
+    margin: 0 10px;
     color: var(--main-color);
+    transition: all .3s ease-in-out;
+}
+
+.prem-it-btn:hover,
+.hook-btn:hover, 
+.hero-btn:hover {
+    background-color: var(--alt-color);
+    color: var(--font2-color);
+    box-shadow: 0 0 5px var(--font2-color);
+    cursor: pointer;
 }
 
 .hero-info p {
@@ -241,6 +252,7 @@ main section{
     padding: 5px 0;
     border-radius: 5px;
     border: none;
+    transition: all .3s ease-in-out;
 }
 
 .prem-it-btn::after {
@@ -257,7 +269,7 @@ main section{
 .billboard-list {
     display: flex;
     flex-flow: column nowrap;
-    place-items: center;
+    place-items: flex-start;
     padding: 5px;
     width: 100%;
 }
@@ -269,7 +281,14 @@ main section{
     justify-content: space-between;
     width: fit-content;
     margin: 10px;
+    max-width: 200px;
+    text-align: center;
     padding-bottom: 10px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.bill-item:hover {
+    transform: scale(1.1);
 }
 
 .bill-item img {
@@ -299,6 +318,7 @@ main section{
     color: var(--font2-color);
     border: 1px solid var(--font2-color);
     border-radius: 5px;
+    transition: all .3s ease-in-out;
 }
 
 /** ------------- catalog style ------------------ */
@@ -313,6 +333,7 @@ section>p {
     padding: 15px 20px;
     margin-bottom: 10px;
     background-color: var(--alt-color);
+    border-radius: 3px;
 }
 
 .featured{
@@ -473,8 +494,6 @@ form textarea {
     
     grid-area: c;
 }
-
-
 
 /*! footer style-------------------------- */
 footer {
