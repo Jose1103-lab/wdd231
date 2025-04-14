@@ -35,6 +35,7 @@ a,
 li,
 span,
 label,
+button,
 textarea,
 input,
 option {
@@ -131,14 +132,15 @@ main {
     padding: 10px 0;
     display: grid;
     grid-template-areas:
-    "a"
-    "b"
-    "c"
-    "d"
-    "f";
+        "a"
+        "b"
+        "c"
+        "d"
+        "f";
     place-items: center;
     place-content: center;
 }
+
 main>* {
     max-width: 960px;
 }
@@ -154,7 +156,7 @@ section h2 {
     text-align: center;
 }
 
-main section{
+main section {
     width: 100%;
     min-width: 350px;
     margin: 20px 0;
@@ -162,7 +164,7 @@ main section{
 }
 
 /** ------------- home style ------------------ */
-.hero{
+.hero {
     position: relative;
     grid-area: a;
     width: 100%;
@@ -195,7 +197,7 @@ main section{
 }
 
 .prem-it-btn:hover,
-.hook-btn:hover, 
+.hook-btn:hover,
 .hero-btn:hover {
     background-color: var(--alt-color);
     color: var(--font2-color);
@@ -207,8 +209,11 @@ main section{
     margin: 15px 0;
 }
 
-.premiere{
+.premiere {
     grid-area: b;
+    display: flex;
+    flex-flow: column nowrap;
+    place-items: center;
 }
 
 .prem-list {
@@ -260,16 +265,18 @@ main section{
     color: var(--font2-color);
 }
 
-.billboard{
+.billboard {
+    /* border: 1px solid var(--font2-color); */
     grid-area: c;
     display: flex;
     flex-flow: column nowrap;
+
 }
 
 .billboard-list {
     display: flex;
     flex-flow: column nowrap;
-    place-items: flex-start;
+    align-items: center;
     padding: 5px;
     width: 100%;
 }
@@ -287,6 +294,7 @@ main section{
     transition: all .3s ease-in-out;
     cursor: pointer;
 }
+
 .bill-item:hover {
     transform: scale(1.1);
 }
@@ -310,7 +318,7 @@ main section{
     word-wrap: break-word;
 }
 
-.hook-btn{
+.hook-btn {
     place-self: center;
     margin-top: 20px;
     padding: 10px 25px;
@@ -336,14 +344,14 @@ section>p {
     border-radius: 3px;
 }
 
-.featured{
+.featured {
     padding: 20px 0;
     width: 100%;
     background-color: var(--secundary-color);
     place-self: center;
 }
 
-.i-featured{
+.i-featured {
     background-color: var(--main-color);
     border-radius: 3px;
 }
@@ -354,9 +362,17 @@ section>p {
     padding: 30px;
 }
 
-/* .feat-forum form{
-     margin-top: 30px; 
-} */
+.discuss-feat {
+    grid-area: a;
+}
+
+.discuss-sect {
+    grid-area: c;
+}
+
+.hr-line-frm {
+    grid-area: b;
+}
 
 form button {
     background-color: var(--secundary-color);
@@ -376,10 +392,14 @@ form textarea {
     width: 100%;
     max-width: 500px;
     padding: 10px;
-    margin:3px 0 10px 0;
+    margin: 3px 0 10px 0;
     border-radius: 5px;
     border: none;
     display: block;
+}
+
+option{
+    color: var(--main-color);
 }
 
 .feat-forum textarea {
@@ -387,7 +407,7 @@ form textarea {
     resize: none;
 }
 
-.discuss-sub{
+.discuss-sub {
     margin-top: 25px;
     border: 2px solid var(--secundary-color);
     padding: 5px 0;
@@ -412,7 +432,7 @@ form textarea {
     width: fit-content;
 }
 
-#date{
+#date {
     font-size: var(--small);
     color: var(--font2-color);
     margin-top: 15px;
@@ -426,12 +446,22 @@ form textarea {
 #booking-form {
     padding: 10px 20px;
     width: 100%;
-    max-width:500px ;
+    max-width: 400px;
 }
 
-#booker{
+.booking-cont {
+    position: relative;
+}
+
+#booker {
     width: 80%;
     margin: 5% 10%;
+    transition: all .3s ease-in-out;
+    border: 1px solid var(--secundary-color);
+}
+#booker:hover {
+    color: var(--font2-color);
+    border: 1px solid var(--font2-color);
 }
 
 .required {
@@ -448,7 +478,8 @@ form textarea {
     width: 100%;
     max-width: 400px;
 }
-.completed>p{
+
+.completed>p {
     text-align: center;
     margin-bottom: 10px;
     font-size: var(--small);
@@ -462,14 +493,13 @@ form textarea {
     margin: 30px 0;
 }
 
-.link{
+.link {
     color: var(--font2-color);
     text-decoration: underline;
 }
 
 /** ------------- preview style ------------------ */
 .movie-info {
-    border: 1px solid var(--font2-color);
     padding: 10px;
     display: grid;
     grid-template-areas:
@@ -483,17 +513,32 @@ form textarea {
     grid-area: a;
     width: 250px;
     height: 300px;
+    /* remove after getting the pictures*/
     object-fit: cover;
     border-radius: 5px;
 }
+
 .movie-details {
+    margin-top: 25px;
     grid-area: b;
-    
+
 }
+
+.movie-details button {
+    background-color: var(--secundary-color);
+}
+
 .movie-trailer {
-    
     grid-area: c;
+    margin-top: 10px;
 }
+
+iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
 
 /*! footer style-------------------------- */
 footer {
@@ -555,4 +600,16 @@ footer {
 
 .grading {
     color: var(--font2-color);
+}
+
+@media screen and (max-width: 930px) {
+    .booking-cont img {
+        position: absolute;
+        top: 0;
+        width: 400px;
+        height: auto;
+        z-index: -1;
+        filter: blur(3px) brightness(0.5) opacity(0.5);
+    }
+
 }

@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
     <script src="scripts/main.js" type="module"></script>
-    <title>Le Coin</title>
+    <title>Le Coin | Booking</title>
 
 </head>
 
@@ -64,25 +64,35 @@
             <p>Fill out the form below to secure your spot for an unforgettable cinematic experience.</p>
 
             <h2>Book a Ticket</h2>
-            <form action="complete.html" method="get" id="booking-form">
-                <label>First Name <span class="required">*</span> <input type="text" name="first" autocomplete="name" required ></label>
-                <label>Last Name <span class="required">*</span> <input type="text" name="last" autocomplete="family-name" required ></label>
-                <label>Personal ID/Passport <span class="required">*</span><input type="number" name="pid" required></label>
-                <label>Phone Number <span class="required">*</span> <input type="number" name="phone" autocomplete="tel" placeholder="8001234567" required ></label>
-                <label>Email <input type="email" name="email" autocomplete="email" placeholder="joedoe@example.com"></label>
-                <label>Select Movie <span class="required">*</span> <select name="movie" id="movie-bk" required>
-                    <option value="" disabled selected>--Select movie--</option>
-                    
-                </select></label>
-                <label>Select Time <span class="required">*</span> <select name="movie_time" id="movie-bk" required>
-                    <option value="" disabled selected>--Select showtime--</option>
-                    
-                </select></label>
+            <div class="booking-cont">
+                <form action="complete.html" method="get" id="booking-form">
+                    <label>First Name <span class="required">*</span> <input type="text" name="first"
+                            autocomplete="name" required></label>
+                    <label>Last Name <span class="required">*</span> <input type="text" name="last"
+                            autocomplete="family-name" required></label>
+                    <label>Personal ID/Passport <span class="required">*</span><input type="number" name="pid"
+                            required></label>
+                    <label>Phone Number <span class="required">*</span> <input type="tel" name="phone"
+                            autocomplete="tel" placeholder="8001234567" required></label>
+                    <label>Email <input type="email" name="email" autocomplete="email"
+                            placeholder="joedoe@example.com"></label>
+                    <label>Select Movie <span class="required">*</span> <select name="movie" id="movie-bk-t" required>
+                            <option value="" disabled selected>--Select movie--</option>
 
-                <input type="hidden" name="date_booked" id="date_booked">
-                <button type="submit" id="booker">Book ticket</button>
+                        </select></label>
+                    <label>Select Showtime <span class="required">*</span> <select name="movie_time" id="movie-bk-s" required>
+                            <option value="" disabled selected>--Select showtime--</option>
 
-            </form>
+                        </select></label>
+
+                    <input type="hidden" name="date_booked" id="date_booked">
+                    <button type="submit" id="booker">Book ticket</button>
+
+                </form>
+
+                <img src="images/pop2.webp" alt="popcorns"  loading="lazy"> 
+            </div>
+
         </section>
 
     </main>
@@ -111,7 +121,6 @@
                             (for GRADER)</span></a></li>
                 <li><a class="footer-links" href="#" target="_blank">Video<span class="grading"> (for GRADER)</span></a>
                 </li>
-                </a></li>
             </ul>
 
         </section>

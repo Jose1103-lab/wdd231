@@ -30,8 +30,14 @@
          height: 400px;
      }
 
+     .billboard {
+         width: 200%;
+     }
+
      .billboard-list {
          flex-flow: row wrap;
+         align-items: flex-start;
+         place-content: center;
      }
 
      .prem-list {
@@ -39,13 +45,91 @@
          max-width: 100%;
      }
 
-     .featured{
-        border-radius: 3px;
+     .featured {
+         border-radius: 3px;
      }
-     .featured .billboard-list{
-        justify-content: center;
-    }
 
+     .featured .billboard-list {
+         justify-content: center;
+     }
+
+     .discuss-sect {
+         /* border: 1px solid var(--font2-color); */
+         width: 200%;
+         display: grid;
+         grid-template-areas:
+             "a a a a"
+             "b b c c"
+             "b b . .";
+     }
+
+     .discuss-sect h2 {
+         grid-area: a;
+     }
+
+     .feat-forum {
+         grid-area: b;
+     }
+
+     .discuss-sub {
+         grid-area: c;
+     }
+
+     .movie-info {
+         grid-template-areas:
+             "a a b b"
+             "a a c c";
+         /* "c c c c" */
+         align-items: flex-start;
+         justify-content: left;
+
+     }
+
+     .movie-info img {
+         grid-area: a;
+         width: 450px;
+         height: 550px;
+         /* remove after getting the pictures*/
+         border-radius: 5px;
+     }
+
+     .movie-details {
+         grid-area: b;
+
+     }
+
+     .movie-trailer {
+         width: 100%;
+         height: auto;
+         grid-area: c;
+         margin-left: 50px;
+     }
+
+
+     .booking-sect {
+         width: 200%;
+         display: grid;
+         grid-template-columns: 1fr;
+         place-items: center;
+     }
+
+     .booking-cont {
+         display: grid;
+         grid-template-areas:
+             "a b";
+         place-items: center;
+     }
+
+     .booking-form {
+         grid-area: a;
+     }
+
+     .booking-cont img {
+         -webkit-user-drag: none;
+         width: 350px;
+         height: auto;
+         grid-area: b;
+     }
 
      footer {
          box-shadow: 0 -1px 20px 1px var(--font2-color);
