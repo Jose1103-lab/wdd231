@@ -92,7 +92,43 @@ header {
     grid-area: c;
     display: flex;
     place-items: center;
+    cursor:pointer;
 }
+
+#login{
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    place-items: center;
+    top: 150px;
+    right: 10px;
+    width: 400px;
+    height: 450px;
+    background-color: var(--alt-color);
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+}
+
+#login img{
+    margin: 40px 0 10px 0 ;
+}
+#login input{
+    min-width: 300px;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+#login button{
+    width:80%;
+    margin: 10px 10%;
+}
+#login button:hover{
+    color: var();
+}
+
 
 .user-ctrl img {
     filter: invert(100%);

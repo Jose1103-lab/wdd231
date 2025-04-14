@@ -157,8 +157,13 @@ function previewLoader() {
 }
 
 function showModal() {
+    const modalBtn = document.querySelector("#user-log")
+    const modal = document.querySelector("#login");
 
+    modalBtn.addEventListener('click', () =>{
+        modal.showModal();
+    })
 }
 
 
-export { loadMovie, dateloader, ticketBooking, previewLoader };
+export { loadMovie, dateloader, ticketBooking, previewLoader, showModal };
