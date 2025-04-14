@@ -1,3 +1,6 @@
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:4241511030.
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:3301638641.
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:3790615987.
 import { movieFectch, dateFetch, featureArray, billboardArray } from "./data.mjs";
 
 
@@ -119,5 +122,43 @@ function ticketBooking() {
     movieDate.textContent = `${ticketInfo.get("movie_time")}`;
 }
 
+function previewLoader() {
+    if (!document.title.includes("Preview")) return;
+    const movieId = new URLSearchParams(window.location.search).get("id");
+    let url
+    dateFetch().then((showData) => {
+        const movieData = showData.find(movie => movie.id === movieId);
+        url = movieData.trailer;
+    }).then(() => {
 
-export { loadMovie, dateloader, ticketBooking };
+        movieFectch().then((data) => {
+            const movieData = data.find(movie => movie.id === movieId);
+            const movieContainer = document.querySelector("#movie-info");
+            movieContainer.innerHTML = `
+                <img src="${movieData.poster}" alt="${movieData.title}" id="movie-poster" loading="lazy" width="250">
+                <div class="movie-details">
+                    <h3 id="movie-title">${movieData.title}</h3>
+                    <p id="movie-rating">Rating: <span id="rating">${movieData.rate}</span></p>
+                    <p id="movie-duration">Duration: <span id="duration">${movieData.duration} min</span></p>
+                    <p id="movie-genre">Genre: <span id="genre">${movieData.genre[0]}</span></p>
+                    <p id="movie-release-date">Release Date: <span id="release-date">${movieData.date}</span></p>
+                    <p id="movie-director">Director: <span id="director">${movieData.director}</span></p>
+                    <button class="hook-btn" onclick="window.location.href='booking.html'">Book Now</button>
+                    
+                    <div class="movie-trailer">
+                    <h4>Trailer</h4>
+                    <iframe width="437" height="246" src="${url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                `
+        });
+    })
+
+
+}
+
+function showModal() {
+
+}
+
+
+export { loadMovie, dateloader, ticketBooking, previewLoader };

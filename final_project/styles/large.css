@@ -81,30 +81,26 @@
              "a a c c";
          /* "c c c c" */
          align-items: flex-start;
-         justify-content: left;
+         justify-content: space-around;
+
 
      }
 
      .movie-info img {
          grid-area: a;
-         width: 450px;
-         height: 550px;
-         /* remove after getting the pictures*/
+         width: 400px;
+         height: auto;
          border-radius: 5px;
      }
 
      .movie-details {
          grid-area: b;
-
      }
 
      .movie-trailer {
-         width: 100%;
-         height: auto;
+        margin-top: 80px;
          grid-area: c;
-         margin-left: 50px;
      }
-
 
      .booking-sect {
          width: 200%;
