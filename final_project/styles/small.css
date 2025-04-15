@@ -89,7 +89,7 @@ header {
     flex-flow: column nowrap;
     place-items: center;
     top: 40px;
-    left: 60%;
+    left: 10%;
     width: 400px;
     height: fit-content;
     background-color: var(--alt-color);

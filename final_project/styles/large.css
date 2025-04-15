@@ -7,6 +7,10 @@
         grid-area: c;
      }
 
+     .access-form{
+        left: 60%;
+     }
+
      #usr-status,
      .menu-container {
          display: inline-block;
