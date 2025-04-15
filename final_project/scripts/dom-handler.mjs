@@ -161,7 +161,7 @@ function previewLoader() {
 
 }
 
-function showModal() {
+function showModal(identifier) {
     const modalBtn = document.querySelector("#user-log")
     const modalcloser = document.querySelectorAll(".modal-close")
     const modal = document.querySelector("#login");
