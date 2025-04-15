@@ -25,12 +25,11 @@ function loging(pass, usr){
     return userULog === usr && userPLog === pass;
 }
 
-function signing(pass, usr){
+function signin(pass, usr){
     const newUser = localStorage.setItem("usr", usr);
     const newPass = localStorage.setItem("usrp", pass);
 
     return newUser && newPass;
 }
 
-
-export { movieFectch, dateFetch, featureArray, billboardArray, signing, loging };
+export { movieFectch, dateFetch, featureArray, billboardArray, signin, loging };

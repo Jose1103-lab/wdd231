@@ -161,22 +161,34 @@ function previewLoader() {
 
 }
 
-function showModal(identifier) {
+function showSignModal() {
     const modalBtn = document.querySelector("#user-log")
     const modalcloser = document.querySelectorAll(".modal-close")
+    const switcher = document.querySelector("#sign-up") // to move from login form to sign up one
+    const switcher2 = document.querySelector("#sign-in") // to move from sign up form to sign in one
     const modal = document.querySelector("#login");
+    const modal2 = document.querySelector("#signin");
 
     modalBtn.addEventListener('click', () => {
         modal.showModal();
     })
-
+    
+    switcher.addEventListener('click', () => {
+        modal.close();
+        modal2.showModal();
+    })
+    
+    switcher2.addEventListener('click', () => {
+        modal2.close();
+        modal.showModal();
+    })
+    
     modalcloser.forEach(button => {
         button.addEventListener('click', () => {
             modal.close();
-
+            modal2.close();
         })
     })
 }
 
-
-export { loadMovie, dateloader, ticketBooking, previewLoader, showModal, menuToggle };
+export { loadMovie, dateloader, ticketBooking, previewLoader, showSignModal, menuToggle };
