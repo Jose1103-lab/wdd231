@@ -51,24 +51,41 @@
         </nav>
 
 
-        <div class="user-ctrl" id="user-log">
+        <div class="user-ctrl"  id="user-log">
             <img src="images/profile.webp" alt="user-icon" width="50">
             <p id="usr-status">Log in</p>
         </div>
-      
         <div id="tg-mn"></div>
-        
-        <dialog id="login" popover>
-            <img src="images/image.webp" alt="logo" width="100" loading="lazy">
 
-            <h2>Login</h2>
+
+        <dialog id="logifn" class="access-form">
+            <div class="modal-close"></div>
+            <h1>Log in</h1>
+            <img src="images/image.webp" alt="le coin logo" loading="lazy" width="100" >
+
             <form action="#">
-                <label>Username<input type="text" name="user" autocomplete="username"></label>
-                <label>Password<input type="password" name="pass" ></label>
-                <button id="loging">Log in</button>
+                <label>Username<input type="text" name="user" autocomplete="username" required></label>
+                <label>Password<input type="password" name="key" autocomplete="current-password"></label>
+                
+                <button id="logger">Log in</button>
+                
+                <p>First time? <a href="#" id="sign-up" class="highlight">Sign up</a></p>
             </form>
+        </dialog>
+        <dialog id="login" class="access-form">
+            <div class="modal-close"></div>
+            <h1>Sign up</h1>
+            <img src="images/image.webp" alt="le coin logo" loading="lazy" width="100" >
 
-            <p>New at Le Coin? <a href=""><u>Sign in</u></a></p>
+            <form action="#">
+                <label>Username<input type="text" name="user" autocomplete="username" required></label>
+                <label>Password<input type="password" name="key" required></label>
+                <label>Confirm password<input type="password" name="key_confirmation" required></label>
+                
+                <button id="signer">Sign up</button>
+                
+                <p>Already watcher? <a href="#" id="sign-in" class="highlight">Sign in</a></p>
+            </form>
         </dialog>
 
     </header>

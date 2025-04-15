@@ -1,9 +1,14 @@
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:4241511030.
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:3301638641.
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:3790615987.
 import { movieFectch, dateFetch, featureArray, billboardArray } from "./data.mjs";
 
+function menuToggle() {
+    const menuBtn = document.querySelector("#tg-mn");
+    const menu = document.querySelector(".menu-container");
 
+    menuBtn.addEventListener('click', () => {
+        menu.classList.toggle("show");
+        menuBtn.classList.toggle("show");
+    })
+}
 
 function loadMovie() {
     movieFectch().then((data) => {
@@ -158,12 +163,20 @@ function previewLoader() {
 
 function showModal() {
     const modalBtn = document.querySelector("#user-log")
+    const modalcloser = document.querySelectorAll(".modal-close")
     const modal = document.querySelector("#login");
 
-    modalBtn.addEventListener('click', () =>{
+    modalBtn.addEventListener('click', () => {
         modal.showModal();
+    })
+
+    modalcloser.forEach(button => {
+        button.addEventListener('click', () => {
+            modal.close();
+
+        })
     })
 }
 
 
-export { loadMovie, dateloader, ticketBooking, previewLoader, showModal };
+export { loadMovie, dateloader, ticketBooking, previewLoader, showModal, menuToggle };

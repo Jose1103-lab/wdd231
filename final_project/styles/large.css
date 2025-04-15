@@ -3,6 +3,10 @@
          width: 300px;
      }
 
+     .user-ctrl {
+        grid-area: c;
+     }
+
      #usr-status,
      .menu-container {
          display: inline-block;
@@ -11,6 +15,34 @@
      #tg-mn {
          display: none;
      }
+
+     .menu-list {
+        flex-flow: row nowrap;
+    }
+
+    .menu-container{
+        position: static;
+        grid-area: b;
+    }
+
+     .mn-it a::after {
+         display: inline-block;
+         content: " ▾";
+         color: var(--font2-color);
+         transition: all .5s ease-in-out;
+     }
+
+     .mn-it a:hover::after {
+         transform: rotate(-180deg);
+         color: var(--secundary-color);
+     }
+
+     .mn-it a {
+        padding: 0 10px;
+    }
+    .mn-it {
+        padding:0 20px;
+    }
 
      main {
          grid-template-areas:
@@ -98,7 +130,7 @@
      }
 
      .movie-trailer {
-        margin-top: 80px;
+         margin-top: 80px;
          grid-area: c;
      }
 

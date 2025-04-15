@@ -24,6 +24,11 @@ body {
     color: var(--font2-color);
 }
 
+.highlight{
+    color: var(--font2-color);
+    text-decoration: underline;
+}
+
 hr {
     border: 1px solid var(--font2-color);
     width: 80%;
@@ -61,7 +66,7 @@ header {
     /* background-color: var(--alt-color); */
     display: grid;
     place-items: center;
-    grid-template-areas: "a b b b c";
+    grid-template-areas: "a . . b c";
     border-bottom: 1px solid var(--alt-color);
 }
 
@@ -70,6 +75,133 @@ header {
     grid-area: a;
 }
 
+.user-ctrl {
+    justify-self: right;
+    margin-right: 20px;
+    grid-area: b;
+    display: flex;
+    place-items: center;
+    cursor:pointer;
+}
+
+.access-form{
+    box-shadow: 0 0 10px 1px var(--font2-color);
+    flex-flow: column nowrap;
+    place-items: center;
+    top: 40px;
+    left: 60%;
+    width: 400px;
+    height: fit-content;
+    background-color: var(--alt-color);
+    padding: 20px;
+    border-radius: 3px;
+    border: none;
+}
+
+.access-form img{
+    margin: 5px 0 10px 0 ;
+}
+.access-form input{
+    min-width: 300px;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.access-form button{
+    border: 1px solid var(--alt-color);
+    transition: all;
+}
+.access-form button:hover{
+    color: var(--font2-color);
+    border-color:var(--font2-color) ;
+}
+.access-form h1{
+    color: var(--font2-color);
+}
+
+.modal-close::after{
+    cursor: pointer;
+    content: "✖";
+    font-size: var(--large);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: var(--highlight-color);
+}
+
+.access-form p{
+    margin-top: 10px;
+    font-size: var(--normal);
+    text-align: center;
+}
+
+.access-form::backdrop{
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+.user-ctrl img {
+    filter: invert(100%);
+    width: 30px;
+    margin-right: 5px;
+}
+
+#usr-status,
+.menu-container {
+    display: none;
+    justify-self: right;
+}
+
+.menu-container {
+    grid-area: b;
+    z-index: 1;
+    width: 100%;
+    padding: 20px 0;
+}
+
+
+.menu-container.show {
+    animation: starter 0.5s ease-in-out ;  
+}
+
+@keyframes starter {
+    0% {
+        right: -100%;
+        opacity: 0;
+    }
+    100% {        
+        right: 0;
+    }
+}
+
+.menu-list {
+    display: flex;
+    flex-flow: column nowrap;
+    list-style: none;
+}
+
+.show{
+    display: inline-block;
+}
+
+.mn-it {
+    padding: 15px 0;
+}
+.mn-it:active {
+    background-color: var(--font2-color);
+}
+
+.mn-it a {
+    padding:5px 79% 5px 15px;
+}
+
+#tg-mn {
+    grid-area: c;
+    padding: 0;
+    width: 55px;
+    height: 55px;
+}
 #tg-mn::after {
     content: "〣";
     transform: rotate(-90deg);
@@ -78,88 +210,9 @@ header {
     font-size: var(--xxl);
     cursor: pointer;
 }
-
-#usr-status,
-.menu-container {
-    display: none;
-    justify-self: right;
-    grid-area: b;
-}
-
-.user-ctrl {
-    justify-self: right;
-    margin-right: 20px;
-    grid-area: c;
-    display: flex;
-    place-items: center;
-    cursor:pointer;
-}
-
-#login{
-    position: absolute;
-    display: flex;
-    flex-flow: column nowrap;
-    place-items: center;
-    top: 150px;
-    right: 10px;
-    width: 400px;
-    height: 450px;
-    background-color: var(--alt-color);
-    padding: 10px;
-    border-radius: 3px;
-    border: none;
-}
-
-#login img{
-    margin: 40px 0 10px 0 ;
-}
-#login input{
-    min-width: 300px;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    border: none;
-}
-
-#login button{
-    width:80%;
-    margin: 10px 10%;
-}
-#login button:hover{
-    color: var();
-}
-
-
-.user-ctrl img {
-    filter: invert(100%);
-    width: 30px;
-    margin-right: 5px;
-}
-
-.menu-list {
-    display: flex;
-    flex-flow: row nowrap;
-    list-style: none;
-}
-
-.mn-it {
-    padding: 5px 30px;
-}
-
-.mn-it a {
-    width: fit-content;
-}
-
-.mn-it a::after {
-    display: inline-block;
-    content: " ▾";
-    color: var(--font2-color);
-    transition: all .5s ease-in-out;
-}
-
-.mn-it a:hover::after {
-    transform: rotate(-180deg);
-    color: var(--secundary-color);
+#tg-mn.show::after{
+        /* transform: translateX(0); */
+    content: "✖";
 }
 
 /*! main style-------------------------- */
@@ -645,6 +698,18 @@ footer {
         height: auto;
         z-index: -1;
         filter: blur(3px) brightness(0.5) opacity(0.5);
+    }
+
+    .menu-container {
+        position: absolute;
+        top: 70px;
+        /* right: -100%; */
+    }
+    
+    .menu-list {
+        width: 100%;
+        padding: 20px 0;
+        background-color: var(--alt-color);
     }
 
 }

@@ -3,9 +3,13 @@ let featureArray = [];
 let billboardArray = [];
 
 async function movieFectch() {
-    const movieData = await fetch("https://rest-api-deply.onrender.com/movies");
-    const data = await movieData.json();
-    return data;
+    try {
+        const movieData = await fetch("https://rest-api-deply.onrender.com/movies");
+        const data = await movieData.json();
+        return data;
+    } catch (error) {
+        console.warn("The movie information was not gotten");
+    }
 }
 
 async function dateFetch() {

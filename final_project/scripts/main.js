@@ -1,6 +1,7 @@
-import { loadMovie, previewLoader, dateloader, ticketBooking, showModal } from "./dom-handler.mjs";
+import { loadMovie, previewLoader, dateloader, ticketBooking, showModal, menuToggle } from "./dom-handler.mjs";
 import { loging, signing } from "./data.mjs";
 
+menuToggle();
 loadMovie();
 dateloader();
 ticketBooking();
