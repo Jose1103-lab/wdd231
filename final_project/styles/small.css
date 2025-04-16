@@ -27,6 +27,7 @@ body {
 .highlight{
     color: var(--font2-color);
     text-decoration: underline;
+    cursor: pointer;
 }
 
 hr {

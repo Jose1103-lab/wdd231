@@ -22,6 +22,7 @@
 
      .menu-list {
         flex-flow: row nowrap;
+        justify-self: right;
     }
 
     .menu-container{

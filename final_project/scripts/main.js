@@ -1,4 +1,4 @@
-import { loadMovie, previewLoader, dateloader, ticketBooking, showSignModal, menuToggle } from "./dom-handler.mjs";
+import { loadMovie, access, previewLoader, dateloader, ticketBooking, showSignModal, menuToggle } from "./dom-handler.mjs";
 import { loging, signin } from "./data.mjs";
 
 menuToggle();
@@ -7,6 +7,7 @@ dateloader();
 ticketBooking();
 previewLoader();
 showSignModal();
+access();
 
-console.log(signin())
-console.log(loging())
+// console.log(signin())
+// console.log(loging())

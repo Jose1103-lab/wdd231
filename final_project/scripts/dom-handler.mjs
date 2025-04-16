@@ -1,4 +1,4 @@
-import { movieFectch, dateFetch, featureArray, billboardArray } from "./data.mjs";
+import { movieFectch, dateFetch, featureArray, billboardArray, loging, signin } from "./data.mjs";
 
 function menuToggle() {
     const menuBtn = document.querySelector("#tg-mn");
@@ -191,4 +191,20 @@ function showSignModal() {
     })
 }
 
-export { loadMovie, dateloader, ticketBooking, previewLoader, showSignModal, menuToggle };
+function access(){
+    const accessStarter = document.querySelector("#logger")
+    const accessStarter2 = document.querySelector("#signer")
+    
+    accessStarter.addEventListener("click", () =>{
+        loging();
+        // setTimeout(() =>{
+        // console.log("accessing")
+        // }, 5000)
+    })
+    accessStarter2.addEventListener("click", () =>{
+        signin();
+    })
+
+}
+
+export { loadMovie, access, dateloader, ticketBooking, previewLoader, showSignModal, menuToggle };
