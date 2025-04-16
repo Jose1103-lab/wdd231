@@ -72,6 +72,22 @@ function loadMovie() {
                 `
                 feature.appendChild(movieContainer);
             }
+
+            if (document.title.includes("Showtimes") && counter <= 5) {
+                counter++;
+                const movieContainer = document.createElement("div");
+                movieContainer.classList.add("bill-item");
+                movieContainer.setAttribute("id", element.id);
+                movieContainer.innerHTML = `
+                <a href="preview.html?id=${element.id}">
+                <img src="${element.poster}" alt="${element.title}" loading="lazy" width="200">
+                <h3>${element.title}</h3>
+                <p><strong>Showtime:</strong> 4/26/25</p> <!-- Added showtime here -->
+                </a>
+                `;
+                billboard.appendChild(movieContainer);
+
+            }
         });
     });
 }
@@ -172,17 +188,17 @@ function showSignModal() {
     modalBtn.addEventListener('click', () => {
         modal.showModal();
     })
-    
+
     switcher.addEventListener('click', () => {
         modal.close();
         modal2.showModal();
     })
-    
+
     switcher2.addEventListener('click', () => {
         modal2.close();
         modal.showModal();
     })
-    
+
     modalcloser.forEach(button => {
         button.addEventListener('click', () => {
             modal.close();
@@ -191,17 +207,17 @@ function showSignModal() {
     })
 }
 
-function access(){
+function access() {
     const accessStarter = document.querySelector("#logger")
     const accessStarter2 = document.querySelector("#signer")
-    
-    accessStarter.addEventListener("click", () =>{
+
+    accessStarter.addEventListener("click", () => {
         loging();
         // setTimeout(() =>{
         // console.log("accessing")
         // }, 5000)
     })
-    accessStarter2.addEventListener("click", () =>{
+    accessStarter2.addEventListener("click", () => {
         signin();
     })
 

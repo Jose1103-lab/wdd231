@@ -57,6 +57,36 @@
         </div>
         <div id="tg-mn"></div>
 
+        <dialog id="login" class="access-form">
+            <div class="modal-close"></div>
+            <h1>Log in</h1>
+            <img src="images/image.webp" alt="le coin logo" loading="lazy" width="100" >
+
+            <form action="#" id="login-form"> 
+                <label>Username<input type="text" name="user" autocomplete="username" required></label>
+                <label>Password<input type="password" name="key" autocomplete="current-password"></label>
+                
+                <button id="logger">Log in</button>
+                
+                <p>First time? <span id="sign-up" class="highlight">Sign up</span></p>
+            </form>
+        </dialog>
+        <dialog id="signin" class="access-form">
+            <div class="modal-close"></div>
+            <h1>Sign up</h1>
+            <img src="images/image.webp" alt="le coin logo" loading="lazy" width="100" >
+
+            <form action="#" id="sign-form">
+                <label>Username<input type="text" name="user" autocomplete="username" required></label>
+                <label>Password<input type="password" name="key" required></label>
+                <label>Confirm password<input type="password" name="key_confirmation" required></label>
+                
+                <button id="signer">Sign up</button>
+                
+                <p>Already watcher? <span id="sign-in" class="highlight">Sign in</span></p>
+            </form>
+        </dialog>
+
     </header>
 
     <main>
